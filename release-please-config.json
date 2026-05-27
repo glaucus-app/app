@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "node",
-      "package-name": "di-lab",
+      "package-name": "glaucus",
       "changelog-path": "CHANGELOG.md",
       "changelog-types": [
         { "type": "feat", "section": "Added", "hidden": false },

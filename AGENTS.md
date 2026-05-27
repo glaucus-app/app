@@ -25,9 +25,8 @@ This file provides guidance to agents when working with code in this repository.
 
 ## Feature Recipes
 
-When adding features, check `.kilocode/recipes/`:
-- **Add Database**: `.kilocode/recipes/add-database.md` (Drizzle + SQLite)
+When adding features, check the project docs for any recipes or patterns to follow.
 
 ## Memory Bank
 
-Update `.kilocode/rules/memory-bank/context.md` after completing significant changes.
+Update project documentation after completing significant changes.

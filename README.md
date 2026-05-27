@@ -1,8 +1,6 @@
-# DI-Lab
+# Glaucus
 
-[![Build Status](https://github.com/dahgoth/di-lab/workflows/CI/badge.svg)](https://github.com/dahgoth/di-lab/actions)
 [![License: AGPL-3.0-or-later](https://img.shields.io/badge/License-AGPL%203.0+-blue.svg)](https://opensource.org/licenses/AGPL-3.0)
-[![Version](https://img.shields.io/github/v/release/dahgoth/di-lab?filter=di-lab-*)](https://github.com/dahgoth/di-lab/releases)
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
@@ -15,7 +13,7 @@
 
 ## Description
 
-DI-Lab is a web application for optimizing legendary gems in Diablo Immortal. Similar to World of Warcraft tools like Raidbots and Ask Mr. Robot, DI-Lab helps players make data-driven decisions about gem upgrades to maximize their character's power.
+Glaucus is a web application for optimizing legendary gems in Diablo Immortal. Similar to World of Warcraft tools like Raidbots and Ask Mr. Robot, Glaucus helps players make data-driven decisions about gem upgrades to maximize their character's power.
 
 The application analyzes your current gem build, considers available resources (platinum, Telluric Pearls, etc.), and provides prioritized upgrade recommendations based on power gain per resource cost.
 
@@ -44,8 +42,8 @@ The application analyzes your current gem build, considers available resources (
 
 ```bash
 # Clone the repository
-git clone https://github.com/dahgoth/di-lab.git
-cd di-lab
+git clone git@github.com:glaucus-app/app.git
+cd app
 
 # Install dependencies
 bun install
