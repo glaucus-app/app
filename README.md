@@ -1,5 +1,12 @@
+<p align="center">
+  <img src="public/images/glaucus.png" alt="Glaucus" width="400" />
+</p>
+
 # Glaucus
 
+[![GitHub](https://img.shields.io/badge/GitHub-glaucus--app-181717?logo=github)](https://github.com/glaucus-app)
+[![Domain](https://img.shields.io/badge/Domain-glaucus.app-00a8e8?logo=internet-explorer)](https://glaucus.app)
+[![Email](https://img.shields.io/badge/Email-me@glaucus.app-e74c3c?logo=mail.ru)](mailto:me@glaucus.app)
 [![License: AGPL-3.0-or-later](https://img.shields.io/badge/License-AGPL%203.0+-blue.svg)](https://opensource.org/licenses/AGPL-3.0)
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
