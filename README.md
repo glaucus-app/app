@@ -1,8 +1,6 @@
-<p align="center">
-  <img src="public/images/glaucus.png" alt="Glaucus" width="400" />
-</p>
+# Glaucus App 🌊
 
-# Glaucus
+![Glaucus Avatar](public/images/glaucus.png)
 
 [![GitHub](https://img.shields.io/badge/GitHub-glaucus--app-181717?logo=github)](https://github.com/glaucus-app)
 [![Domain](https://img.shields.io/badge/Domain-glaucus.app-00a8e8?logo=internet-explorer)](https://glaucus.app)
@@ -20,9 +18,9 @@
 
 ## Description
 
-Glaucus is a web application for optimizing legendary gems in Diablo Immortal. Similar to World of Warcraft tools like Raidbots and Ask Mr. Robot, Glaucus helps players make data-driven decisions about gem upgrades to maximize their character's power.
+Glaucus App is a web application for optimizing legendary gems in Diablo Immortal. Similar to World of Warcraft tools like Raidbots and Ask Mr. Robot, Glaucus helps players make data-driven decisions about gem upgrades to maximize their character's power.
 
-The application analyzes your current gem build, considers available resources (platinum, Telluric Pearls, etc.), and provides prioritized upgrade recommendations based on power gain per resource cost.
+The application analyzes your current gem build, considers available resources (stashed gems, Gem Powder, Platinum, etc.), and provides prioritized upgrade recommendations based on power gain per resource cost.
 
 ## Features
 
