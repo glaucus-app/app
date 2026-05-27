@@ -1,0 +1,1048 @@
+,,,,,,,,,,,,,,
+,ATTRIBUTES,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,COMBAT RATING,,BASE ATTRIBUTES,,ARMOR,,MAGIC AFFIXES,,KNOWN CAPS,,,,,
+,RESONANCE,,PRIMARY ATTRIB.,,ARMOR PEN.,,CLASS AFFIXES,,,,,,,
+,REFINEMENT,,DAMAGE,,POTENCY,,LEGENDARY AFFIXES,,,,,,,
+,BADGES,,LIFE,,RESISTANCE,,HELLIQUARY AFFIXES,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,There are many Attributes that you can improve to make your character stronger. Here are all the ways you can boost your Stats:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,"Primary Gear /
+Set Items","Legendary
+Gems","Normal
+Gems",Paragon,Horadim,Runes,Helliquary,"Ancestral 
+Tableau",Charms,Remnants,Pets,
+,Combat Rating,,X,X,,,,,X,X,,,,
+,Primary Attributes,,X,,,,,,X,X,,,,
+,Base Attributes,,X,,,,,,,,,,,
+,Secondary Attributes,,X,X,X,X,X,,X,X,,,,
+,Resonance,,,X,,,,,,,,,,
+,Refinement,,,,X,,,,,,,,,
+,Additional Attributes,,X,X,,X,,X,,,X,X,X,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Combat Rating,,,,,,,,,,,,,
+,Combat Rating (CR) is one of the most important stats. Your CR is compared to your enemies CR to determine how much more / less damage you deal. ,,,,,,,,,,,,,
+,Once you have enough CR to enter a higher difficulty CR gets less important.,,,,,,,,,,,,,
+,In PVP this effect is capped at 10%. In PVE the cap is 11.3%.,,,,,,,,,,,,,
+,Set Pieces have a fixed max. Combat Rating for each Difficulty. For Primary Gear the max. Combat Rating increases from a base value by 2 for each Paragon Level,,,,,,,,,,,,,
+,Here are all the sources that increase your Combat Rating:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Calculation of Character Sheet Combat Rating,,,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.*,%,,,,,,
+,ATTRIBUTES,Primary Equipment,,CR Stat from Primary Gear,,,21680,"40,70%",* 8 x Inferno VI,,,,,
+,ATTRIBUTES,Set-Pieces,,CR Stat from Set Pieces,,,21296,"39,98%",* 8 x Inferno VI,,,,,
+,ATTRIBUTES,Primary Equipment Upgrades,,Sum of CR from Upgrades,,,1760,"3,30%",* 8 x Rank 30,,,,,
+,ATTRIBUTES,Set-Piece Upgrades,,Sum of CR from Upgrades,,,1696,"3,18%",* 8 x Rank 22,,,,,
+,LEGEND,Legendary Gems,,CR from Legendary Gems,,,1920,"3,60%",* 8 x R10 5/5,,,,,
+,TABLEAU,Ancestral Tableau,,CR Stat from Ancestral Tableau,,,1800,"3,38%",* no upper limit yet,,,,,
+,HELLIQUARY,Helliquary,,CR from Helliquary Rank,,,3120,"5,86%",* no upper limit yet,,,,,
+,,,,,,,53272,"100,00%",,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"10% difference in PVP may not seem that much, but when two otherwise equally strong players are fighting, the difference is quite noticable",,,,,,,,,,,,,
+,"Especially because it works both ways (Player 2 has a 10% damage bonus and Player 1 has a 10% ""vulnerability"" malus, so the difference is really approx. 20%",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Damage,Player Life,"Combat Rating
+Player 1","Combat Rating
+Player 2","Player 1
+deals dmg","Player 1
+takes dmg","Player 2
+deals dmg","Player 2
+takes dmg","Hits to kill
+Player 1","Hits to kill
+Player 2",,,,
+,10000,100000,1000,2000,90%,110%,110%,90%,"8,26","12,35",,,,
+,10000,100000,1500,2000,"90,75%","107,50%","108,25%","93,00%","8,59","11,85",,,,
+,10000,100000,1900,2000,96%,103%,104%,97%,"9,34","10,74",,,,
+,10000,100000,2000,2000,100%,100%,100%,100%,"10,00","10,00",,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Primary Attributes,,,,,,,,,,,,,
+,"The value of the primary attributes (Strength, Fortitude, Willpower, Vitality) on Primary Gear is dependant on your paragon level and the difficulty your character has unlocked. ",,,,,,,,,,,,,
+,Primary Stats on your Primary Gear are important but also pay attention to the magic affixes as these are mostly % based modifiers that can be extremely powerful.,,,,,,,,,,,,,
+,If you look at your primary attack for example a gear piece with 100 points of strength more than your current piece offers you +30 more damage.,,,,,,,,,,,,,
+,"If you have a total of 10000 (primary attack) damage and one of the magic affixes is a ""primary attack +4.5% damage increase"" that means +450 more damage.",,,,,,,,,,,,,
+,These % based modifiers are not visible in the stats of your character but are applied during combat.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Base Attributes,,,,,,,,,,,,,
+,Base attributes are fixed values for damage and life of your primary and secondary equipment.,,,,,,,,,,,,,
+,They increase with each difficulty and are the base for the bonus damage / life that legendary gems offer via resonance and normal gems offer via refinement,,,,,,,,,,,,,
+,The tables below show the base damage and base life values for all legendary items for each difficulty:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Damage,,,,,,,,,,,,,
+,Difficulty,Sum,Head,Shoulders,Main-Hand,Main-Hand 2,Off-Hand,Off-Hand 2,Hand,,,,,
+,Inferno IV,6650,778,778,1546,1546,612,612,778,,,,,
+,Inferno V,6806,796,796,1582,1582,627,627,796,,,,,
+,Inferno VI,6930,814,814,1617,1617,627,627,814,,,,,
+,Inferno VII,7079,831,831,1653,1653,640,640,831,,,,,
+,Inferno VIII,7263,849,849,1689,1689,669,669,849,,,,,
+,Inferno IX,7415,867,867,1724,1724,683,683,867,,,,,
+,Inferno X,7492,876,876,1742,1742,690,690,876,,,,,
+,Inferno XI,,,,,,,,,,,,,
+,Inferno XII,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Life,,,,,,,,,,,,,
+,Difficulty,Sum,Chest,Legs,Neck,Ring 1,Ring 2,Waist,Feet,Bracelet 1,Bracelet 2,,,
+,Inferno IV,64456,25784,8594,2578,2578,2578,8594,8594,2578,2578,,,
+,Inferno V,65938,26377,8792,2637,2637,2637,8792,8792,2637,2637,,,
+,Inferno VI,67416,26969,8989,2696,2696,2696,8989,8989,2696,2696,,,
+,Inferno VII,68902,27561,9187,2756,2756,2756,9187,9187,2756,2756,,,
+,Inferno VIII,70381,28154,9384,2815,2815,2815,9384,9384,2815,2815,,,
+,Inferno IX,71862,28746,9582,2874,2874,2874,9582,9582,2874,2874,,,
+,Inferno X,72602,29042,9680,2904,2904,2904,9680,9680,2904,2904,,,
+,Inferno XI,,,,,,,,,,,,,
+,Inferno XII,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Resonance,,,,,,,,,,,,,
+,Resonance is a % multiplier for damage / life that is increased by the ranks of your legendary gems.,,,,,,,,,,,,,
+,"For each point of resonance, 0,05% of the base damage and 0,05% of the base life are added to your overall life / damage.",,,,,,,,,,,,,
+,"Since the base life & damage values increase with each difficulty, the resonance scales in higher difficulties",,,,,,,,,,,,,
+,"The table below illustrates how much extra damage / life you get for 1, 100 or 1000 resonance points",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,Damage,,,Life,,,,,,,
+,"Gear
+Level","Base
+Damage","Base
+Life","1
+Resonance","100
+Resonance","1000
+Resonance","1
+Resonance","100
+Resonance","1000
+Resonance",,,,,
+,Inferno IV,6650,64456,"3,33",333,3325,"32,2",3223,32228,,,,,
+,Inferno V,6806,65938,"3,40",340,3403,"33,0",3297,32969,,,,,
+,Inferno VI,6930,67416,"3,47",347,3465,"33,7",3371,33708,,,,,
+,Inferno VII,7079,68902,"3,54",354,3540,"34,5",3445,34451,,,,,
+,Inferno VIII,7263,70381,"3,63",363,3632,"35,2",3519,35191,,,,,
+,Inferno IX,7415,71862,"3,71",371,3708,"35,9",3593,35931,,,,,
+,Inferno X,7492,72602,"3,75",375,3746,"36,3",3630,36301,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,F2P vs P2W Difference in Damage,,,,,,,,,,,,,
+,Player,Reso,Damage,,,,,,,,,,,
+,Kraken,12000,65000,,,,,,,,,,,
+,Whale,8000,54000,,,,,,,,,,,
+,Dolphin,5000,39000,,,,,,,,,,,
+,Casual,3000,31000,,,,,,,,,,,
+,F2P,1500,25000,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Resonance Wings & Additional Resonance,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Only for 5* Gems:,,,,,,,,,,,,,
+,When you extract Gem Power your Gem becomes dormant. However you can still socket it. It will re-awaken with all its effects when the Resonance Gems,,,,,,,,,,,,,
+,inside the Gem are filled with equal or more Gem Power than the now dormant Gem had before,,,,,,,,,,,,,
+,"The ""new"" Resonance of the Gem is:",,,,,,,,,,,,,
+,Original Resonance of the Ranked Gem (e.g. 1000 for a R10 5/5),,,,,,,,,,,,,
+,Reduced Resonance of the Resonance Gems (e.g. 2 per Rank for a 2-Star and 10 per Rank for a 5-Star),,,,,,,,,,,,,
+,"Additional Resonance ( = Gem Power of all socketed Resonance Gems / 125 (for ""correct"" gems) or 200). This only works with R10 5* Gems",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Rank,"Normal
+Resonance
+5/5","Gem
+Power","Slot 1
+
+2*","Slot 2
+
+2*","Slot 3
+R6+
+2*","Slot 4
+R7+
+5*","Slot 5
+R8+
+5*","Max.
+Resonance
+Inside Gems","Max.
+Additional
+Reso",,,,
+,4,400,321,20,20,,,,40,0,,,,
+,5,500,731,20,20,,,,40,0,,,,
+,6,600,1298,20,20,20,,,60,0,,,,
+,7,700,2407,20,20,20,110,,170,0,,,,
+,8,800,3516,20,20,20,110,110,280,0,,,,
+,9,900,5167,20,20,20,110,110,280,0,Max,,,
+,10,1000,6818,20,20,20,110,110,280,80,1360,,,
+,,,,,,,,,,,,,,
+,When you reach 6000 Resonance you are able to slot up to 4 additional legendary gems into your wings,,,,,,,,,,,,,
+,"The next Wing Slots are available at 7000 Resonance, then 8000 Resonance and over 8500 Resonance the current maximum amount of 16 additional Slots is available",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"When reaching 10000 Resonance, a new ultimate skill is available for each class.",,,,,,,,,,,,,
+,When reaching 12000 Resonance Swift Heaven Movement Speed Bonus in safe zones is active,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,The current maximum possible Resonance is 13024,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Resonance,"No. of
+Wing Slots","Max. Reso
+ per Slot","Max.
+Sum","Max.
+Add.Reso",,Reso from,Reso,Add.Reso,,,,,
+,6000,4,100,400,136,,Gems,8000,0,,,,,
+,7000,8,100,800,272,,Inside Gems,2240,640,,,,,
+,8000,12,100,1200,409,,Wings,1600,544,Max,,,,
+,8500+,16,100,1600,544,,Total,11840,1184,13024,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Refinement,,,,,,,,,,,,,
+,Refinement is a % multiplier for damage / life that is incereased by the ranks of your normal gems. ,,,,,,,,,,,,,
+,For each Rank of a socketed gem 3% of the base damage or 3% of the base life of the equipment piece that the gem is socketed in are added to your overall life / damage,,,,,,,,,,,,,
+,Because all Gem Slots count towards the bonus try to get Set Pieces with triple Gem Slots,,,,,,,,,,,,,
+,Place your highest ranked yellow Gems in the Hand Slot,,,,,,,,,,,,,
+,Place your highest ranked blue Gems in the Feet,,,,,,,,,,,,,
+,Place your highest ranked red Gems in the Waist,,,,,,,,,,,,,
+,Place your lowest ranked Gems in the Rings / Bracelets,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Damage Bonus per Yellow Gem (Ranks 5-10) slotted in the Hand Set Piece ,,,,,,,,,,,,,
+,Difficulty,"Hand
+Base Dmg",5,6,7,8,9,10,,,,,,
+,Inferno IV,778,117,140,163,187,210,233,,,,,,
+,Inferno V,796,119,143,167,191,215,239,,,,,,
+,Inferno VI,814,122,147,171,195,220,244,,,,,,
+,Inferno VII,831,125,150,175,199,224,249,,,,,,
+,Inferno VIII,849,127,153,178,204,229,255,,,,,,
+,Inferno IX,,0,0,0,0,0,0,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Secondary Attributes,,,,,,,,,,,,,
+,The secondary attributes are your most important stats. ,,,,,,,,,,,,,
+,They are especially important in Battlegrounds where those stats are compared against your opponents stats to determine damage dealt / taken or duration of stuns etc,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Damage,,,,,,,,,,,,,
+,The table below shows all the sources that go into the Damage Stat on your character sheet:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Calculation of Character Sheet Base Damage,,,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.,%,,,,,,
+,RESO,Legendary Gems,,"Equipment Base Damage x 0,0005 x Resonance",,,47297,"63,01%",* Inferno VI,,,,,
+,PARAGON,Paragon Tree,,Sum of all Paragon Damage Nodes,,,8640,"11,51%",* all paragon trees,,,,,
+,GEAR,Equipment Base Damage (Inferno III),,"Sum of Base Damage of Head, Shoulders, Off-Hand, Main-Hand and Hand",,,7263,"9,68%",* Inferno VI,,,,,
+,TOURM,Normal tourmaline Gems,,Sum of all socketed Tourmaline normal gems,,,3840,"5,12%",*8 tourmalines all Rank 10,,,,,
+,ATTRIBUTES,Set-Pieces,,"Sum of Primary Attributes (STR or INT) x 0,3",,,2280,"3,04%",* Inferno VI,,,,,
+,ATTRIBUTES,Primary Equipment,,"Sum of Primary Attributes (STR or INT) x 0,3",,,3040,"4,05%",* Paragon 1200,,,,,
+,REFINE,Normal yellow Gems in Hand,,"Hand Base Damage x 0,03 x (Sum of Ranks of socketed Gems)",,,764,"1,02%",* 3 Rank 10 in Inferno VI gear,,,,,
+,HORADRIM,Legacy of the Horadrim,,Sum of all Legacy of Horadim Damage Points,,,720,"0,96%",* Rank 60 on 2 vessels,,,,,
+,ATTRIBUTES,Primary Equipment Upgrades,,"Sum of STR or INT on Off-Hand, Main Hand and Head x 0,3",,,264,"0,35%",* 8 pieces Level 30,,,,,
+,ATTRIBUTES,Set-Piece Upgrades,,"Sum of STR or INT on Rings and Neck x 0,3",,,95,"0,13%",* 3 pieces Level 22,,,,,
+,HELLIQUARY,Demonic Remains,,"Sum of Primary Attributes (STR or INT) x 0,3",,,382,"0,51%",* 5 Pieces with Strength,,,,,
+,TABLEAU,Ancestral Tableau,,"Sum of Primary Attributes (STR or INT) x 0,3",,,94,"0,13%",* no upper limit yet,,,,,
+,GEAR,"Magic Affixes ""increase item base damage""",,Equipment Base Damage (Primary Gear only) x Item Modifier,,,385,"0,51%",* 6 pieces with 6% (max roll),,,,,
+,RUNES,"Magic Affixes ""increase item base damage""",,Equipment Base Damage (Primary Gear only) x Item Modifier,,,641,"0,85%",* 6 Runes with 10%,,,,,
+,,,,,,,75.064,"100,00%",,,,,,
+,,,,,,,,,,,,,,
+,"The Damage Stat you see in the Character Sheet is not the damage you actually deal. How Damage is calculated is explained in the ""Damage"" tab.",,,,,,,,,,,,,
+,Damage Calculation,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Life,,,,,,,,,,,,,
+,"This is the ""Life"" Attribute that you can see on the Attributes Tab of your character sheet.",,,,,,,,,,,,,
+,"It is not exactly the life you actually have - there are some % modifiers like ""Max Health +X% or the Shadow/Immortal Badges (PVP) that further increase your health",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Calculation of Character Sheet Base Life,,,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.,%,,,,,,
+,RESO,Legendary Gems,,"Equipment Base Life x 0,005 x Resonance",,,458321,"46,66%",,,,,,
+,PARAGON,Paragon Tree,,Sum of all Paragon Life Nodes,,,97200,"9,90%",,,,,,
+,GEAR,Equipment Base Life,,Equipment Base Life,,,70381,"7,17%",,,,,,
+,NAKED,Life without any gear,,Life without Gear,,,80000,"8,14%",* Depends on your class and Paragon Level,,,,,
+,REFINE,Normal Gems in Slots except Hands,,"Gem Ranks x Neck, Rings, Waist, Feet, Bracelet Base Life x 0,03",,,167499,"17,05%",* 11 Rank 10 ,,,,,
+,ATTRIBUTES,Primary Equipment,,Vitality from Primary Gear x 3,,,27744,"2,82%",* Inferno VI,,,,,
+,HORADRIM,Legacy of the Horadrim,,Life from Nor Tiraj & Ibn Fahd,,,7200,"0,73%",*2 vessels rank 60,,,,,
+,RUBY,Normal Ruby Gems,,Life from Normal Gems,,,28800,"2,93%",*8 rubys all Rank 10,,,,,
+,ATTRIBUTES,Set-Pieces,,Vitality from Set-Pieces x 3,,,27744,"2,82%",* Inferno VI,,,,,
+,GEAR,"Magic Affixes ""increase item base life""",,Item Base Life +X%,,,2252,"0,23%",* 2 x Inferno VI with max roll 6%,,,,,
+,HELLIQUARY,Demonic Remains,,Vitality from Demonic Remains x 3,,,3435,"0,35%",*5 pieces with Vitality,,,,,
+,ATTRIBUTES,Primary Equipment Upgrades,,"Sum of Vitality on Off-Hand, Main Hand and Head x 0,3",,,1650,"0,17%",* 6 pieces Level 30,,,,,
+,ATTRIBUTES,Set-Piece Upgrades,,"Sum of Vitality on Rings, Bracelets and Neck x 0,3",,,1590,"0,16%",* 5 pieces Level 20,,,,,
+,TABLEAU,Ancestral Tableau,,Vitality from Ancestral Tableau x 3,,,4695,"0,48%",* 5 Remains with Vitality,,,,,
+,RUNES,"Magic Affixes ""increase item base life""",,Equipment Base Life (Primary Gear only) x Item Modifier,,,3754,"0,38%",,,,,,
+,,,,,,,982.265,"100,00%",,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Armor Penetration & Critical Hit Chance,,,,,,,,,,,,,
+,"If you manage to land a Critical Hit, your Armor Penetration Stat is compared to your Opponent's Armor Stat (PVP). If your AP is higher, then you can deal up to",,,,,,,,,,,,,
+,58% more Critical Hit Damage because of your Armor Penetration (in PVE this Stat is measured against a fixed value depending on the diffculty).,,,,,,,,,,,,,
+,So it makes sense to stack Armor Penetration alongside Critical Hit Chance.,,,,,,,,,,,,,
+,The second benefit besides added value on Critical Hits is the amount of damage you deal when your opponent blocks a hit.,,,,,,,,,,,,,
+,"Because when he/she blocks a hit, your Armor Penetration is compared to the enemy Armor and the higher your AP is over their Armor, the less damage they will block (from a base of 50%)",,,,,,,,,,,,,
+,"The below table shows all sources of Armor Penetration. If all were maxed out you could theoretically have over 11.000 AP. More realistically, ",,,,,,,,,,,,,
+,most players have around 2.000 - 4.500 AP.,,,,,,,,,,,,,
+,Your Critical Hit Chance without any bonus stats is 3% by default.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Calculation of Character Sheet Armor Penetration,,,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.,%,,Whale,Dolphin,F2P,,
+,SAPHIRES,Normal Saphire Gems,,AP from Saphires (max. 8 x R10),,,10048,"68,18%",,3808,2624,1472,,
+,HORADRIM,Legacy of the Horadrim,,AP Nilfur & Caldennsan Vessels,,,1620,"10,99%",,1200,700,500,,
+,PARAGON,Paragon Tree,,AP from Paragon Trees,,,1010,"6,85%",,1010,1010,1010,,
+,ATTRIBUTES,Set-Pieces,,"Fortitude from Set-Pieces x 0,1",,,925,"6,27%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment,,"Fortitude & from Primary Gear x 0,1",,,925,"6,27%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment Upgrades,,"Fortitude Chest, Shoulder, Legs x 0,1",,,33,"0,22%",,33,33,33,,
+,ATTRIBUTES,Set-Piece Upgrades,,"Fortitude Hands, Waist, Feet x 0,1",,,32,"0,22%",,32,32,32,,
+,HELLIQUARY,Demonic Remains,,"Fortitude from Demonic Remains x 0,1",,,115,"0,78%",,115,115,115,,
+,TABLEAU,Ancestral Tableau,,"Fortitude from Ancestral Tableau x 0,1",,,31,"0,21%",,31,31,31,,
+,,,,,,,14.738,100%,,8.079,6.395,5.043,,
+,,,,,,,,,,,,,,
+,"How Armor Penetration is factored in when calculating Critical Hit Damage is explained in the ""Damage"" tab.",,,,,,,,,,,,,
+,How you can increase your Critical Hit Chance is explained below ,,,,,,,,,,,,,
+,Critical Hit Chance,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Armor & Block Chance,,,,,,,,,,,,,
+,Your Armor Stat does not reduce all damage you take. Armor is only applied in 2 cases:,,,,,,,,,,,,,
+,"1. When blocking damage, the higher your Armor is compared to your opponents Armor Penetration, the more damage you will block from a base of 50%.",,,,,,,,,,,,,
+,"    This means if you block, you will always block at least 50% of the damage + whatever extra amount of reduction your Armor Stat gives you.",,,,,,,,,,,,,
+,    In PVE it is compared to a fixed value that is required for each Difficulty.,,,,,,,,,,,,,
+,"2. When receiving a Critical Hit, the higher your Armor is compared to your opponents Armor Penetration, the more of the bonus critical hit damage is reduced",,,,,,,,,,,,,
+,"    Critical Hits cannot  be blocked, so the 200% damage is never reduced, only the bonus part is reduced (if your Armor is higher).",,,,,,,,,,,,,
+,"So stacking Armor only makes sense if you are also stacking Block Chance, otherwise you are just mitigating a little bit of extra Critical Hit damage",,,,,,,,,,,,,
+,Your Block Chance default value without additional bonus factors is 6%,,,,,,,,,,,,,
+,More Information on how to increase your Block Chance can be found below:,,,,,,,,,,,,,
+,Block Chance,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,These are all the fixed Attributes that contribute to the calculation of your Armor Stat on your character sheet:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Calculation of Character Sheet Armor,,,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.,%,,Whale,Dolphin,F2P,,
+,AQUAMARINE,Normal Aquamarine Gems,,Armor from Aquamarines,,,10048,"68,18%",,3808,2624,1472,,
+,HORADRIM,Legacy of the Horadrim,,Armor from Nilfur & Cathan Vessels,,,1620,"10,99%",,1200,700,500,,
+,PARAGON,Paragon Tree,,Armor Nodes from Paragon Trees,,,1010,"6,85%",,1010,1010,1010,,
+,ATTRIBUTES,Set-Pieces,,"Fortitude from Set-Pieces x 0,1",,,925,"6,27%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment,,"Fortitude from Primary Gear x 0,1",,,925,"6,27%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment Upgrades,,"Fortitude Chest, Shoulder, Legs x 0,1",,,33,"0,22%",,33,33,33,,
+,HELLIQUARY,Demonic Remains,,"Fortitude from Demonic Remains x 0,1",,,115,"0,78%",,32,32,32,,
+,ATTRIBUTES,Set-Piece Upgrades,,"Fortitude Hands, Waist, Feet x 0,1",,,32,"0,22%",,115,115,115,,
+,TABLEAU,Ancestral Tableau,,"Fortitude from Ancestral Tableau x 0,1",,,31,"0,21%",,31,31,31,,
+,,,,,,,14.738,100%,,8.079,6.395,5.043,,
+,,,,,,,,,,,,,,
+,Reference Values in Battlegrounds,,,,,,,,,,,,,
+,F2P,Dolphin,Whale,Kraken,,,,,,,,,,
+,0 - 4000,4000 - 6000,6000 - 8000,8000+,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Armor vs Armor Penetration,,,,,,,,,,,,,
+,"In PVP, the amount of damage you take is strongly dependant on the comparison of your armor vs your opponents armor penetration",,,,,,,,,,,,,
+,"Everytime you block a hit, these two stats are compared and the damage you take (from a base of 50% because you blocked the hit) is either reduced or increased.",,,,,,,,,,,,,
+,"Furthermore if you get critically hit, these stats determine if you take the full critical hit bonus damage or if its ""just"" the critical hit.",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Critical Hit Damage Increase(PVE) = 59,5% * [ ( Player AP - Monster Armor) / Player AP - Monster Armor + 77 ) ]",,,,,,,,,,,,,
+,"Block Damage Reduction(PVE) = 19,8% * [ ( Player Armor - Monster AP) / Player Armor - Monster AP + 78 ) ]",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Here are some example values to showcase the behaviour:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Original
+Damage","Critical Hit
+Damage %","Armor Penetration
+(Player 1)","Armor
+(Player 2)","Damage
+Reduction from
+Blocking","Damage 
+taken when 
+blocking","Critical Hit
+Damage 
+incl. AP","Critical Hit
+Damage
+taken",,,,,,
+,100.000,25%,2.000,1.000,30%,30.000,82%,282.000,,,,,,
+,100.000,25%,1.500,1.000,34%,34.000,72%,272.000,,,,,,
+,100.000,25%,1.100,1.000,41%,41.000,51%,251.000,,,,,,
+,100.000,25%,1.000,1.000,50%,50.000,25%,225.000,,,,,,
+,100.000,25%,1.000,1.100,59%,59.000,10%,210.250,,,,,,
+,100.000,25%,1.000,1.500,66%,66.000,9%,208.500,,,,,,
+,100.000,25%,1.000,2.000,70%,70.000,8%,207.500,,,,,,
+,,,,,,,,,,,,,,
+,So the difference between having a high Armor stat vs a low Armor stat in comparison to your opponent is taking 40.000 dmg more (when blocking),,,,,,,,,,,,,
+,"If you get critically hit, you take 74.500 more dmg when your Armor stat is weak",,,,,,,,,,,,,
+,Let's say you have 500.000 Life and you block evey hit. That's a difference of being hit 7 times before you die and 17 times.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Potency & Duration of harmful effects,,,,,,,,,,,,,
+,"If you are the Attacker, your Potency Stat is compared to the Defenders Resistance Stat. If your Potency is higher, the duration of your harmful effects will be extended.",,,,,,,,,,,,,
+,More information on harmful effects in general can be found on the Game Page,,,,,,,,,,,,,
+,Harmful Effects,,,,,,,,,,,,,
+,"Potency increases DoT time, however for the bleed to occur 1 x time, the time interval of the increase of the duration needs to be >1 sec (30% higher Potency)",,,,,,,,,,,,,
+,"The Cap in PVP for increased Duration because of higher Potency is 50%, so a DoT that lasts 1s can only be extended to 1.5s, so a second ""Tic"" will never happen",,,,,,,,,,,,,
+,"For example a 3s duration DoT that has 3 Tics would need a 40% extended duration to add another Tic, so your Potency vs. Opponents Resistance",,,,,,,,,,,,,
+,"has to be very high to get the 40% extension. On the other side, you would only need a small amount of higher Resistance over Potency to make the",,,,,,,,,,,,,
+,"opponent's DoT Effect ""loose"" a Tic (3%)",,,,,,,,,,,,,
+,"So it is more efficent to stack Resistance, especially if you are F2P.",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Calculation of Character Sheet Potency,,,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.,%,,Whale,Dolphin,F2P,,
+,CITRINE,Normal Citrine Gems,,Potency from Citrines,,,10048,"68,22%",,3808,2624,1472,,
+,HORADRIM,Legacy of the Horadrim,,Potency from Jered Chain & Zoltan Kulles Vessels,,,1620,"11,00%",,1200,700,500,,
+,PARAGON,Paragon Tree,,Potency Nodes from Paragon Trees,,,1010,"6,86%",,1010,1010,1010,,
+,ATTRIBUTES,Set-Pieces,,"Willpower from Set-Pieces x 0,1",,,925,"6,28%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment,,"Willpower & from Primary Gear x 0,1",,,925,"6,28%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment Upgrades,,"Willpower Chest, Shoulder, Legs x 0,1",,,33,"0,22%",,33,33,33,,
+,HELLIQUARY,Demonic Remains,,"Willpower from Demonic Remains x 0,1",,,105,"0,71%",,32,32,32,,
+,ATTRIBUTES,Set-Piece Upgrades,,"Willpower Hands, Waist, Feet x 0,1",,,32,"0,22%",,115,115,115,,
+,TABLEAU,Ancestral Tableau,,"Willpower from Ancestral Tableau x 0,1",,,31,"0,21%",,31,31,31,,
+,,,,,,,14.729,100%,,8.079,6.395,5.043,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Resistance,,,,,,,,,,,,,
+,"When an enemy inflicts a harmful effect on your character, your Resistance Stats is compared to his Potency Stat to deduct if the effect will last longer or be shortened.",,,,,,,,,,,,,
+,"In Battlegrounds, when the attackers potency is higher than the targets resistance the duration of harmful effects can be up to 50% longer",,,,,,,,,,,,,
+,"But when the targets resistance is higher than the attackers potency, the duration can be shortened by up to 35%.",,,,,,,,,,,,,
+,"The difference between super high and super low resistance is around 57% shorter cc effects, 0.65/1.5=0.43. ",,,,,,,,,,,,,
+,Or in other words if your resistance is super low you get CC'd for 2.3x longer than when it's super high.,,,,,,,,,,,,,
+,In PVE your Resistance Stat is compared to a fixed value that depends on the Difficulty (see below).,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Calculation of Character Sheet Resistance,,,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.,%,,Whale,Dolphin,F2P,,
+,TOPAZ,Normal Topaz Gems,,Resistance from Topaz,,,10048,"68,18%",,3808,2624,1472,,
+,HORADRIM,Legacy of the Horadrim,,Resistance from Jered Chain & Guilt Vessels,,,1620,"11,00%",,1200,700,500,,
+,PARAGON,Paragon Tree,,Resistance Nodes from Paragon Trees,,,1010,"6,86%",,1010,1010,1010,,
+,ATTRIBUTES,Set-Pieces,,"Willpower from Set-Pieces x 0,1",,,925,"6,28%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment,,"Willpower & from Primary Gear x 0,1",,,925,"6,28%",,925,925,925,,
+,ATTRIBUTES,Primary Equipment Upgrades,,"Willpower Chest, Shoulder, Legs x 0,1",,,33,"0,22%",,33,33,33,,
+,HELLIQUARY,Demonic Remains,,"Willpower from Demonic Remains x 0,1",,,115,"0,78%",,32,32,32,,
+,ATTRIBUTES,Set-Piece Upgrades,,"Willpower Hands, Waist, Feet x 0,1",,,32,"0,22%",,115,115,115,,
+,TABLEAU,Ancestral Tableau,,"Willpower from Ancestral Tableau x 0,1",,,31,"0,21%",,31,31,31,,
+,,,,,,,14.738,100%,,8.079,6.395,5.043,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Potency vs Resistance,,,,,,,,,,,,,
+,The following table shows the behaviour of Potency vs Resistance when 2 players are fighting:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Original
+LOC time","DoT Damage
+per tick","Potency
+(Player 1)","Resistance
+(Player 2)","LOC
+Duration","LOC
+time","DoT
+ticks","DoT
+Damage",,,,,,
+,6,10.000,2000,1000,138%,"8,28",8,80.000,,,,,,
+,6,10.000,1500,1000,122%,"7,32",7,70.000,,,,,,
+,6,10.000,1100,1000,107%,"6,42",6,60.000,,,,,,
+,6,10.000,1000,1000,100%,6,6,60.000,,,,,,
+,6,10.000,1000,1100,94%,"5,64",5,50.000,,,,,,
+,6,10.000,1000,1500,81%,"4,86",4,40.000,,,,,,
+,6,10.000,1000,2000,72%,"4,32",4,40.000,,,,,,
+,,,,,,,,,,,,,,
+,"Having even a slightly higher Resistance stat over the opponents potency stat is great agains DoTs, because it means you take away at least 1 ""tick"".",,,,,,,,,,,,,
+,"For Players with DoT builds to gain an additional ""tick"" you need to have at least 500 more Potency than your opponent.",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Additional Attributes,,,,,,,,,,,,,
+,Additional Attributes are mainly the magic affixes and reforge bonus attributes on your equipment that offer % modifiers to attributes or effects and can be very powerful.,,,,,,,,,,,,,
+,An overview can be found below,,,,,,,,,,,,,
+,Overview of Additional Attributes,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Below is my personal Tier List of additional attributes:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,PVE,,,,,,,,,,,,,
+,S,"Critical
+Hit Chance","Benefitial
+Effect Duration","Cooldown
+Reduction","Critical Hit
+Damage","Primary
+Attack Damage","Damage vs
+loss of control","Attack
+Speed","Dmg vs
+Demons",,,,,
+,A,"Movement
+Speed","Dmg vs
+Elites","Damage
+vs <30%","Dmg vs
+Undead","Damage vs
+shields","Skill
+Damage",,,,,,,
+,B,"Primary Attacks
+slow enemies","Dmg done by
+your summons","Dmg taken
+by your summons","Nearby dmg
+reduced","Cheat Death
+Chance",,,,,,,,
+,C,"Evasion
+Rating","Block
+Chance","Dmg taken
+while LOC","Maximum
+Life","Dmg taken by
+continual dmg","Slow
+Resistance","Stun
+Resistance","Knockback
+Resistance",,,,,
+,D,"Your Death heals
+party members","Fear
+Resistance","Life
+Regeneration","Primary Attacks
+reduce healing","Healing Potion
+Cooldown","Accuracy
+Rating","Dmg done
+to players","Dmg taken
+from players",,,,,
+,,,,,,,,,,,,,,
+,PVP,,,,,,,,,,,,,
+,S,"Critical
+Hit Chance","Benefitial
+Effect Duration","Cooldown
+Reduction","Evasion
+Rating","Block
+Chance","Dmg taken
+from players","Dmg done
+to players","Critical Hit
+Damage","Damage vs
+loss of control",,,,
+,A,"Movement
+Speed","Accuracy
+Rating","Skill
+Damage","Attack
+Speed","Dmg taken
+while LOC","Damage vs
+shields","Maximum
+Life",,,,,,
+,B,"Stun
+Resistance","Nearby dmg
+reduced","Knockback
+Resistance","Primary Attacks
+slow enemies","Primary
+Attack Damage","Cheat Death
+Chance","Dmg taken by
+continual dmg","Damage
+vs <30%",,,,,
+,C,"Slow
+Resistance","Fear
+Resistance","Life
+Regeneration","Primary Attacks
+reduce healing","Dmg taken
+by your summons","Dmg done by
+your summons",,,,,,,
+,D,"Your Death heals
+party members","Dmg vs
+Undead","Dmg vs
+Elites","Dmg vs
+Demons","Healing Potion
+Cooldown",,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Known Caps on Attributes,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Attribute,Cap,,Attribute,Cap,,,,,,,,,
+,Attack Speed,100%,,Stun Resistance,80%,,,,,,,,,
+,Movement Speed,70%,,Fear Resistance,80%,,,,,,,,,
+,Critical Hit Dmg,120%,*new,KB Resistance,80%,,,,,,,,,
+,Cooldown,30%,,Slow Resistance,80%,,,,,,,,,
+,Block Chance,80%,,Healing Increase,80%,,,,,,,,,
+,Damage Reduction,70%,,Lifesteal,100%,,,,,,,,,
+,Accuracy,30%,,Reduce Energy,50%,,,,,,,,,
+,Evasion,30%,,Benefital Duration,no cap,,,,,,,,,
+,Cheat Death,80%,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Critical Hit Chance,,,,,,,,,,,,,
+,Critical Hit Chance is the chance to land a non-blockable hit that deals at least double damage (200%) ,,,,,,,,,,,,,
+,The default Critical Hit Chance is 3% for every character. ,,,,,,,,,,,,,
+,"Here is the formula for calculating Critical Hit Chance, taking different Buffs and diminishing returns into account:",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Critical Hit Chance  = ( 0,03 + CRITFIXED + CRITLEG_BUFFS) + ( 1 - ( 0,03 + CRITFIXED + CRITLEG_BUFFS)) * CRITHIGHEST_BUFF",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,More information on how these Buffs for Critical Hit Chance work and how they are calculated can be found here:,,,,,,,,,,,,,
+,Critical Hit Chance Buffs,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,The fixed (permanent + non-conditional) components that add to your Critical Hit Chance can have various sources:,,,,,,,,,,,,,
+,CRITFIXED = gear + runes + effects + gems,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,The following Sources are additive for CRITFIXED:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,X%,,,,,,,
+,Magic Affixes,,Primary Gear,permanent,,,30%,,,,,,,
+,Berserker's Eye,,Legendary Gem,permanent,,,2%,,,,,,,
+,ZUH,,Runes,permanent,,,8%,,,,,,,
+,Maim ,,Familiar Trait,permanent,,,"9,5%","*4 different Legendary Pets with Advanced Trait ""Maim""",,,,,,
+,Shepherd's 4pc,,Set-Piece,permanent,,,18%,,,,,,,
+,Attacker: Arrowhead of Precision,,Remnant,permanent,,,1-3%,,,,,,,
+,Attacker: War Vase,,Remnant,conditional,while above 70% life,,3%,* does not appear on character sheet,,,,,,
+,Cutthroat's Grin,,Legendary Gem,conditional,when attacking from behind,,8-24%,* does not appear on character sheet,,,,,,
+,Attacker: Liar's Pact,,Remnant,conditional,when attacking from behind,,3%,* does not appear on character sheet,,,,,,
+,Offensive Stance*,,Stance,conditional,Being in the offensive stance,,10%,"* offensive stances for BK,Crusader,Wizard (Skills)& DH, Monk (PA) not on character sheet",,,,,,
+,Gladiator: Overpower,,Paragon Skill,conditional,defeating a player,,3 - 15%,* 3% per player until defeated,,,,,,
+,Survivor: Covert Operations,,Paragon Skill,conditional,when 4 different classes in party,,10% *,* does not appear on character sheet,,,,,,
+,Slinger: Sharp Eye,,Paragon Skill,conditional,2-3% per yd between target,,2 - 8%,* does not appear on character sheet,,,,,,
+,Slinger: Uncanny,,Paragon Skill,conditional,10 stacks of Unseen Dynamism,,"6,5%",* does not appear on character sheet,,,,,,
+,Vanquisher: Judgement,,Paragon Skill,conditional,after defeating 5 monsters,,100%,* does not appear on character sheet,,,,,,
+,,,,,,,,,,,,,,
+,"When a range attack hits multiple enemies at the same time, each target will be judged individually whether to receive a critical hit.",,,,,,,,,,,,,
+,"Critical hits cannot be blocked. If an attack hits a critical hit, the opponent cannot block the attack.",,,,,,,,,,,,,
+,Monsters (PVE) have no basic critical hits.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Critical Hit Damage,,,,,,,,,,,,,
+,The Damage of a Critical Hit is calculated by the following formula:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,CRITDAMAGE = 1 + APCRIT + CONDITIONAL + GEAR,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,APCRIT is the Bonus Damage % you get from having a higher Armor Penetration stat over your opponents Armor Stat,,,,,,,,,,,,,
+,GEAR is the Bonus Damage % you can see in your Character Sheet. It can be increased by various sources like magic Attributes on Primary Equipment or Reforging,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,Type,Effect,,Trigger,,max. %,,,,,,,
+,Magix Affixes,Primary Gear,permanent,,,,36%,,,,,,,
+,Wildfire Set,Reforging,permanent,,,,18%,,,,,,,
+,Manifest Carnage,Remnants: Attacker,conditional,,when Critical Hit Chance >70%,,10%,* this cannot be seen on your character sheet,,,,,,
+,Decimate,Familar Trait,permanent,,,,"9,5%","*4 different Legendary Pets with Advanced Trait ""Maim""",,,,,,
+,,,,,,,,,,,,,,
+,Let's assume you have 20.000 damage and your Critical Hit Damage % Stat GEAR is 15% and you manage to land a Critical Hit.,,,,,,,,,,,,,
+,"If your Armor Penetration is equal to the Opponent's Armor Stat, you would deal 20.000 x [200% + 0 + 15%] = 43.000 damage",,,,,,,,,,,,,
+,"If your Armor Penetration is much lower than the Opponent's Armor Stat, you would deal 20.000 x [200% + (100% - 70%)*15%] = 40.900 damage",,,,,,,,,,,,,
+,"If your Armor Penetration is much higher than the Opponent's Armor Stat, you would deal 20.000 x [200% + 57% + 15%] = 54.400 in PVE or ",,,,,,,,,,,,,
+,"45.000 damage in PVP, because the bonus from Armor Penetration is capped at 10% for PVP",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,There are also temporary Buffs to Critical Hit Damage. More information can be found here:,,,,,,,,,,,,,
+,Critical Hit Damage Buffs,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Benefitial Effect Duration,,,,,,,,,,,,,
+,"All benefitial effects have a duration that can be enhanced by your ""Duration of benefitial effects"" stat. There are various sources to enhance this stat:",,,,,,,,,,,,,
+,In combination with Cooldown Reduction you can achieve 100% uptime for some of your buffs,,,,,,,,,,,,,
+,More Information can be found here:,,,,,,,,,,,,,
+,Benefitial Effects,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Cooldown Reduction,,,,,,,,,,,,,
+,"Allmost all skills have a cooldown, which means it takes X seconds before you can use the skill again. The Cooldown reduction reduces this time by X%",,,,,,,,,,,,,
+,"Cooldown Reduction is not affected by the Strife debuff, so it is a very valuable stat.",,,,,,,,,,,,,
+,Maximum cooldown reduction is 30%,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Block Chance,,,,,,,,,,,,,
+,Block chance is the probability to block a hit.,,,,,,,,,,,,,
+,"1. When blocking damage, the higher your Armor is compared to your opponents Armor Penetration (PVP), the more damage you will block from a base of 50%.",,,,,,,,,,,,,
+,"    This means if you block, you will always block at least 50% of the damage + whatever extra amount of reduction your Armor Stat gives you.",,,,,,,,,,,,,
+,    In PVE Open World it is compared to a fixed value that is required for each Difficulty.,,,,,,,,,,,,,
+,"2. When receiving a Critical Hit, the higher your Armor is compared to your opponents Armor Penetration (PVP), the more of the bonus critical hit damage is reduced",,,,,,,,,,,,,
+,"    Critical Hits cannot  be blocked, so the 200% damage is never reduced, only the bonus part is reduced (if your Armor is higher).",,,,,,,,,,,,,
+,"So stacking Armor only makes sense if you are also stacking Block Chance, otherwise you are just mitigating a little bit of extra Critical Hit damage",,,,,,,,,,,,,
+,Your Block Chance default value without additional bonus factors is 6%,,,,,,,,,,,,,
+,In PVP your Block Chance from Gear and Legendary Gems is reduced by a debuff of 70%.,,,,,,,,,,,,,
+,BLOCK CHANCE = 0.06 + 0.3 x (AFFIXES + REFORGE + LEGENDARY) + PARAGON + WARBAND_ROLE + REMNANTS + AWAKENING,,,,,,,,,,,,,
+,"The best ways to improve your block chance are reforging, stacking gear pieces with magic affixes block chance and choosing the Protector Warband Role",,,,,,,,,,,,,
+,Some Legendary Gems also have Block Chance +2% as an awakened bonus when you get them to Rank 10 and fill the resonance slots,,,,,,,,,,,,,
+,The table below shows all the ways (besides class-specific essences) to increase your block chance:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Magic Affixes on Gear,,Magic Affixes,permanent,,,15%,,,,,,,
+,Barrier Set,,Reforge Bonus,permanent,,,16%,,,,,,,
+,Protector: Buckle of Obstruction,,Remnant,permanent,,,"4,50%","* 1,5% per Remnant",,,,,,
+,Role: Protector,,Warband Role,permanent,,,5%,,,,,,,
+,Respite Stone,,Legendary Gem,conditional,when below 50% life,,6%,,,,,,,
+,Awakening,,Resonance Bonus,permanent,,,16%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Primary Attack Speed,,,,,,,,,,,,,
+,Primary Attack Speed is the speed of your primary attacks and only affects your primary attack and the primary attack of your summons.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Caarsen's Invigoration,,Legendary Gem,permanent,,,16%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Skill Attack Speed,,,,,,,,,,,,,
+,This only affects the attack rate of your Skills.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Entropic Well,,Legendary Gem,permanent,,,4%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Attack Speed,,,,,,,,,,,,,
+,Attack Speed is the speed of your primary attacks and skills and affects the speed of the animation. ,,,,,,,,,,,,,
+,"Note that Attack Speed does not influence continual damage effects, so it does not shorten the dime between damage ""ticks"".",,,,,,,,,,,,,
+,Attack Speed modifiers come from different sources and either add permanent attack speed buffs or temporary buffs. It is capped at +100% max.,,,,,,,,,,,,,
+,The table below shows all the non class specific ways to increase your attack speed:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Magic Affixes,,Magic Affixes,permanent,,,15%,,,,,,,
+,Vengeance Set,,Reforge Bonus,permanent,,,12%,,,,,,,
+,Attacker: Curb Bit of Haste,,Remnant,permanent,,,1%,,,,,,,
+,,,,,,,,,,,,,,
+,"Attack Speed is an important stat especially for classes that do most of their damage with primary attacks, like Demon Hunters",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Movement Speed (&Size),,,,,,,,,,,,,
+,"Being fast is very important in almost all game modes, so buffs to your movement speed are very useful.",,,,,,,,,,,,,
+,"The basic movement speed of all classes is the same (4,26yd / s)",,,,,,,,,,,,,
+,"Your Size does also impact your Movement Speed. While it is not visible on the Attributes Sheet, the bigger you are, the faster you move.",,,,,,,,,,,,,
+,"Movement Speed is not affected by the Strife debuff, so it is a very valuable stat.",,,,,,,,,,,,,
+,The passive Attribute Movement Speed is capped at +20%,,,,,,,,,,,,,
+,Total Movement Speed when buffed is capped at +70%.,,,,,,,,,,,,,
+,The Cap on Size increase is 150%,,,,,,,,,,,,,
+,More Information on how Buffs interact with movement speed can be found here:,,,,,,,,,,,,,
+,Movement Speed Buffs,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Additionally, channeling skills that increase movement have a different calculation (max. bonus speed here is an extra x 100%)",,,,,,,,,,,,,
+,"If you increase the attack speed your skills, this leads to an increase of the movement speed while channeling that skill (e.g. Helicopter Monk)",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Skills that determine their damage from movement speed do not consider your Size in their damage calculation,,,,,,,,,,,,,
+,The part of the permanent movement speed that exceeds 20% cannot offset the deceleration ,,,,,,,,,,,,,
+,The part of the total character sheet movement speed that exceeds 70% can offset deceleration.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Permanent Movement Speed (Cap: 20%),,,,,,,,,,,,,
+,Name,Type,Effect,Trigger,,max. X%,Duration,Cooldown,,,,,,
+,Set Gear,Magic Affixes,permanent,,,16%,,,,,,,,
+,Blood Soaked Jade,Legendary Gem,permanent,,,10%,,,,,,,,
+,Role: Survivor,Warband Role,permanent,,,5%,,,,,,,,
+,Stag of Swiftness,Remnant: Survivor,permanent,,,"4,5%",,,"* 3 x 1,5% Remnants",,,,,
+,Lone Wolf,Paragon: Slinger,conditional,when no enemies are within 3y,,10%,,,* does not appear on the character sheet,,,,,
+,,,,,,,,,,,,,,
+,These are the sources that can permanently increase your size:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Permanent Size (Cap: 150%),,,,,,,,,,,,,
+,Name,Type,Effect,Trigger,,max. X%,Duration,Cooldown,,,,,,
+,Shepherds,Remnant,Size +X%,permanent,,15%,,,,,,,,
+,Rugged,Paragon: Warden,Size +X%,permanent,,8%,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Fear Resistance,,,,,,,,,,,,,
+,"When an enemy uses a fear effect on you, this stat gives you a % chance of the fear effect not happening to you",,,,,,,,,,,,,
+,This Stat can be improved through Gear Affixes and the Barrier Reforge Bonus,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Magic Affixes on Gear,,Magic Affix,permanent,,,70%,,,,,,,
+,Barrier Reforge Attribute,,Reforges,permanent,,,32%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Knockback Resistance,,,,,,,,,,,,,
+,"When an enemy uses a knockback effect on you, this stat gives you a % chance of the knockback effect not happening to you",,,,,,,,,,,,,
+,This Stat can be improved through Gear Affixes and the Tremor Reforge Bonus,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Magic Affixes on Gear,,Magic Affix,permanent,,,70%,,,,,,,
+,Tremor Reforge Attribute,,Reforges,permanent,,,32%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Stun Resistance,,,,,,,,,,,,,
+,"When an enemy uses a stun effect on you, this stat gives you a % chance of the stun effect not happening to you",,,,,,,,,,,,,
+,This Stat can be improved through Gear Affixes and the Tremor Reforge Bonus,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Magic Affixes on Gear,,Magic Affix,permanent,,,70%,,,,,,,
+,Tremor Reforge Attribute,,Reforges,permanent,,,32%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Slow Resistance,,,,,,,,,,,,,
+,"When an enemy uses a slow effect on you, this stat gives you a % chance of the slow effect not happening to you",,,,,,,,,,,,,
+,This Stat can be improved through Gear Affixes and the Jolt Reforge Bonus,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Magic Affixes on Gear,,Magic Affix,permanent,,,70%,,,,,,,
+,Jolt Reforge Attribute,,Reforges,permanent,,,32%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Accuracy,,,,,,,,,,,,,
+,"Your Accuracy Rating is compared to the Defenders Evasion Rating. If your Stat is higher, your attacks are more likely to hit them",,,,,,,,,,,,,
+,"There are not many Essences or ways to improve this Stat. It is mostly found on Primary Gear (Head, Shoulder, Main-Hand)",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,Magic Affixes on Gear,,Magic Affix,permanent,,,45%,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Evasion,,,,,,,,,,,,,
+,"Your Evasion Rating is compared to the Attackers Accuracy Rating. If your Stat is higher, you are more likely to evade an attack",,,,,,,,,,,,,
+,"Evading an attack means you take 0 damage, which makes it on of the best stats to have in PVP.",,,,,,,,,,,,,
+,Currently there is only a few ways to improve this stat.,,,,,,,,,,,,,
+,"Some classes have Essences that enhance this stat (e.g. Blood Knight's ""Void of the Crescent"" Head Essence for the Shroud of Night Skill)",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,,Type,Effect,Trigger,,max. X%,,,,,,,
+,VOX / QOT,,Rune,conditional,Number of enemies,,6% / 8%,,,,,,,
+,Legendary Affix,,Primary Gear,conditional,Number of enemies,,24%,* 4 x 6%,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Cheat Death,,,,,,,,,,,,,
+,"This Stat is only relevant for PVP. When you increase your Cheat Death Chance, you increase the chance of surviving a fatal attack with 1 HP.",,,,,,,,,,,,,
+,You can increase your chance by reforging or with Gear peaces that offer the Magic Affix.,,,,,,,,,,,,,
+,Additional ways to cheat your death can be found here:,,,,,,,,,,,,,
+,Cheat Death,,,,,,,,,,,,,
+,"These do not count towards the Attribute ""Cheat Death Chance""",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Name,Type,,Effect,,,Trigger,max. X%,Cooldown,,,,,
+,Magic Affixes,Magic Affixes,,Cheat Death chance increased by X%,,,when you die,30%,,,,,,
+,Jolt Family,Reforge Bonus,,Cheat Death chance increased by X%,,,when you die,48%,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Damage taken reduced,,,,,,,,,,,,,
+,"How much damage you take is dependant on your class, the difference between Combat Rating, Evasion Rating, Damage reducing effects and your Block Chance",,,,,,,,,,,,,
+,In Battlegrounds an additional 40% damage reduction is active for all players.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Like the Damage Formula, the Damage Reduction also has different categories, but they are not multiplicative ",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,DAMAGE REDUCTION =,,GENERAL +,LEGENDARY +,EFFECTS +,CR_BONUS,Cycle of Strife,,,,,,,
+,CAP 70%,,Gear Magic Affixes,Legendary Gems,strongest Buff,-10% / +10%,shadow rank,,,,,,,
+,,,Reforges,,strongest Debuff,,badges,,,,,,,
+,,,Runes ,,,,vigil of blades,,,,,,,
+,,,Paragon,,,,,,,,,,,
+,,,Remnant,,,,,,,,,,,
+,,,Runes ,,,,,,,,,,,
+,,,Familiars,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Damage reducing effects can come from multiple sources:,,,,,,,,,,,,,
+,"Similar to Damage Buffs, only the strongest damage reduction Effect is active if multiple of the same damage reducing temporary effects are triggred at the same time",,,,,,,,,,,,,
+,More information on how Damage Reduction Buffs work can be found here:,,,,,,,,,,,,,
+,Damage reduction Buffs,,,,,,,,,,,,,
+,Here is an overview of all the fixed (permanent and conditional) sources that can enhance your Damage Reduction Stat:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Effect,,"Gear
+Magic Affix","Reforge
+Bonus","Legendary
+Gem","Paragon
+Tree","Remnant
+","Awakening
+Gem Resonance",Runes,Familiar,"Max. Possible
+Value",,,
+,Strifed in BG ->,,yes,yes,yes,no,no,no,yes,yes,,,,
+,Damage taken decreased by X%,,10%,,"24% - Battleguard
+16% - Respite Stone
+8% - Blood Soaked Jade
+6% - Defiant Soul
+4,5% - Unity Crystal
+4% - Mossthorn
+2% - Trickshot Gem","12,5% - Survivor
+10% - Massacre
+7,5% - Soldier
+3% - Mastermind","3,5% - Survivor Role
+3% - The Black Skull
+3% - Armlet of Grit
+3% - Lord Maxwell
+1,2% - Protector Role",8%,"3% - DRO, PIN","7,5%",53%,,,
+,"Damage taken from players
+decreased by X% (not strifed)",,8%,8% - Jolt,,4% - Gladiator,,,4% - TAHT,,24%,,,
+,"Damage taken by continual damage
+decreased by X%",,30%,36% - Tremor,4% - Eye o.t. Unyielding,,,,"4% - LAZ, ATI. LUX
+8% - TOR",,"24,6%",,,
+,"Damage taken from nearby enemies
+decreased by X%",,16%,,,10% - Brawler,3% - Ammon Shell,16%,8% - TOR,,"20,2%",,,
+,"Damage taken while moving 
+decreased by X%",,30%,,15% - Unrefined Passage,,,24%,"3% - NIE,RAE,TYR
+9% - OTH + OUN",,"41,1%",,,
+,"Damage taken while suffering from LOC
+decreased by X%",,40%,24% - Jolt,"4% - Pain of Subjugation
+4% - Lucent Watcher",,,32%,"2% - WEH, VOX, CIR
+8% - PHY+DYN",,"56,6%",,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Overview,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Additional Attributes
+Max. Stats",,"Max.
+Bonus
+PVP","Max.
+Bonus
+PVE","Gear
+Magic
+Affixes","Reforge 
+ Bonus","Awakening
+Gem
+Bonus","Set
+Pieces",Runes,"Legendary
+Gems","Paragon
+Tree","Familiar
+Traits",Remnants,
+,Damage done increased by X% per nearby party member,,"13,25%","25,5%","17,5%",/,8%,,,,,,,
+,Primary Attack damage increased by X%,,"69,90%","142,0%",45%,32%,24%,15%,9%,2%,,"10,5%","4,5%",
+,Attack Speed increased by X%,,"49,00%","89,0%",20%,16%,16%,,4%,20%,10%,,3%,
+,Critical Hit Chance increased by X%,,"43,67%","88,5%","30,0%",/,,,8%,26%,12%,"9,5%",3%,
+,Critical Hit Damage increased by X%,,"30,17%","90,5%",45%,24%,,,12%,,,"9,5%",,
+,Skill damage increased by X%,,"42,50%","95,5%",30%,16%,16%,,6%,18%,,"9,5%",,
+,Beneficial effect duration increased by X%,,"54,50%","103,5%",24%,24%,,30%,9%,12%,,,"4,5%",
+,Skill cooldowns reduced by X%,,30%,30%,16%,/,30%,,8%,6%,,,,
+,Movement speed increased by X%,,20%,20%,20%,/,,,6%,10%,10%,,,
+,Primary Attacks have a X% chance to reduce enemy Attack and Movement Speeds,,"50,00%","150,0%",90%,48%,,,12%,,,,,
+,Item base Damage increased by X%,,"35,00%","105,0%","45,0%",/,,,60%,,,,,
+,Block Chance increased by X%,,"32,33%","58,0%",15%,16%,16%,,6%,,,,5%,
+,Item base Life increased by X%,,"21,67%","65,0%","45,0%",/,,,20%,,,,,
+,Maximum Life increased by X%,,"32,5%","32,5%",12%,8%,,,3%,,,"9,5%",,
+,Cheat Death chance increased by X%,,"26,00%","78,0%",30%,48%,,,,,,,,
+,Damage taken reduced by X%,,"12,50%","37,5%","15,0%",/,,,3%,10%,,"9,5%",,
+,Damage done to players increased by X%,,"37,5%",n.r.,8%,12%,,,4%,,4%,"9,5%",,
+,Damage taken from players reduced by X%,,"37,5%",n.r.,12%,8%,,,4%,,4%,"9,5%",,
+,Primary Attacks reduce enemy healing by X%,,"31,00%","93,0%",45%,48%,,,,,,,,
+,Accuracy Rating increased by X%,,"15,00%","45,0%",45%,/,,,,,,,,
+,Damage done by your summons increased by X%,,"21,67%","65,0%",30%,32%,,,,3%,,,,
+,Damage done to beasts increased by X%,,n.r.,"80,0%","80,0%",/,,,,,,,,
+,Damage done to demons increased by X%,,n.r.,"108,0%",60%,48%,,,,,,,,
+,Damage done to undead increased by X%,,n.r.,"108,0%",60%,48%,,,,,,,,
+,Damage done to Elites increased by X%,,n.r.,"126,0%",60%,48%,,,8%,10%,,,,
+,Damage done to enemies below 30% Life increased by X%,,"65,33%","132,0%",60%,32%,32%,,8%,,,,,
+,Damage done to enemies suffering loss of control increased by X%,,"91,17%","179,5%",63%,40%,32%,15%,4%,26%,,,,
+,Damage done to full Life enemies increased by X%,,"76,67%","150,0%","100,0%",/,40%,,10%,,,,,
+,Damage done to shielded enemies is increased by X%,,"34,67%","104,0%",40%,48%,,,16%,,,,,
+,Damage taken by continual damage decreased by X%,,"32,00%","96,0%",40%,48%,,,4%,4%,,,,
+,Damage taken by your summons decreased by X%,,"26,00%","78,0%",40%,32%,,,,6%,,,,
+,Damage taken from nearby enemies decreased by X%,,"53,33%","96,0%",24%,16%,32%,,,24%,,,,
+,Damage taken while moving decreased by X%,,"51,50%","90,5%","37,5%",/,32%,,6%,15%,,,,
+,Damage taken while suffering loss of control decreased by X%,,"71,33%","150,0%",70%,32%,32%,,8%,8%,,,,
+,Fear resistance increased by X%,,"34,00%","102,0%",70%,32%,,,,,,,,
+,Healing Potion cooldown decreased by X%,,n.r.,"32,0%",16%,16%,,,,,,,,
+,Knockback resistance increased by X%,,"34,00%","102,0%",70%,32%,,,,,,,,
+,Slow resistance increased by X%,,"34,00%","102,0%",70%,32%,,,,,,,,
+,Stun resistance increased by X%,,"35,33%","106,0%",70%,32%,,,4%,,,,,
+,Your death heals party members for X% of their Life,,"13,67%","41,0%",25%,16%,,,,,,,,
+,,,,,,,,,,,,,,
+,Magic Affixes cannot all appear on every Gear Piece. The following table shows which attributes can roll on which Gear Piece.,,,,,,,,,,,,,
+,The upper limits of rolls for Magic Affixes on your Equipment pieces are the following:,,,,,,,,,,,,,
+,"The numbers in brackets before the affix identify ""Affix Groups"". The Affixes within such a group will not roll together on an equipment piece",,,,,,,,,,,,,
+,"However through Enchanting, you can manage to get these Affixes together on a piece",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Magic Affixes
+Max. Stats from 
+single Attribute Gear",,Head,"Shoul-
+ders","Main 
+Hands
+x2","Off 
+Hands
+x2",Chest,Legs,Neck,"Rings
+x2","Braces
+x2",Hands,Waist,Feet
+,Skill cooldowns +X%,,/,/,/,/,/,/,4%,4%,/,4%,/,/
+,Movement speed X%,,/,/,/,/,/,/,5%,5%,/,5%,/,/
+,Beneficial effect duration  X%,,/,/,/,/,"7,5%","7,5%",/,/,/,/,"7,5%","7,5%"
+,[1] Attack Speed  X%,,5%,5%,5%,/,/,/,/,/,/,/,/,/
+,Critical Hit Chance  X%,,5%,5%,5%,5%,/,/,/,/,/,/,/,/
+,Critical Hit Dmg  X%,,"7,5%","7,5%","7,5%","7,5%",/,/,/,/,/,/,/,/
+,Dmg done to players  X%,,/,/,/,/,/,/,"2,5%","2,5%",/,"2,5%",/,/
+,Skill Dmg  X%,,5%,5%,5%,5%,/,/,/,/,/,/,/,/
+,Item base Dmg  X%,,"7,5%","7,5%","7,5%","7,5%",/,/,/,/,/,/,/,/
+,Primary Attack Dmg  X%,,"7,5%","7,5%","7,5%","7,5%",/,/,/,/,/,/,/,/
+,[1] Accuracy Rating  X%,,15%,15%,15%,/,/,/,/,/,/,/,/,/
+,[2] Dmg done by your summons X%,,/,/,/,/,/,/,10%,10%,/,/,/,/
+,[2] Dmg done X% per nearby party,,/,/,"2,5%","2,5%","2,5%",/,/,/,/,"2,5%",/,/
+,[2] Dmg vs beasts  X%,,10%,10%,10%,10%,10%,/,/,/,/,10%,/,/
+,[2] Dmg vs demons  X%,,/,/,10%,10%,10%,/,/,/,/,10%,/,/
+,[2] Dmg vs undead  X%,,/,/,10%,10%,10%,/,/,/,/,10%,/,/
+,[2] Dmg vs Elites  X%,,/,/,10%,10%,10%,/,/,/,/,10%,/,/
+,[2] Dmg vs enemies <30% Life  X%,,10%,10%,10%,/,/,/,/,10%,/,/,/,/
+,[2] Dmg vs enemies suffering LOC  X%,,/,/,"12,5%","12,5%",/,/,/,/,/,"12,5%",/,/
+,[2] Dmg vs full Life enemies  X%,,"12,5%","12,5%","12,5%","12,5%",/,/,"12,5%",/,/,"12,5%",/,/
+,[2] Dmg vs shielded enemies is  X%,,/,/,10%,/,/,/,/,10%,/,/,/,/
+,Block Chance  X%,,/,/,/,/,5%,5%,/,/,/,/,5%,/
+,Item base Life  X%,,/,/,/,/,"7,5%","7,5%",/,/,"7,5%",/,"7,5%","7,5%"
+,Maximum Life  X%,,/,/,/,/,"2,5%","2,5%",/,/,"2,5%",/,"2,5%","2,5%"
+,Dmg taken from players X%,,/,/,/,/,/,/,"2,5%","2,5%","2,5%","2,5%",/,/
+,Dmg taken  X%,,/,/,/,/,"2,5%","2,5%",/,/,"2,5%",/,"2,5%","2,5%"
+,[3] Dmg taken continual dmg X%,,/,/,/,/,10%,/,10%,/,10%,/,/,"10,0%"
+,[3] Dmg taken summons  X%,,/,/,/,/,/,/,10%,10%,/,10%,/,/
+,Dmg taken nearby enemies X%,,/,/,/,/,4%,4%,/,/,4%,/,4%,"4,0%"
+,[3] Dmg taken while moving  X%,,/,/,/,"7,5%","7,5%","7,5%",/,/,/,/,"7,5%",/
+,[3] Dmg taken suffering LOC X%,,/,/,5%,5%,5%,5%,/,/,/,/,5%,/
+,[6] Primary Attacks X% chance slow,,15%,15%,15%,15%,/,/,/,/,/,/,/,/
+,[6] PA reduce enemy healing X%,,"7,5%","7,5%","7,5%","7,5%",/,/,/,/,/,/,/,/
+,[4] Cheat Death chance  X%,,/,/,/,/,10%,10%,/,/,/,/,10%,/
+,[4] Fear resistance  X%,,/,/,/,10%,10%,/,10%,/,10%,/,/,"10,0%"
+,[4] Knockback resistance  X%,,/,/,/,10%,10%,/,10%,/,10%,/,/,"10,0%"
+,[4] Slow resistance  X%,,/,/,/,10%,10%,/,10%,/,10%,/,/,"10,0%"
+,[4] Stun resistance  X%,,/,/,/,10%,10%,/,10%,/,10%,/,/,"10,0%"
+,[5] Your death heals party X% ,,/,/,/,/,5%,/,5%,/,5%,/,/,"5,0%"
+,[5] Healing Potion cooldown X%,,/,/,/,/,/,/,4%,/,4%,/,/,"4,0%"
+,,,,,,,,,,,,,,
+,The maximum rolls for Magic Affixes on gear with double or triple or even quadruple magic affixes are a bit lower than on single affix items:,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,"Magic Affixes
+Max. Stats from double/triple/quadruple
+Attribute Gear",,Head,"Shoul-
+ders","Main 
+Hands
+x2","Off 
+Hands
+x2",Chest,Legs,Neck,"Rings
+x2","Braces
+x2",Hands,Waist,Feet
+,Skill cooldowns +X%,,/,/,/,/,/,/,3%,3%,/,3%,/,/
+,Movement speed X%,,/,/,/,/,/,/,3%,3%,/,3%,/,/
+,Beneficial effect duration  X%,,/,/,/,/,6%,6%,/,/,/,/,6%,6%
+,[1] Attack Speed  X%,,4%,4%,4%,/,/,/,/,/,/,/,/,/
+,Critical Hit Chance  X%,,4%,4%,4%,4%,/,/,/,/,/,/,/,/
+,Critical Hit Dmg  X%,,6%,6%,6%,6%,/,/,/,/,/,/,/,/
+,Dmg done to players  X%,,/,/,/,/,/,/,2%,2%,/,2%,/,/
+,Skill Dmg  X%,,4%,4%,4%,4%,/,/,/,/,/,/,/,/
+,Item base Dmg  X%,,6%,6%,6%,6%,/,/,/,/,/,/,/,/
+,Primary Attack Dmg  X%,,6%,6%,6%,6%,/,/,/,/,/,/,/,/
+,[1] Accuracy Rating  X%,,12%,12%,12%,/,/,/,/,/,/,/,/,/
+,[2] Dmg done by your summons X%,,/,/,/,/,/,/,10%,10%,/,/,/,/
+,[2] Dmg done X% per nearby party,,/,/,2%,2%,2%,/,/,/,/,2%,/,/
+,[2] Dmg vs beasts  X%,,8%,8%,8%,8%,8%,/,/,/,/,8%,/,/
+,[2] Dmg vs demons  X%,,/,/,8%,8%,8%,/,/,/,/,8%,/,/
+,[2] Dmg vs undead  X%,,/,/,8%,8%,8%,/,/,/,/,8%,/,/
+,[2] Dmg vs Elites  X%,,/,/,8%,8%,8%,/,/,/,/,8%,/,/
+,[2] Dmg vs enemies <30% Life  X%,,8%,8%,8%,/,/,/,/,8%,/,/,/,/
+,[2] Dmg vs enemies suffering LOC  X%,,/,/,10%,10%,/,/,/,/,/,10%,/,/
+,[2] Dmg vs full Life enemies  X%,,10%,10%,10%,10%,/,/,10%,/,/,10%,/,/
+,[2] Dmg vs shielded enemies is  X%,,/,/,8%,/,/,/,/,8%,/,/,/,/
+,Block Chance  X%,,/,/,/,/,4%,4%,/,/,/,/,4%,/
+,Item base Life  X%,,/,/,/,/,6%,6%,/,/,6%,/,6%,6%
+,Maximum Life  X%,,/,/,/,/,2%,2%,/,/,2%,/,2%,2%
+,Dmg taken from players X%,,/,/,/,/,/,/,2%,2%,2%,2%,/,/
+,Dmg taken  X%,,/,/,/,/,2%,2%,/,/,2%,/,2%,2%
+,[3] Dmg taken continual dmg X%,,/,/,/,/,8%,/,8%,/,8%,/,/,8%
+,[3] Dmg taken summons  X%,,/,/,/,/,/,/,8%,8%,/,8%,/,/
+,Dmg taken nearby enemies X%,,/,/,/,/,3%,3%,/,/,3%,/,3%,3%
+,[3] Dmg taken while moving  X%,,/,/,/,6%,6%,6%,/,/,/,/,6%,/
+,[3] Dmg taken suffering LOC X%,,/,/,4%,4%,4%,4%,/,/,/,/,4%,/
+,[6] Primary Attacks X% chance slow,,"12,5%","12,5%","12,5%","12,5%",/,/,/,/,/,/,/,/
+,[6] PA reduce enemy healing X%,,6%,6%,6%,6%,/,/,/,/,/,/,/,/
+,[4] Cheat Death chance  X%,,/,/,/,/,8%,8%,/,/,/,/,8%,/
+,[4] Fear resistance  X%,,/,/,/,8%,8%,/,8%,/,8%,/,/,8%
+,[4] Knockback resistance  X%,,/,/,/,8%,8%,/,8%,/,8%,/,/,8%
+,[4] Slow resistance  X%,,/,/,/,8%,8%,/,8%,/,8%,/,/,8%
+,[4] Stun resistance  X%,,/,/,/,8%,8%,/,8%,/,8%,/,/,8%
+,[5] Your death heals party X% ,,/,/,/,/,4%,/,4%,/,4%,/,/,4%
+,[5] Healing Potion cooldown X%,,/,/,/,/,/,/,3%,/,3%,/,/,3%
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Badge of Valor,,,,,,,,,,,,,
+,At the End of each Cycle of Strife you get a badge based on the rating in 4 categories,,,,,,,,,,,,,
+,"based on your score you will get a ""Badge of Valor. The last 3 Badges of Valor are active and will give you up to 12% bonus damage / life in all your",,,,,,,,,,,,,
+,"Cycle of Strife activities (Battlegrounds, Raid the Vault, Shadow War, Rite of Exile, Path of Blood)",,,,,,,,,,,,,
+,How to get the Badge is listed here:,,,,,,,,,,,,,
+,DEEDS OF VALOR,,,,,,,,,,,,,

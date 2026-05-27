@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Commitlint Configuration",
+  "description": "JSON Schema for commitlint configuration validation",
+  "type": "object",
+  "properties": {
+    "extends": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of configurations to extend"
+    },
+    "rules": {
+      "type": "object",
+      "description": "Rules for commit message validation",
+      "properties": {
+        "type-enum": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "array", "items": { "type": "string" } }
+          ],
+          "description": "Allowed commit types"
+        },
+        "scope-enum": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "array", "items": { "type": "string" } }
+          ],
+          "description": "Allowed scopes"
+        },
+        "scope-case": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            {
+              "type": "string",
+              "enum": [
+                "lower-case",
+                "upper-case",
+                "camel-case",
+                "kebab-case",
+                "pascal-case",
+                "snake-case"
+              ]
+            }
+          ],
+          "description": "Case requirement for scope"
+        },
+        "subject-case": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            {
+              "type": "string",
+              "enum": [
+                "lower-case",
+                "upper-case",
+                "camel-case",
+                "kebab-case",
+                "pascal-case",
+                "snake-case"
+              ]
+            }
+          ],
+          "description": "Case requirement for subject"
+        },
+        "subject-empty": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] }
+          ],
+          "description": "Whether subject can be empty"
+        },
+        "subject-full-stop": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "string" }
+          ],
+          "description": "Subject ending character"
+        },
+        "subject-max-length": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "integer" }
+          ],
+          "description": "Maximum subject length"
+        },
+        "subject-min-length": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "integer" }
+          ],
+          "description": "Minimum subject length"
+        },
+        "header-max-length": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "integer" }
+          ],
+          "description": "Maximum header length"
+        },
+        "body-max-line-length": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "integer" }
+          ],
+          "description": "Maximum body line length"
+        },
+        "footer-max-line-length": {
+          "type": "array",
+          "items": [
+            { "type": "integer", "enum": [0, 1, 2] },
+            { "type": "string", "enum": ["always", "never"] },
+            { "type": "integer" }
+          ],
+          "description": "Maximum footer line length"
+        }
+      }
+    },
+    "parserPreset": {
+      "type": "object",
+      "description": "Parser preset configuration"
+    },
+    "ignores": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Functions to ignore certain commits"
+    },
+    "defaultIgnores": {
+      "type": "boolean",
+      "description": "Whether to use default ignore rules"
+    },
+    "prompt": {
+      "type": "object",
+      "description": "Interactive prompt configuration"
+    }
+  },
+  "additionalProperties": true
+}

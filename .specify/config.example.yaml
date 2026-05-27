@@ -1,0 +1,136 @@
+# Spec-Kit Project Configuration
+# Copy this file to config.yaml and customize for your project.
+# The actual config.yaml should be committed to version control.
+
+naming:
+  # ═══════════════════════════════════════════════════════════
+  # BRANCH AND FOLDER NAMING TEMPLATES
+  # ═══════════════════════════════════════════════════════════
+  #
+  # Available tokens:
+  #   {type}     - Branch type: "feature" or "fix" (auto-detected or specified)
+  #   {ticket}   - Ticket/identifier: "PROJ-001" or just "PROJ" (from --ticket or project.identifier)
+  #   {seq}      - Zero-padded sequence number: "001", "042"
+  #   {summary}  - Raw description text (lowercase)
+  #   {kebab}    - Kebab-case summary: "user-auth"
+  #   {date}     - Date in YYYYMMDD format: "20260214"
+  #   {branch}   - Full branch name (for folder_format only)
+  #
+  # The {branch} token in folder_format keeps folder in lockstep with branch.
+  # This eliminates any possibility of mismatch between branch and folder names.
+  #
+  # Example configurations:
+  #
+  # 1. Full lockstep (recommended):
+  #    branch_format: "{type}/{ticket}-{seq}-{kebab}"
+  #    folder_format: "specs/{branch}"
+  #    Result: feature/PROJ-001-user-auth → specs/feature/PROJ-001-user-auth/
+  #
+  # 2. Strip prefix (legacy):
+  #    branch_format: "{type}/{ticket}-{seq}-{kebab}"
+  #    folder_format: "specs/{seq}-{kebab}"
+  #    Result: feature/PROJ-001-user-auth → specs/001-user-auth/
+  #
+  # 3. GitFlow style:
+  #    branch_format: "{type}/{ticket}-{kebab}"
+  #    folder_format: "specs/{ticket}-{kebab}"
+  #    Result: feature/PROJ-user-auth → specs/PROJ-user-auth/
+  #
+  # 4. Date-based:
+  #    branch_format: "{type}/{date}-{kebab}"
+  #    folder_format: "specs/{date}-{kebab}"
+  #    Result: feature/20260214-user-auth → specs/20260214-user-auth/
+  #
+  # 5. Minimal (no identifier):
+  #    branch_format: "{type}/{seq}-{kebab}"
+  #    folder_format: "specs/{branch}"
+  #    Result: feature/001-user-auth → specs/feature/001-user-auth/
+
+  branch_format: "{type}/{ticket}-{seq}-{kebab}"
+  folder_format: "specs/{branch}"
+
+  # ─────────────────────────────────────────────────────────────
+  # OPTIONAL: Branch name validation
+  # ─────────────────────────────────────────────────────────────
+  # Regex to enforce team conventions. Fails with clear error if mismatch.
+  #
+  # Example patterns:
+  #   "^(feature|fix)/[A-Z]+-\\d{3}-[a-z0-9-]+$"
+  #     → Enforces: feature/PROJ-001-user-auth
+  #
+  #   "^(feature|bugfix|hotfix)/[A-Z]+-\\d+-[a-z0-9-]+$"
+  #     → GitFlow style with flexible number length
+  #
+  #   "^(feature|fix)/[a-z0-9-]+$"
+  #     → Simple: just requires type prefix
+  #
+  # Leave empty ("") to skip validation.
+
+  validate_branch: ""
+
+  # ─────────────────────────────────────────────────────────────
+  # TYPE DETECTION
+  # ─────────────────────────────────────────────────────────────
+  # Auto-detect branch type from description keywords.
+  # When true, descriptions containing fix/bug/repair keywords create 'fix' branches.
+  #
+  # Keywords triggering 'fix':
+  #   fix, bug, repair, resolve, patch, correct, hotfix
+  #
+  # Examples:
+  #   "Add user authentication"     → feature
+  #   "Fix login timeout bug"       → fix
+  #   "Repair broken API endpoint"  → fix
+  #   "Create analytics dashboard"  → feature
+
+  auto_detect_type: true
+
+  # Default branch type when auto-detection is disabled or no keywords match
+  # Options: "feature", "fix"
+  default_type: "feature"
+
+project:
+  # ═══════════════════════════════════════════════════════════
+  # PROJECT IDENTIFIER
+  # ═══════════════════════════════════════════════════════════
+  # Project identifier prefix for branch names.
+  # Used with task tracker integration (Linear, Jira, GitHub Projects, etc.)
+  #
+  # Examples:
+  #   identifier: "PROJ"  → feature/PROJ-001-user-auth
+  #   identifier: "DI"    → feature/DI-001-user-auth
+  #   identifier: ""      → feature/001-user-auth (no prefix)
+  #
+  # You can also override per-feature with --ticket flag:
+  #   create-new-feature.sh --ticket "JIRA-123" "Add feature"
+  #   → feature/JIRA-123-001-add-feature
+
+  identifier: "PROJ"
+
+# ═══════════════════════════════════════════════════════════════
+# ENVIRONMENT VARIABLES
+# ═══════════════════════════════════════════════════════════════
+# All settings can be overridden via environment variables:
+#
+#   SPECIFY_BRANCH_FORMAT  - Override branch_format
+#   SPECIFY_FOLDER_FORMAT  - Override folder_format
+#   SPECIFY_TICKET         - Override default ticket/identifier
+#   SPECIFY_TYPE           - Override default branch type
+#
+# Precedence: CLI flags > environment variables > config file > defaults
+
+# ═══════════════════════════════════════════════════════════════
+# CLI FLAGS
+# ═══════════════════════════════════════════════════════════════
+# create-new-feature.sh supports these flags:
+#
+#   --type <feature|fix>       - Override branch type
+#   --ticket <TICKET>          - Override ticket/identifier
+#   --branch-format <format>   - Override branch_format
+#   --folder-format <format>   - Override folder_format
+#   --number N                 - Specify sequence number manually
+#   --short-name <name>        - Override auto-generated kebab name
+#   --json                     - Output in JSON format
+#
+# Example:
+#   create-new-feature.sh --type fix --ticket "JIRA-456" "Fix login bug"

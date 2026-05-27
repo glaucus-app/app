@@ -1,0 +1,30 @@
+# DI-Lab Project Configuration
+# Spec-Kit naming and project settings
+
+naming:
+  # Branch name template with tokens
+  # Tokens: {type}, {ticket}, {seq}, {summary}, {kebab}, {date}, {branch}
+  branch_format: "{type}/{ticket}-{seq}-{kebab}"
+
+  # Folder format - use {branch} for lockstep sync with branch name
+  # Examples:
+  #   "specs/{branch}"       → specs/feature/PROJ-001-user-auth/
+  #   "specs/{seq}-{kebab}"  → specs/001-user-auth/ (strips prefix)
+  folder_format: "specs/{branch}"
+
+  # Optional regex validation for branch names
+  # Leave empty ("") to skip validation
+  validate_branch: ""
+
+  # Auto-detect branch type from description keywords
+  # Keywords triggering 'fix': fix, bug, repair, resolve, patch, correct, hotfix
+  auto_detect_type: true
+
+  # Default branch type when auto-detection is disabled or no keywords match
+  default_type: "feature"
+
+project:
+  # Project identifier prefix for branch names
+  # Used with task tracker integration (Linear, Jira, GitHub Projects, etc.)
+  # Examples: "PROJ", "DI", "GEM", "" (empty for no prefix)
+  identifier: "PROJ"

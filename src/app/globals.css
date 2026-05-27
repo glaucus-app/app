@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* TweakCN Vercel Theme - Official */
+:root {
+  /* Theme configuration */
+  --font-sans: "Geist", ui-sans-serif, sans-serif, system-ui;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --font-serif: Georgia, serif;
+  --radius: 0.5rem;
+  
+  /* Letter spacing */
+  --tracking-normal: 0em;
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+  
+  /* Light mode colors */
+  --background: oklch(0.9900 0 0);
+  --foreground: oklch(0 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0 0 0);
+  --popover: oklch(0.9900 0 0);
+  --popover-foreground: oklch(0 0 0);
+  --primary: oklch(0 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.9400 0 0);
+  --secondary-foreground: oklch(0 0 0);
+  --muted: oklch(0.9700 0 0);
+  --muted-foreground: oklch(0.4400 0 0);
+  --accent: oklch(0.9400 0 0);
+  --accent-foreground: oklch(0 0 0);
+  --destructive: oklch(0.6300 0.1900 23.0300);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9200 0 0);
+  --input: oklch(0.9400 0 0);
+  --ring: oklch(0 0 0);
+  
+  /* Chart colors (light) */
+  --chart-1: oklch(0.8100 0.1700 75.3500);
+  --chart-2: oklch(0.5500 0.2200 264.5300);
+  --chart-3: oklch(0.7200 0 0);
+  --chart-4: oklch(0.9200 0 0);
+  --chart-5: oklch(0.5600 0 0);
+  
+  /* Sidebar (light) */
+  --sidebar: oklch(0.9900 0 0);
+  --sidebar-foreground: oklch(0 0 0);
+  --sidebar-primary: oklch(0 0 0);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.9400 0 0);
+  --sidebar-accent-foreground: oklch(0 0 0);
+  --sidebar-border: oklch(0.9400 0 0);
+  --sidebar-ring: oklch(0 0 0);
+  
+  /* Shadow configuration (light) */
+  --shadow-color: hsl(0 0% 0%);
+  --shadow-opacity: 0.18;
+  --shadow-blur: 2px;
+  --shadow-spread: 0px;
+  --shadow-offset-x: 0px;
+  --shadow-offset-y: 1px;
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
+  --shadow: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
+  --shadow-md: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 2px 4px -1px hsl(0 0% 0% / 0.18);
+  --shadow-lg: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 4px 6px -1px hsl(0 0% 0% / 0.18);
+  --shadow-xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 8px 10px -1px hsl(0 0% 0% / 0.18);
+  --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
+  
+  /* Additional DI-Lab specific colors */
+  /* Toast/feedback colors */
+  --warning: oklch(0.75 0.18 90);
+  --warning-foreground: oklch(0.2050 0 0);
+  --info: oklch(0.6000 0.15 250);
+  --info-foreground: oklch(1 0 0);
+  --success: oklch(0.577 0.19 160);
+  --success-foreground: oklch(1 0 0);
+  
+  /* Star rating colors */
+  --color-gem-1star: #9ca3af;
+  --color-gem-2star: #60a5fa;
+  --color-gem-5star: #fbbf24;
+  --color-gem-5star-border: #f59e0b;
+  
+  /* Tier ranking colors (per FR-002a) */
+  --color-tier-s: oklch(0.75 0.15 90);
+  --color-tier-a: oklch(0.70 0.10 250);
+  --color-tier-b: oklch(0.65 0.18 50);
+  --color-tier-c: oklch(0.50 0.05 250);
+  --color-tier-d: oklch(0.50 0.05 250);
+  
+  /* Gem effect category colors */
+  --effect-offense: oklch(0.90 0.10 25);
+  --effect-offense-fg: oklch(0.35 0.10 25);
+  --effect-defense: oklch(0.90 0.10 250);
+  --effect-defense-fg: oklch(0.35 0.10 250);
+  --effect-all: oklch(0.90 0.10 290);
+  --effect-all-fg: oklch(0.35 0.10 290);
+  --effect-utility: oklch(0.90 0.10 60);
+  --effect-utility-fg: oklch(0.35 0.10 60);
+  --effect-cc: oklch(0.90 0.10 330);
+  --effect-cc-fg: oklch(0.35 0.10 330);
+  
+  /* Error and status colors (per FR-045) */
+  --color-error: oklch(0.577 0.22 25);
+  --color-success: oklch(0.577 0.19 160);
+  --color-warning: oklch(0.75 0.18 90);
+  
+  /* Interaction state colors (per FR-016b) */
+  --color-hover-overlay: rgba(0, 0, 0, 0.1);
+  --color-focus-ring: oklch(0.7080 0 0);
+  --color-disabled-opacity: 0.5;
+  
+  /* Layout constants (per FR-002a) */
+  --gem-card-width: 120px;
+  --gem-card-height: 160px;
+  --gem-card-gap: 16px;
+  --gem-border-5star: 2px;
+  
+  /* Z-index hierarchy */
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+}
+
+/* Dark mode - TweakCN Vercel theme */
+.dark {
+  --background: oklch(0 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.1400 0 0);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.1800 0 0);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(1 0 0);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.2500 0 0);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.2300 0 0);
+  --muted-foreground: oklch(0.7200 0 0);
+  --accent: oklch(0.3200 0 0);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.6900 0.2000 23.9100);
+  --destructive-foreground: oklch(0 0 0);
+  --border: oklch(0.2600 0 0);
+  --input: oklch(0.3200 0 0);
+  --ring: oklch(0.7200 0 0);
+  
+  /* Chart colors (dark) */
+  --chart-1: oklch(0.8100 0.1700 75.3500);
+  --chart-2: oklch(0.5800 0.2100 260.8400);
+  --chart-3: oklch(0.5600 0 0);
+  --chart-4: oklch(0.4400 0 0);
+  --chart-5: oklch(0.9200 0 0);
+  
+  /* Sidebar (dark) */
+  --sidebar: oklch(0.1800 0 0);
+  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(1 0 0);
+  --sidebar-primary-foreground: oklch(0 0 0);
+  --sidebar-accent: oklch(0.3200 0 0);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.3200 0 0);
+  --sidebar-ring: oklch(0.7200 0 0);
+  
+  /* Shadow configuration (dark) */
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
+  --shadow: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
+  --shadow-md: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 2px 4px -1px hsl(0 0% 0% / 0.18);
+  --shadow-lg: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 4px 6px -1px hsl(0 0% 0% / 0.18);
+  --shadow-xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 8px 10px -1px hsl(0 0% 0% / 0.18);
+  --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
+}
+
+/* Base styles */
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    letter-spacing: var(--tracking-normal);
+  }
+}
+
+/* Custom scrollbar for TweakCN feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}

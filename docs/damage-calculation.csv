@@ -1,0 +1,493 @@
+,,,,,,,,,,,,
+,DAMAGE,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,COLOR,,BASE DAMAGE,,GENERAL,,CRITICAL HIT CHANCE,,,,,
+,TYPE,,SKILL DAMAGE,,LEGENDARY GEMS,,,,,,,
+,STRATEGIES,,ATTACK DAMAGE,,COMBAT RATING,,,,,,,
+,,,DPS,,BUFFS/DEBUFFS,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,How much damage you deal to an enemy depends on many different variables and is calculated differently in each game mode.,,,,,,,,,,,
+,"When we attack an enemy in the game, a damage number will pop up on the target's head. ",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Damage Color,,,,,,,,,,,
+,The color of the number represents the status of the attack. There are three colors of the damage number:,,,,,,,,,,,
+,,,,,,,,,,,,
+,"white: Generally, normal damage is displayed in white",,,,,,,,,,,
+,"yellow: If a critical hit is triggered, the damage text will be displayed in yellow font.",,,,,,,,,,,
+,orange: there is 3 possible scenarios for orange damage numbers,,,,,,,,,,,
+,,,,,,,,,,,,
+,"Firestorm: Using wind skills to hit an enemy in a burning state will trigger the firestorm. Wind skills will increase damage by +50% in D type, ",,,,,,,,,,,
+,"and the damage number will change to orange.  The display priority of this orange text is higher than that of critical hits, and will cover the yellow text of critical hits",,,,,,,,,,,
+,"Ancestral Hammer: The Barbarian's Ancestral Hammer, after using the Razor Grip (off-hand) to turn it into a giant hammer inscription, ",,,,,,,,,,,
+,the stunned monster will suffer 50% damage and will also be displayed in orange. This 50% damage is not mentioned in the equipment special effects and skill panel descriptions.,,,,,,,,,,,
+,"Big Critical Damage: Regardless of skill coefficients, various damage bonuses, or the target's immunity and vulnerability, as long as a critical hit is hit, ",,,,,,,,,,,
+,"and the damage value of this critical hit is more than 2.2 times the damage value of the player's own (base damage) panel, it will be displayed in orange. 
+Only critical hit damage will change to orange. ",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Damage Type,,,,,,,,,,,
+,There are a lot of different damage types in the game:,,,,,,,,,,,
+,,,,,,,,,,,,
+,Damage Type,Elemental Type,Damage Source,Attack Type,,,,,,,,
+,Normal,Wind,Primary Attack,Direct,,,,,,,,
+,Continual,Fire,Skill Attack,Projectile,,,,,,,,
+,Ground,Lightning,Ultimate Attack,Ray,,,,,,,,
+,,Frost,Summons Attack,Ground,,,,,,,,
+,,,,DoT,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Build Strategies,,,,,,,,,,,
+,Since there are different types of damage and possibilities to build your character there are multiple ways to optimize / increase your damage output.,,,,,,,,,,,
+,"All damage done takes your BASE_DMG (the number you see in your character attribute) into its calculation, so it is always good to try to improve the damage stat",,,,,,,,,,,
+,,,,,,,,,,,,
+,1. Permanent Damage Buffs / Increased Buff Duration,,,,,,,,,,,
+,"These buffs are always good because they increase your damage everytime. With the right build and combination of Set-Pieces, Gems and Essences and a focus on 
+ increasing your buff duration and skill cooldown through reforging and magic affixes you can have temporary buffs being always active.",,,,,,,,,,,
+,2. Attack Speed & Primary Attack,,,,,,,,,,,
+,"If you play a class that can focus on their primary attack as the main damage source (like Demon Hunter), you can try to focus on buffs for your primary attack and 
+ increasing your attack speed to get a higher DPS (Damage per second)",,,,,,,,,,,
+,3. Critical Hit Chance & Critical Hit Damage,,,,,,,,,,,
+,Another strategy would be to focus on increasing your Critical Hit Chance and Critical Hit Damage so you regularly deal 200-300% damage,,,,,,,,,,,
+,4. DOT (Damage over time),,,,,,,,,,,
+,"Putting harmful effects on your enemies and killing them with damage over time is another strategy you can focus on.
+ This requires really specific Essences, Set-Pieces, Legendary Gems and a focus on Potency.",,,,,,,,,,,
+,5. Summons,,,,,,,,,,,
+,"Why do the damage yourself when your minions can do it for you? This is another way to improve your damage output. 
+ Focus on summon damage through reforgig and magic affixes as well asShepherds Set Piece, Echoing Shade Legendary Gem and improving your primary attack, 
+ as your summons will deal most of their damage with this.",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Damage Calculation,,,,,,,,,,,
+,,,,,,,,,,,,
+,PVE Damage,,,,,,,,,,,
+,How much damage you actually deal to an enemy in PVE is determined by the following formulas,,,,,,,,,,,
+,Your Actual Damage is the Damage of your Skill (which you can see in your skills sheet) multiplied by different % modifiers of 5 categories,,,,,,,,,,,
+,"Damage Modifiers within a category are additive, not multiplicative. If for example a legendary gem increases your damage by 24% and another gem increases it by 16%, ",,,,,,,,,,,
+,"this means your damage is increased by 40% (24+16), and not by 43,84% (1,24*1,16)",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,[Skill Damage] = SKILL_DMG x GENmod x LEGmod x EFFmod x COMmod x CRITmod,,,,,,,,,,,
+,,,,,,,,,,,,
+,[Attack Damage] = ATK_DMG x GENmod x LEGmod x EFFmod x COMmod x CRITmod x ATKSpeed,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,BASE_DMG,SKILL_DMG,GENmod,LEGmod,EFFmod,COMmod,CRIT,ATK,COSmod,,,
+,"This is the damage
+number you can 
+see on your
+character sheet","This is the damage
+number you can 
+see on your 
+skill sheet","Most Damage 
+Modifiers
+fall into this 
+category","Damage 
+Modifiers
+from Legendary Gems
+(Buffs do stack here)","The strongest 
+Damage Buff +
+The strongest 
+Debuff in each Buff/
+Debuff Category","Modifier from 
+the Combat 
+Rating Difference","Critical
+Hit Chance &
+Critical Hit Dmg",Attack Speed,"Modifier from
+Cycle of Strife (PVP)",,,
+,,,,,,,,,,,,
+,Examples for Damage Calculations with different Damage Modifier Values:,,,,,,,,,,,
+,,,,,,,,,,,,
+,SKILL_DMG,Modified Damage,BUILD Factor,GEN,LEG,EFF,COM,CRIT,ATK,,,
+,20.000,152.978,"7,65","1,8","1,64","1,19","1,135","1,9184",1,,,
+,20.000,178.474,"8,92","2,1","1,64","1,19","1,135","1,9184","1,5",,,
+,20.000,156.620,"7,83","1,7","1,64","1,29","1,135","1,9184",1,,,
+,25.000,195.775,"7,83","1,7","1,64","1,29","1,135","1,9184",1,,,
+,20.000,198.402,"9,92","1,9","1,8","1,4","0,9","1,9184","1,2",,,
+,,,,,,,,,,,,
+,"Because each damage category is a multiplier, the product is higher if each individual category is higher",,,,,,,,,,,
+,"For example in the third line the GEN category is 0,1 lower than in line 1 but the EFF categoryis 0,1 higher. Overall the damage is more",,,,,,,,,,,
+,That is because percentage wise the reduction in the GEN categoryis not as much as the increase of the EFF factor,,,,,,,,,,,
+,So if you have a choice if you want to increase e.g. your GEN category by using an essence that gives your skill +19% dmg or you can use an essence that gives a +19% buff,,,,,,,,,,,
+,"It might be better to use the buff essence, if your EFF category has none or only weaker buffs.",,,,,,,,,,,
+,More Reso = More Damage? Not Neccessarily. In Line 4 you can see that +5000 more Skill Damage (bossted from Resonance) does lead to a significant higer amount of,,,,,,,,,,,
+,"damage, BUT if a lower resonance player (Line 5) were to improve some of the damage catgeories just a little bit (aside from Combat Rating which would presumably also",,,,,,,,,,,
+,be lower) then he can effectively deal more damage due to the power of percentage multipliers.,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,SKILL DAMAGE,,,,,,,,,,,
+,This is the damage number you can see in your skill sheet. It is calculated by multiplying the BASE_DMG by a factor Y that is unique to each individual skill ,,,,,,,,,,,
+,and an offset Z that is also unique.,,,,,,,,,,,
+,"Some skills have a range of damage, others do multiple (different) amounts. But all those numbers scale with your BASE_DMG. If you increase your BASE_DMG, ",,,,,,,,,,,
+,the Skill Base Damage will increase based on the below formula.,,,,,,,,,,,
+,"Every skill can be transformed using Essence Mastery. This gives the skill a new look, different abilities, different bonus effects etc. The damage factor and offset also changes sometimes.",,,,,,,,,,,
+,,,,,,,,,,,,
+,SKILL_DMG = Y x BASE_DMG + Z,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Base Damage,,,,,,,,,,,
+,This is the damage number you can see in your character attributes sheet. It is the sum of various damage sources and is the base for your skill damage,,,,,,,,,,,
+,"You can see the different Gear Base Damage Values in the ""Attributes"" Tab",,,,,,,,,,,
+,,,,,,,,,,,,
+,BASE_DMG = GEAR + RESO + TOURM + ATTRIBUTES + PARAGON + HORADRIM + REFINE + AFFIX,,,,,,,,,,,
+,,,,,,,,,,,,
+,In Battlegrounds there is a stat compression active which calculates the damage with the following formula:,,,,,,,,,,,
+,"BASE_DMG_BG = (BASE_DMG / 2) + min{BASE_DMG, 8625}/2",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Calculation of Character Sheet Base Damage,,,,,,,,,,,
+,Variable,Source,,Calculation,,,max.,%,,,,
+,RESO,Legendary Gems,,"Equipment Base Damage x 0,0005 x Resonance",,,40269,"60,81%",* Inferno III,,,
+,PARAGON,Paragon Tree,,Sum of all Paragon Damage Nodes,,,7440,"11,24%",* all 15 paragon trees,,,
+,GEAR,Equipment Base Damage (Inferno III),,"Sum of Base Damage of Head, Shoulders, Off-Hand, Main-Hand and Hand",,,6667,"10,07%",* Inferno IV,,,
+,TOURM,Normal tourmaline Gems,,Sum of all socketed Tourmaline normal gems,,,3840,"5,80%",*8 tourmalines all Rank 10,,,
+,ATTRIBUTES,Set-Pieces,,"Sum of Primary Attributes (STR or INT) x 0,3",,,2080,"3,14%",* Inferno IV,,,
+,ATTRIBUTES,Primary Equipment,,"Sum of Primary Attributes (STR or INT) x 0,3",,,2773,"4,19%",* Paragon 1200,,,
+,REFINE,Normal yellow Gems in Hand,,"Hand Base Damage x 0,03 x (Sum of Ranks of socketed Gems)",,,716,"1,08%",* 3 Rank 10 in Inferno III gear,,,
+,HORADRIM,Legacy of the Horadrim,,Sum of all Legacy of Horadim Damage Points,,,720,"1,09%",* Rank 60 on 2 vessels,,,
+,ATTRIBUTES,Primary Equipment Upgrades,,"Sum of STR or INT on Off-Hand, Main Hand and Head x 0,3",,,264,"0,40%",* 8 pieces Level 30,,,
+,ATTRIBUTES,Set-Piece Upgrades,,"Sum of STR or INT on Rings and Neck x 0,3",,,55,"0,08%",* 3 pieces Level 20,,,
+,HELLIQUARY,Demonic Remains,,"Sum of Primary Attributes (STR or INT) x 0,3",,,363,"0,55%",* 5 Pieces with 200 Strength,,,
+,TABLEAU,Ancestral Tableau,,"Sum of Primary Attributes (STR or INT) x 0,3",,,94,"0,14%",* no upper limit yet,,,
+,GEAR,"Magic Affixes ""increase item base damage""",,Equipment Base Damage (Primary Gear only) x Item Modifier,,,352,"0,53%",* 6 pieces with 6% (max roll) Inferno III,,,
+,RUNES,"Magic Affixes ""increase item base damage""",,Equipment Base Damage (Primary Gear only) x Item Modifier,,,587,"0,89%",* 6 Runes with 10%,,,
+,,,,,,,66.220,"100,00%",,,,
+,,,,,,,,,,,,
+,From the example values and possible max values one can clearly see that Resonance is the biggest contributor here ,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,General Modifiers,,,,,,,,,,,
+,Most Damage Modifiers fall into this category except for similar worded effects on legendary gems.,,,,,,,,,,,
+,,,,,,,,,,,,
+,Effect,,"Gear
+Magic
+Affixes","Reforge 
+ Bonus",Runes,"Essence
+Mastery","Paragon
+Tree","Awakening
+Gem Resonance
+Bonus","Set
+Piece
+Effects","Familiar
+Trait","Max
+PVE","Max
+PVP
+(strifed)"
+,Strifed in Battlegrounds?,,yes,yes,yes,no,no,no,no,yes,no,yes
+,Damage done increased by X%,,,,,,,,,,0%,0%
+,Damage done to players increased by X% ,,8%,12%,4%,,4%,,,"9,5%",38%,38%
+,Damage +X% per nearby party member,,"17,5%",,,,,8%,,,"25,5%",13%
+,Skill Damage increased by X%,,30%,16%,6%,54%,,46%,,"9,5%",162%,118%
+,Primary Attack Damage increased by X%,,45%,32%,9%,54%,17%,64%,15%,"10,5%",247%,179%
+,Damage vs enemies suffering LOC,,"62,5%",40%,4%,,,32%,20%,,"158,5%",84%
+,Damage vs enemies suffering continual dmg,,,,,,,,15%,,15%,15%
+,Damage vs shielded enemies,,40%,48%,16%,,,,,,104%,31%
+,Damage vs enemies with <30% life,,60%,32%,8%,,,32%,,,132%,62%
+,Damage vs full life enemies,,100%,,10%,,,40%,,,150%,73%
+,Damage vs chilled enemies,,,,,,,,15%,,15%,15%
+,Damage vs frozen enemies,,,,,,,,30%,,30%,30%
+,Damage vs Elites,,60%,48%,8%,,,,,,116%,n.r.
+,Damage vs Demons,,60%,48%,,,,,,,108%,n.r.
+,Damage vs Undead,,60%,48%,,,,,,,108%,n.r.
+,Damage vs Beasts,,80%,,,,,,,,80%,n.r.
+,Ultimate Skill Damage +X%,,,,,,7%,,,,7%,7%
+,Continual Damage +X%,,,,,,10%,,15%,,25%,25%
+,,,,,,,,,,,,
+,"Additionaly, your Charm can also give you between 0-10% fixed damage increase on a specific skill (unstrifed)",,,,,,,,,,,
+,"Your Remnants can give you an additional 4,5% increase in Primary Attack Damage",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Legendary Gem Modifiers,,,,,,,,,,,
+,Many Legendary Gems have damage increasing effects. These gems not only enhance your damage by their resonance (as all legendary gems do) but ,,,,,,,,,,,
+,also contribute big time to the actual damage dealt.,,,,,,,,,,,
+,"Most of them only increase the damage if a condition is met. Others are unconditional, which is of course universally good.",,,,,,,,,,,
+,"Some only give a temporary buff, others give permanent buffs.",,,,,,,,,,,
+,,,,,,,,,,,,
+,LEGMOD = 1 + sum of all relevant buffs,,,,,,,,,,,
+,,,,,,,,,,,,
+,Permanent Damage Buff Gems,,Star Quality,Gem Name,,"max.
+% Damage Buff",Conditional?,,,,,
+,Damage done increased by X%,,1*,"Berserker's Eye
+Chained Death",,"16%
+17,5%","no
+yes",,,,,
+,Damage done increased by X%,,2*,"Fervent Fang
+Bloody Reach
+Cutthroat's Grin",,"24%
+24%
+4%","yes
+yes
+yes",,,,,
+,Damage done increased by X%,,5*,Blood Soaked Jade,,24%,no,,,,,
+,Skill Damage +X%,,1*,Entropic Well,,18%,no,,,,,
+,Damage vs enemies suff. from LOC +X%,,1*,Pain of Subjugation,,16%,yes,,,,,
+,Damage vs enemies suff. from DoT +X%,,2*,Pain Clasp,,24%,yes,,,,,
+,Damage vs enemies suff. from harmful +X%,,1*,Misery Elixyr,,2%,yes,,,,,
+,Primary Attack Damage +X%,,1*,Caarsen's Invigoration,,2%,no,,,,,
+,Damage +X% per nearby group member,,2*,Unity Crystal,,"3,6%",yes,,,,,
+,Damage vs Elites,,1*,Seled's Weakening,,4%,no,,,,,
+,Damage vs Elites,,2*,Fervent Fang,,6%,no,,,,,
+,Channeled Skills Damage +X%,,2*,Tear of the Comet,,6%,no,,,,,
+,Charge Skill Damage +X%,,1*,Lo's focused Gaze,,20%,no,,,,,
+,Continual Damage +X%,,1*,Eye of the Unyielding,,16%,no,,,,,
+,Ultimate Skill Damage +X%,,1*,Zod Stone,,6%,no,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Buff Damage Buff Gems,,Star Quality,Gem Name,,% Damage Buff,Duration*,Cooldown,"min.
+downtime",,,
+,Damage done increased by X%,,2*,"Mourneskull
+Crimson Behelit
+Lightning Core
+Igneous Scorn
+Mercy's Harvest",,"18 - 36%
+30%
+12%
+10%
+2 - 12%","6
+6
+3
+2
+30","20
+20
+20
+6
+6","7,76
+7,76
+13,88
+1,92
+0",,,
+,Damage done increased by X%,,5*,"Spiteful Blood
+Bottled Hope
+Consecrated Will",,"30%
+24%
+16%","4
+6
+2","20
+20
+6","11,84
+7,76
+1,92",,,
+,Skill Damage +X%,,5*,Colossus Engine,,50%,6,20,"7,76",,,
+,Skill Damage +X%,,2*,Power&Command,,24%,9,18,9,,,
+,Primary Attack Damage +X%,,2*,Power&Command,,24%,9,18,9,,,
+,Damage vs Elites,,1*,Seled's Weakening,,18%,60,0,0,,,
+,*can be prolongued with Benefitial Effect Duration up to 104%,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Debuff Gem Effect,,Star Quality,Gem Name,,% Debuff,Duration*,Cooldown,min. downtime,,,
+,Armorbreak +X%,,2*,"Specter Glass
+Ironbane",,"28%
+15%","2
+6","6
+20","0,43
+3,3",,,
+,Armorbreak +X%,,5*,Maw of the Deep,,24%,6,20,"3,3",,,
+,Vulnerability +X%,,1*,Nightmare Wreath,,8%,"2,4",20,"13,3",,,
+,Vulnerability +X%,,2*,"Kir Sling
+Abiding Curse",,"14%
+10%","4
+7,5","20
+20","8,87
+0",,,
+,Vulnerability +X%,,5*,"Haunt Coil
+Gloom Cask (only Primary Attacks)
+Chip of the Stone Flesh",,"45%
+24%
+24%","6
+3
+3","20
+20
+?","3,29
+11,65",,,
+,"* duration can be prolongued by Potency, 2pc Baron, Legendary Affixes, Class Essences",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,EFFECTS Modifier (Buffs / Debuffs),,,,,,,,,,,
+,"These are effects that do not fall into the GENERAL category and are treated differently. They are mostly skill-based damage enhancers, armor breaking effects ",,,,,,,,,,,
+,"or special set-piece effects. If more than one armorbreak or buff effect is applied only the strongest is active, but only if the buff would be exactly the same type of buff",,,,,,,,,,,
+,Buffs from legendary Gems fall into the LEGmod category and do stack,,,,,,,,,,,
+,"Different types of vulnerability effects do stack if the text is not the same, for example:",,,,,,,,,,,
+,"The Familiar Passive Skill ""Lingering Wounds"" (32% for 3s when hit by familar skill) and the Nettled Effect (16% when hit by a counter attack)",,,,,,,,,,,
+,The Debuff duration can be prolongued by your Potency Attribute (or Barons 2pc / Misery Elixyr Legendary Gem),,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,EFFmod = 1 + buff + armorbreak + vulnerabilies (1-n),,,,,,,,,,,
+,,,,,,,,,,,,
+,Different buffs only stack if they are worded differently and are not the same type of buff,,,,,,,,,,,
+,,,,,,,,,,,,
+,Damage Buff,,"Essence
+Mastery",,"Set Piece
+Effect",,Paragon,,,,,
+,Damage done increased by X% for Ys,,e.g. Tempest: Seafarer's Trows +19% for 3s,,,,"30% - ""Critical Hit"" (Harbinger) 5s",,,,,
+,Critical Hit Damage +X% for Ys,,,,,,,,,,,
+,Your next n skill(s) deal +X% damage,,,,,,,,,,,
+,Channeled Skills +X% while channeling,,,,30% - Seeds of Sown Gold,,,,,,,
+,Firestorm Effect (50%),,,,70% - Wildfire,,,,,,,
+,Damage vs Enemies <20% Life,,,,,,250% - Brawler ,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,"Feasting Baron's 4pc Set Effect does not seem to fall in the ""General"" Category, which makes it more valuable than other Damage enhancing Set Effects",,,,,,,,,,,
+,,,,,,,,,,,,
+,Debuff,,"Essence
+Mastery",,"Set Piece
+Effect",,"Cursed / Helliquary
+Gear ",,Familiar,,,
+,Armorbreak +X%,,,,,,30% - Flamespun Eruption (8s) ,,,,,
+,Vulnerable +X%,,,,,,"16% - Nettled (6s / 30s)
+12% - Detested (6s / 30s)
+18% - Wired (3s / 9s)",,32% - Lingering Wounds,,,
+,Damage vs enemies suff. from your LOC,,,,15% - Feasting Baron's,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Combat Rating Modifier,,,,,,,,,,,
+,Whenever you attack an enemy your Combar Rating is compared to your opponents Combat Rating. Based on the difference you either deal more or less damage.,,,,,,,,,,,
+,In PVE this is hard capped at 11.3%,,,,,,,,,,,
+,Against Players this bonus is capped at 10%.,,,,,,,,,,,
+,,,,,,,,,,,,
+,COMMOD = 1 + combat rating bonus,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Critical Hit Modifier,,,,,,,,,,,
+,When you land a critical hit (yellow or orange damage numbers show up) you deal at least 2 x your actual skill damage.,,,,,,,,,,,
+,The chance to land such a hit can be increased by various sources. At the lowest it is 3%.,,,,,,,,,,,
+,"Your total CRIT_CHANCE is the sum of those sources. Some of them have diminished effects, meaning they dont increase the CHC by their full value.",,,,,,,,,,,
+,This modifier is only valuable if you have high Critical Hit Chance,,,,,,,,,,,
+,,,,,,,,,,,,
+,CRITMOD = 1 + CRIT_CHANCE x CRIT_DMG,,,,,,,,,,,
+,,,,,,,,,,,,
+,CRIT_CHANCE = 3% + CHC_FIXED + CHC_BUFFS,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Effect,,"Gear
+Magic
+Affixes","Reforge 
+ Bonus",Runes,"Legendary
+Gem","Paragon
+Tree","Essence
+Mastery",Remnants,"Familiar
+Trait","Max
+PVE","Max
+PVP
+(strifed)"
+,Strifed in Battlegrounds?,,yes,yes,yes,yes,no,no,no,yes,no,yes
+,Critical Hit Chance,,30%,,8%,26%,12%,,9%,"9,5%",95%,43%
+,Critical Hit Damage,,45%,24%,12%,,,,,"9,5%",91%,27%
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,CHC_BUFFS,,,,,,,,,,,
+,This is the Critical Hit chance from certain buffs which have diminished effects based on your fixed Critical Hit Chance total,,,,,,,,,,,
+,,,,,,,,,,,,
+,CHC_BUFFS = [1 - 0.03 + CHC_FIXED] x sum_of_buffs,,,,,,,,,,,
+,,,,,,,,,,,,
+,Critical Hit Chance from Buffs,,,,,,,,,,,
+,Name,Type,Effect,,Trigger,,X%,Duration,Cooldown,,,
+,Covert Operations,Paragon: Mastermind,Critical Hit Chance increased by X%,,permanent,,10% *,,,"* 2,5% per class in your group",,
+,Fury,Paragon: Duelist,Critical Hit Chance increased by X%,,Everytime you use a skill,,10% *,10,0,* 1% per skill use,,
+,Gloomsguide 4pc,Set-Piece,Critical Hit Chance increased by X%,,After using a Dash Skill,,"22,50%",3,0,,,
+,Mother's Lament,Legendary Gem,Critical Hit Chance increased by X%,,20% chance when dealing damage,,32%,6,20,,,
+,Roiling Consequence,Legendary Gem,Critical Hit Chance increased by X%,,Dealing Damage,,54% *,6,20,*42% + 12% vs burning enemies,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,Critical Hit Damage,,,,,,,,,,,
+,Critical Hit damage is increased by various sources,,,,,,,,,,,
+,The Armor Penetration Stat increases your CHD if it is higher than the armor stat of your enemy you can see this on your character sheet.,,,,,,,,,,,
+,The calculation is the following:,,,,,,,,,,,
+,"Critical Hit Damage Increase(PVE) = 59,5% * [ ( Player AP - Monster Armor) / Player AP - Monster Armor + 77 ) ]",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,"Besides some conditional sources like Remnants or Paragon Tree Effects, the Critical Hit Damage value shown on your attributes page is accurate,",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,ACTUAL_CRIT = ACTUAL_DMG x [200% + AP_CRIT + CRIT_HIT_DMG],,,,,,,,,,,
+,,,,,,,,,,,,
+,AP_CRIT,,,,,,,,,,,
+,AP_CRIT is the Armor Penetration Bonus you get from having a higher AP value then your opponents armor.,,,,,,,,,,,
+,"All Sources of Armor Penetration can be found on the ""Attributes"" tab.",,,,,,,,,,,
+,,,,,,,,,,,,
+,CRIT_HIT_DMG,,,,,,,,,,,
+,"The Critical Hit Damage stat can be found on your character sheet and is improved by various sources (see ""Attributes"")",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,EFFECTIVE_DMG,,,,,,,,,,,
+,The effective damage is the average damage over an infinite number of hits. It factors in the damage you deal when landing Critical Hits.,,,,,,,,,,,
+,,,,,,,,,,,,
+,EFFECTIVE_DMG = CRIT_CHANCE x [ACTUAL_CRIT - ACTUAL_DMG] + ACTUAL_DMG,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,DPS (Damage per second),,,,,,,,,,,
+,The formula above just shows how much damage 1 attack can do. It does not factor in attack speed.,,,,,,,,,,,
+,How much DPS (Damage per second) is done depends on the Number of Attacks (APS) and the damage per Attack.,,,,,,,,,,,
+,,,,,,,,,,,,
+,DPS = APS x [1 + ATK_MODIFIERS] x ATK_DMG,,,,,,,,,,,
+,,,,,,,,,,,,
+,APS,,,,,,,,,,,
+,"APS is class specifc. For example without any buff the Attack Rate (for Demon Hunter) is 113,6 BPM or 1,89 Attacks per second (APS).",,,,,,,,,,,
+,"Attack Speed Bonus is capped at 100%, so the maximum Attacks per second would be 3,79.",,,,,,,,,,,
+,,,,,,,,,,,,
+,Class,PA Speed (BPM),APS,max. APS,,,,,,,,
+,Demon Hunter,"113,6","1,8933","3,79",,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,ATK_MODIFIERS,,,,,,,,,,,
+,Attack Speed modifiers come from different sources and either add permanent attack speed buffs or temporary buffs. It is capped at 100% max.,,,,,,,,,,,
+,,,,,,,,,,,,
+,Attack Speed modifiers,,,,,,,,,,,
+,Name,Type,Effect,Trigger,X%,Duration,Cooldown,,,,,
+,Magic Affixes,Magic Affixes,Attack Speed increased by X%,permanent,15%,,,,,,,
+,Vengeance Set,Reforge Bonus,Attack Speed increased by X%,permanent,12%,,,,,,,
+,Caarsen's Invigoration,Legendary Gem,Attack Speed increased by X%,permanent,16%,,,,,,,
+,Concentrated Will,Legendary Gem,Attack Speed increased by X%,Dash Skill,16%,2,6*,*cannot be decreased,,,,
+,Everlasting Torment,Legendary Gem,Attack Speed increased by X%,Agony,6% *,Agony duration,,* per enemy,,,,
+,Vituhs Urge 4pc,Set-Piece,Attack Speed increased by X%,Benefitial Effect,30%,6,,,,,,
+,Shal'bas 4pc,Set-Piece,Attack Speed increased by X%,Primary Attacks,25%,incremental,,,,,,
+,Shal'bas 6pc,Set-Piece,Attack Speed increased by X%,Primary Attacks *,25%,10,30,* 5% chance,,,,
+,Curb Bit of Haste,Remnant: Attacker,Attack Speed increased by X%,permanent,1%,,,,,,,
+,Zeal,Paragon: Vanquisher,Attack Speed increased by X%,when killing a monster,"7,5% *",6,,"* 0,5 per monster",,,,
+,Aggression,Paragon: Massacre,Attack Speed increased by X%,after 100 kill streak,30% *,,,* 3% per monster,,,,
+,Immortals Favor,Immortal Buff,Attack Speed increased by X%,after Kion,5%,60min,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,ATK_DMG,,,,,,,,,,,
+,"The Damage per Attack is the sum of the actual damage of both Primary Attack Damage and Skill Damage, if a skill is executed alongside the primary attack (like Vengeance).",,,,,,,,,,,
+,"This additional skill damages has to be factored in by the number of ""executions"" per Attack = R.",,,,,,,,,,,
+,"For example Vengeance shoots 2 additional arrows per attack, so R=2",,,,,,,,,,,
+,"Impale shoots an additional knife every 3 attacks, so R = 1/3.",,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,ATK_DMG = PA_ACTUAL_DMG + ATK_SKILL_DMG,,,,,,,,,,,
+,ATK_DMG = SKILL_DMGPA x MODIFIERSPA + SKILL_DMG x MODIFIERS x R,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,PA_ACTUAL_DMG,,,,,,,,,,,
+,The (actual) Damage that your primary attack does. As mentioned above it is calculated by SKILL_DMG x MODIFIERS,,,,,,,,,,,
+,As mentioned above there are numerous ways to increase it.,,,,,,,,,,,
+,,,,,,,,,,,,
+,ATK_SKILL_DMG,,,,,,,,,,,
+,Some Essences can modify skills to act as buffs that add additional SKILL_DMG to your primary attacks,,,,,,,,,,,
+,"Depending on how often per attack the SKLL_DMG is added, the damage here is modified by a factor R.",,,,,,,,,,,
+,For example Vengeance launches 2 additional Shots per Attack (R = 2) while Impale only fires an additional knife every third attack (R = 1/3).,,,,,,,,,,,
+,,,,,,,,,,,,
+,ATK_SKILL_DMG = SKILL_ACTUAL_DMG x R,,,,,,,,,,,
+,,,,,,,,,,,,
+,Added Skill Damage per Attack for Demon Hunter,,,,,,,,,,,
+,Skill,Essence,R,PA_ACTUAL_DMG,SKILL_ACTUAL_DMG,ATK_SKILL_DMG,ATK_DMG,,,,,
+,Vengeance,Vengeance,2,32.314,6.985,13.970,46.284,,,,,
+,Impale,The Excavator,"0,33",32.314,10.489,3.461,35.775,,,,,
+,Knockback Shot,Duplicitous Prophetics,1,32.314,8.800,8.800,41.114,,,,,
+,,,,,,,,,,,,
+,"Because Vengeance and the Impale Buff from the Excavator both add extra damage to the Primary Attacks, the Attack rate is even more important",,,,,,,,,,,
+,,,,,,,,,,,,
+,Skill,ACTUAL_DMG,ATK_SKILL_DMG,ATK_DMG,DPS (0% buff),DPS (50%),max DPS (100%),,,,,
+,Vengeance,32.314,6.985,46.284,87.631,131.447,175.262,,,,,
+,Impale,32.314,10.489,35.810,67.800,101.700,135.601,,,,,
+,Knockback Shot,32.314,8.800,41.114,77.843,116.764,155.685,,,,,

@@ -1,0 +1,354 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Optimize API Contract",
+  "description": "API contract for the /api/optimize endpoint. NOTE: Resource model corrected 2026-02-15 - uses gemPower and copyInventory instead of platinum/telluricPearls.",
+  "version": "1.1.0",
+  "endpoints": {
+    "/api/optimize": {
+      "method": "POST",
+      "description": "Execute optimization calculation and return upgrade recommendations",
+      "request": {
+        "contentType": "application/json",
+        "schema": {
+          "type": "object",
+          "required": ["gems", "resources"],
+          "properties": {
+            "gems": {
+              "type": "array",
+              "description": "Array of equipped gems to optimize",
+              "items": {
+                "$ref": "#/definitions/EquippedGem"
+              },
+              "minItems": 1,
+              "maxItems": 24
+            },
+            "resources": {
+              "$ref": "#/definitions/ResourceInventory"
+            },
+            "mode": {
+              "type": "string",
+              "enum": ["PVP", "PVE"],
+              "default": "PVE",
+              "description": "Optimization mode for tier rankings"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Optimization completed successfully",
+          "contentType": "application/json",
+          "schema": {
+            "$ref": "#/definitions/OptimizationResult"
+          }
+        },
+        "400": {
+          "description": "Validation error",
+          "contentType": "application/json",
+          "schema": {
+            "$ref": "#/definitions/OptimizationError"
+          },
+          "examples": [
+            {
+              "type": "validation",
+              "title": "Invalid Input",
+              "message": "Your gem configuration has validation errors.",
+              "guidance": "Check your gem configuration and ensure all gems have valid quality and rank values.",
+              "details": {
+                "invalidGems": ["gem-id-1"],
+                "errors": ["Quality must be between 1 and 5"]
+              }
+            }
+          ]
+        },
+        "422": {
+          "description": "Insufficient resources for any upgrades",
+          "contentType": "application/json",
+          "schema": {
+            "$ref": "#/definitions/OptimizationError"
+          },
+          "examples": [
+            {
+              "type": "insufficient-resources",
+              "title": "Insufficient Resources",
+              "message": "Your current resources cannot fund any upgrades.",
+              "guidance": "Add more Gem Power or gem copies to enable upgrade recommendations.",
+              "details": {
+                "required": {
+                  "gemPower": 1000,
+                  "copies": { "blood-soaked-jade": 2 }
+                },
+                "available": {
+                  "gemPower": 500,
+                  "copies": { "blood-soaked-jade": 1 }
+                }
+              }
+            }
+          ]
+        },
+        "408": {
+          "description": "Optimization timeout",
+          "contentType": "application/json",
+          "schema": {
+            "$ref": "#/definitions/OptimizationError"
+          },
+          "examples": [
+            {
+              "type": "timeout",
+              "title": "Optimization Timeout",
+              "message": "The optimization calculation exceeded the time limit.",
+              "guidance": "Try reducing the number of gems or simplifying your configuration."
+            }
+          ]
+        },
+        "500": {
+          "description": "Server error",
+          "contentType": "application/json",
+          "schema": {
+            "$ref": "#/definitions/OptimizationError"
+          },
+          "examples": [
+            {
+              "type": "server-error",
+              "title": "Server Error",
+              "message": "An unexpected error occurred during optimization.",
+              "guidance": "Please try again. If the problem persists, contact support."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "definitions": {
+    "EquippedGem": {
+      "type": "object",
+      "required": ["gemId", "quality", "rank", "slotPosition", "slotType"],
+      "properties": {
+        "gemId": {
+          "type": "string",
+          "description": "Reference to LegendaryGem.id",
+          "minLength": 1
+        },
+        "quality": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Quality rating (1-5)"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Current rank (1-10)"
+        },
+        "slotPosition": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24,
+          "description": "Position in grid (1-8 base, 9-24 wing)"
+        },
+        "slotType": {
+          "type": "string",
+          "enum": ["base", "wing"],
+          "description": "Slot type derived from position"
+        },
+        "quantity": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "For inventory tracking (optional)"
+        }
+      }
+    },
+    "ResourceInventory": {
+      "type": "object",
+      "required": ["gemPower", "copyInventory"],
+      "properties": {
+        "gemPower": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Primary upgrade currency amount"
+        },
+        "copyInventory": {
+          "type": "object",
+          "description": "Map of gemId to count of R1 copies available",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "UpgradeCost": {
+      "type": "object",
+      "required": ["gemPower", "copies"],
+      "properties": {
+        "gemPower": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Gem Power required for this upgrade"
+        },
+        "copies": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of R1 copies required (of same gem type)"
+        }
+      }
+    },
+    "OptimizationResult": {
+      "type": "object",
+      "required": [
+        "recommendations",
+        "totalPowerGain",
+        "totalResourceCost",
+        "mode",
+        "calculatedAt",
+        "processingTime"
+      ],
+      "properties": {
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UpgradeRecommendation"
+          },
+          "description": "Ordered list of upgrade suggestions"
+        },
+        "totalPowerGain": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Sum of all power gains"
+        },
+        "totalResourceCost": {
+          "$ref": "#/definitions/UpgradeCost"
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["PVP", "PVE"],
+          "description": "Optimization mode used"
+        },
+        "calculatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO timestamp of calculation"
+        },
+        "processingTime": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Processing time in milliseconds"
+        }
+      }
+    },
+    "UpgradeRecommendation": {
+      "type": "object",
+      "required": [
+        "id",
+        "targetGem",
+        "currentRank",
+        "targetRank",
+        "resourceCost",
+        "powerGain",
+        "priorityRank",
+        "reasoning"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique recommendation ID"
+        },
+        "targetGem": {
+          "$ref": "#/definitions/EquippedGem"
+        },
+        "currentRank": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9,
+          "description": "Starting rank"
+        },
+        "targetRank": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 10,
+          "description": "Destination rank"
+        },
+        "resourceCost": {
+          "$ref": "#/definitions/UpgradeCost"
+        },
+        "powerGain": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Expected power improvement"
+        },
+        "priorityRank": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Position in sorted list (1 = highest priority)"
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Human-readable explanation"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AlternativeUpgrade"
+          },
+          "description": "Alternative upgrade options"
+        }
+      }
+    },
+    "AlternativeUpgrade": {
+      "type": "object",
+      "required": ["description", "powerGain", "resourceCost", "tradeoff"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Description of alternative"
+        },
+        "powerGain": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Power gain for this alternative"
+        },
+        "resourceCost": {
+          "$ref": "#/definitions/UpgradeCost"
+        },
+        "tradeoff": {
+          "type": "string",
+          "description": "Why this alternative might be preferred"
+        }
+      }
+    },
+    "OptimizationError": {
+      "type": "object",
+      "required": ["type", "title", "message", "guidance"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "validation",
+            "insufficient-resources",
+            "timeout",
+            "server-error"
+          ],
+          "description": "Error type for programmatic handling"
+        },
+        "title": {
+          "type": "string",
+          "description": "Short error title for display"
+        },
+        "message": {
+          "type": "string",
+          "description": "Detailed error message"
+        },
+        "guidance": {
+          "type": "string",
+          "description": "Actionable next step for user"
+        },
+        "details": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Additional error context"
+        }
+      }
+    }
+  }
+}

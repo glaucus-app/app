@@ -1,0 +1,2202 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-18",
+  "source": "docs/legendary-gems/*.md",
+  "gems": {
+    "1-star": [
+      {
+        "id": "blessed-pebble",
+        "name": "Blessed Pebble",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "ALL",
+            "type": "permanent",
+            "description": "Beneficial Duration increased +X%",
+            "maxValue": 12,
+            "isStrifed": true
+          },
+          {
+            "category": "ALL",
+            "type": "Buff",
+            "description": "Movement Speed +X% after buff",
+            "maxValue": 8,
+            "duration": 3,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/blessed-pebble.png"
+      },
+      {
+        "id": "berserkers-eye",
+        "name": "Berserker's Eye",
+        "starRating": 1,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All Damage increased by X%",
+            "maxValue": 16,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Critical Hit Chance +X%",
+            "maxValue": 2,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/berserkers-eye.png"
+      },
+      {
+        "id": "caarsens-invigoration",
+        "name": "Ca'arsen's Invigoration",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Primary Attack Speed +X%",
+            "maxValue": 16,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Primary Attack Damage +X%",
+            "maxValue": 2,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/caarsens-invigoration.png"
+      },
+      {
+        "id": "everlasting-torment",
+        "name": "Everlasting Torment",
+        "starRating": 1,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "DOT",
+            "description": "Damage +X%/s over Time",
+            "maxValue": 24,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Attack Speed +X% increase per enemy",
+            "maxValue": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/everlasting-torment.png"
+      },
+      {
+        "id": "chained-death",
+        "name": "Chained Death",
+        "starRating": 1,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All Damage increased 2.5% per target",
+            "maxValue": 17.5,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/chained-death.png"
+      },
+      {
+        "id": "trickshot-gem",
+        "name": "Trickshot Gem",
+        "starRating": 1,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "ALL",
+            "type": "permanent",
+            "description": "Energy Consumption +X% slower",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "conditional",
+            "description": "Damage Reduction while channeling",
+            "maxValue": 2,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/trickshot-gem.png"
+      },
+      {
+        "id": "the-black-rose",
+        "name": "The Black Rose",
+        "starRating": 1,
+        "pvpTier": "S",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "24% chance to Immobilize",
+            "maxValue": 24,
+            "duration": 3.3,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/the-black-rose.png"
+      },
+      {
+        "id": "seleds-weakening",
+        "name": "Seled's Weakening",
+        "starRating": 1,
+        "pvpTier": "D",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage increased after killing Elites",
+            "maxValue": 18,
+            "duration": 60,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Damage vs Elites",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/seleds-weakening.png"
+      },
+      {
+        "id": "zod-stone",
+        "name": "Zod Stone",
+        "starRating": 1,
+        "pvpTier": "D",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Ultimate Duration",
+            "maxValue": 48,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Ultimate Damage",
+            "maxValue": 8,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/zod-stone.png"
+      },
+      {
+        "id": "respite-stone",
+        "name": "Respite Stone",
+        "starRating": 1,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Damage Reduction every 10% life lost",
+            "maxValue": 16,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "conditional",
+            "description": "Block Chance while below 50% life",
+            "maxValue": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/respite-stone.png"
+      },
+      {
+        "id": "nightmare-wreath",
+        "name": "Nightmare Wreath",
+        "starRating": 1,
+        "pvpTier": "D",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "TLOC",
+            "description": "10% chance to Fear after killing enemies",
+            "maxValue": 10,
+            "duration": 2.4,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "conditional",
+            "description": "All damage increased vs fleeing opponents",
+            "maxValue": 8,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/nightmare-wreath.png"
+      },
+      {
+        "id": "pain-of-subjugation",
+        "name": "Pain of Subjugation",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Damage vs LOC",
+            "maxValue": 16,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Damage taken while suffering LOC",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/pain-of-subjugation.png"
+      },
+      {
+        "id": "defiant-soul",
+        "name": "Defiant Soul",
+        "starRating": 1,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Counter Attack each time you block",
+            "maxValue": 192,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Damage Reduction",
+            "maxValue": 6,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ]
+      },
+      {
+        "id": "freedom-and-devotion",
+        "name": "Freedom and Devotion",
+        "starRating": 1,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "ALL",
+            "type": "permanent",
+            "description": "Summons Duration",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Summons Damage",
+            "maxValue": 3,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/freedom-and-devotion.png"
+      },
+      {
+        "id": "mocking-laughter",
+        "name": "Mocking Laughter",
+        "starRating": 1,
+        "pvpTier": "D",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "Taunt when hitting mobs with PA",
+            "maxValue": 100,
+            "duration": 6,
+            "isStrifed": false
+          },
+          {
+            "category": "DEF",
+            "type": "conditional",
+            "description": "Damage Reduction vs taunted mobs",
+            "maxValue": 8,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/mocking-laughter.png"
+      },
+      {
+        "id": "heartstone",
+        "name": "Heartstone",
+        "starRating": 1,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Shield Duration",
+            "maxValue": 36,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Reduce LOC Duration while shield active",
+            "maxValue": 24,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/heartstone.png"
+      },
+      {
+        "id": "los-focused-gaze",
+        "name": "Lo's Focused Gaze",
+        "starRating": 1,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Charge Skill Damage",
+            "maxValue": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "ALL",
+            "type": "permanent",
+            "description": "Charge Skill Speed",
+            "maxValue": 32,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/los-focused-gaze.png"
+      },
+      {
+        "id": "exigent-echo",
+        "name": "Exigent Echo",
+        "starRating": 1,
+        "pvpTier": "B",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Block Chance inc. after being critical hit",
+            "maxValue": 30,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "conditional",
+            "description": "Damage Reduction when blocking",
+            "maxValue": 12,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/exigent-echo.png"
+      },
+      {
+        "id": "eye-of-the-unyielding",
+        "name": "Eye of the Unyielding",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Continual Damage",
+            "maxValue": 16,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Continual Damage taken",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/eye-of-the-unyielding.png"
+      },
+      {
+        "id": "unrefined-passage",
+        "name": "Unrefined Passage",
+        "starRating": 1,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Damage taken while moving",
+            "maxValue": 15,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Slow Resistance",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/unrefined-passage.png"
+      },
+      {
+        "id": "misery-elixir",
+        "name": "Misery Elixir",
+        "starRating": 1,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Duration of harmful effects",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Damage vs harmful",
+            "maxValue": 2,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/misery-elixir.png"
+      },
+      {
+        "id": "lucent-watcher",
+        "name": "Lucent Watcher",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Reduce Duration of LOC",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Damage taken while suffering LOC",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/lucent-watcher.png"
+      },
+      {
+        "id": "entropic-well",
+        "name": "Entropic Well",
+        "starRating": 1,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Skill Damage",
+            "maxValue": 18,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Skill Attack Speed",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/entropic-well.png"
+      },
+      {
+        "id": "havoc-bearer",
+        "name": "Havoc Bearer",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All damage inc. after dash",
+            "maxValue": 18,
+            "duration": 2,
+            "cooldown": 6,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Attack Speed inc. after dash",
+            "maxValue": 4,
+            "duration": 2,
+            "cooldown": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/havoc-bearer.png"
+      },
+      {
+        "id": "faltergrasp",
+        "name": "Faltergrasp",
+        "starRating": 1,
+        "pvpTier": "S",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "Prevent the use of Dash skills",
+            "maxValue": 100,
+            "duration": 3.6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "Apply Slow",
+            "maxValue": 24,
+            "duration": 3.6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/faltergrasp.png"
+      },
+      {
+        "id": "surging-sea",
+        "name": "Surging Sea",
+        "starRating": 1,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "conditional",
+            "description": "Using a skill increases skill dmg +X%",
+            "maxValue": 24,
+            "duration": 3,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Skill cooldown +X%",
+            "maxValue": 2,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/surging-sea.png"
+      },
+      {
+        "id": "mountain-toe",
+        "name": "Mountain Toe",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Critical Resistance +X%",
+            "maxValue": 12,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Critical Hit Damage taken reduced +X%",
+            "maxValue": 4,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/mountain-toe.png"
+      },
+      {
+        "id": "flaystone",
+        "name": "Flaystone",
+        "starRating": 1,
+        "pvpTier": "A",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Damage vs Shielded enemies +X%",
+            "maxValue": 27,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "CHC vs Shielded enemies +X%",
+            "maxValue": 4,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/flaystone.png"
+      }
+    ],
+    "2-star": [
+      {
+        "id": "battleguard",
+        "name": "Battleguard",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Reduce all melee dmg",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "conditional",
+            "description": "Move unhindered if life below",
+            "maxValue": 60,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/battleguard.png"
+      },
+      {
+        "id": "power-and-command",
+        "name": "Power & Command",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "conditional",
+            "description": "Skill Damage",
+            "maxValue": 24,
+            "duration": 9,
+            "cooldown": 9,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "conditional",
+            "description": "Primary Attack Damage",
+            "maxValue": 24,
+            "duration": 9,
+            "cooldown": 9,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/power-command.png"
+      },
+      {
+        "id": "fervent-fang",
+        "name": "Fervent Fang",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "S",
+        "source": "Battle Pass",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All damage +2.4% per stacking attack",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Damage vs Elites",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ]
+      },
+      {
+        "id": "lightning-core",
+        "name": "Lightning Core",
+        "starRating": 2,
+        "pvpTier": "C",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Lightning Strike when PA fully charged",
+            "maxValue": 280,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All damage after LS",
+            "maxValue": 12,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/lightning-core.png"
+      },
+      {
+        "id": "cutthroats-grin",
+        "name": "Cutthroat's Grin",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "CHC when attacking from behind",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All damage when attacking from behind",
+            "maxValue": 4,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/cutthroats-grin.png"
+      },
+      {
+        "id": "pain-clasp",
+        "name": "Pain Clasp",
+        "starRating": 2,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All damage vs suffering from continual",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "conditional",
+            "description": "Movement Speed within 10yd of suff.",
+            "maxValue": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/pain-clasp.png"
+      },
+      {
+        "id": "bloody-reach",
+        "name": "Bloody Reach",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All damage +6% for each 2yd",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "1.2% chance from PA attacks to Slow",
+            "maxValue": 35,
+            "duration": 3,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/bloody-reach.png"
+      },
+      {
+        "id": "vipers-bite",
+        "name": "Viper's Bite",
+        "starRating": 2,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "DOT",
+            "description": "Damage over time",
+            "maxValue": 45,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Reduce Attack Speed X%",
+            "maxValue": 6,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/vipers-bite.png"
+      },
+      {
+        "id": "the-hunger",
+        "name": "The Hunger",
+        "starRating": 2,
+        "pvpTier": "D",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Heal",
+            "description": "Heal after you kill an enemy",
+            "maxValue": 140,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "ALL",
+            "type": "Buff",
+            "description": "Movement Speed after you kill an enemy",
+            "maxValue": 16,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/the-hunger.png"
+      },
+      {
+        "id": "the-abiding-curse",
+        "name": "The Abiding Curse",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "15% chance to Slow",
+            "maxValue": 35,
+            "duration": 7.5,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Cursed enemies are Vulnerable",
+            "maxValue": 10,
+            "duration": 7.5,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/the-abiding-curse.png"
+      },
+      {
+        "id": "unity-crystal",
+        "name": "Unity Crystal",
+        "starRating": 2,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Damage taken reduced 6yd party",
+            "maxValue": 4.5,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All Damage 6yd party",
+            "maxValue": 3.6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/unity-crystal.png"
+      },
+      {
+        "id": "followers-burden",
+        "name": "Follower's Burden",
+        "starRating": 2,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All Damage +6% per summon",
+            "maxValue": 18,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Damage taken by summons",
+            "maxValue": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/followers-burden.png"
+      },
+      {
+        "id": "kir-sling",
+        "name": "Kir Sling",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "LOC",
+            "description": "15% Chance to Blind",
+            "maxValue": 15,
+            "duration": 4,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Debuff",
+            "description": "Vulnerable",
+            "maxValue": 14,
+            "duration": 4,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/kir-sling.png"
+      },
+      {
+        "id": "volatility-shard",
+        "name": "Volatility Shard",
+        "starRating": 2,
+        "pvpTier": "D",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Explosion after killing an enemy",
+            "maxValue": 90,
+            "cooldown": 6,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage after killing an enemy",
+            "maxValue": 8,
+            "duration": 2,
+            "cooldown": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/volatility-shard.png"
+      },
+      {
+        "id": "mothers-lament",
+        "name": "Mother's Lament",
+        "starRating": 2,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "20% chance to inc CHC",
+            "maxValue": 32,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Explosion causes bleed",
+            "maxValue": 54,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/mothers-lament.png"
+      },
+      {
+        "id": "ironbane",
+        "name": "Ironbane",
+        "starRating": 2,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "10% chance to Armorbreak",
+            "maxValue": 15,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "CC",
+            "description": "Slow",
+            "maxValue": 16,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/ironbane.png"
+      },
+      {
+        "id": "igneous-scorn",
+        "name": "Igneous Scorn",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Critical hits cause Explosion",
+            "maxValue": 120,
+            "cooldown": 6,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage",
+            "maxValue": 10,
+            "duration": 2,
+            "cooldown": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/igneous-scorn.png"
+      },
+      {
+        "id": "grim-rhythm",
+        "name": "Grim Rhythm",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "A",
+        "source": "Battle Pass",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Attack Speed +2.4% per stack",
+            "maxValue": 24,
+            "duration": 3,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Movement Speed at full stack",
+            "maxValue": 12,
+            "duration": 3,
+            "isStrifed": false
+          }
+        ]
+      },
+      {
+        "id": "tear-of-the-comet",
+        "name": "Tear of the Comet",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Missile Damage per s channeled",
+            "maxValue": 32,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Channeled Damage",
+            "maxValue": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/tear-of-the-comet.png"
+      },
+      {
+        "id": "mossthorn",
+        "name": "Mossthorn",
+        "starRating": 2,
+        "pvpTier": "C",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Counter Attack every 0.5s",
+            "maxValue": 50,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Damage taken reduced",
+            "maxValue": 8,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/mossthorn.png"
+      },
+      {
+        "id": "cold-confidant",
+        "name": "Cold Confidant",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Summon",
+            "description": "Ice Damage",
+            "maxValue": 85,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "Chill",
+            "maxValue": 100,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/cold-confidant.png"
+      },
+      {
+        "id": "mourneskull",
+        "name": "Mourneskull",
+        "starRating": 2,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "source": "Event",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage hitting 3 enemies",
+            "maxValue": 36,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Missile Damage every s",
+            "maxValue": 12,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ]
+      },
+      {
+        "id": "mercys-harvest",
+        "name": "Mercy's Harvest",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Conjure",
+            "description": "Reaper Damage vs enemies <30% life",
+            "maxValue": 145,
+            "cooldown": 6,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage per enemy killed",
+            "maxValue": 12,
+            "duration": 30,
+            "cooldown": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/mercys-harvest.png"
+      },
+      {
+        "id": "specter-glass",
+        "name": "Specter Glass",
+        "starRating": 2,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Armorbreak",
+            "maxValue": 28,
+            "duration": 2,
+            "cooldown": 6,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "CHC increase",
+            "maxValue": 4,
+            "duration": 2,
+            "cooldown": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/specter-glass.png"
+      },
+      {
+        "id": "crimson-behelit",
+        "name": "Crimson Behelit",
+        "starRating": 2,
+        "pvpTier": "S",
+        "pveTier": "B",
+        "source": "Event",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage",
+            "maxValue": 30,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Damage Reduction",
+            "maxValue": 30,
+            "duration": 6,
+            "cooldown": 60,
+            "isStrifed": true
+          },
+          {
+            "category": "ALL",
+            "type": "TLOC",
+            "description": "AoE Fear",
+            "maxValue": 100,
+            "duration": 1.6,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ]
+      },
+      {
+        "id": "stubborn-oracle",
+        "name": "Stubborn Oracle",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Block Chance",
+            "maxValue": 48,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Reduce LOC duration",
+            "maxValue": 9,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/stubborn-oracle.png"
+      },
+      {
+        "id": "manaflux",
+        "name": "Manaflux",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "B",
+        "source": "Event",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Conjure",
+            "description": "Fire dmg + Burn",
+            "maxValue": 310,
+            "duration": 4,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Conjure",
+            "description": "Dmg + silence",
+            "maxValue": 310,
+            "duration": 4,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ]
+      },
+      {
+        "id": "fading-nostrum",
+        "name": "Fading Nostrum",
+        "starRating": 2,
+        "pvpTier": "B",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Continual Damage reduced",
+            "maxValue": 42,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Block projectiles",
+            "maxValue": 12,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/fading-nostrum.png"
+      },
+      {
+        "id": "rampant-torch",
+        "name": "Rampant Torch",
+        "starRating": 2,
+        "pvpTier": "A",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Damage taken reduced",
+            "maxValue": 15,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Continual Damage reduced",
+            "maxValue": 8,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/rampant-torch.png"
+      }
+    ],
+    "5-star": [
+      {
+        "id": "blood-soaked-jade",
+        "name": "Blood Soaked Jade",
+        "starRating": 5,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "All Damage",
+            "maxValue": 24,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "permanent",
+            "description": "Damage Reduction",
+            "maxValue": 8,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/blood-soaked-jade.png"
+      },
+      {
+        "id": "seeping-bile",
+        "name": "Seeping Bile",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "DOT",
+            "description": "5% chance to cause Damage over time",
+            "maxValue": 65,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "Slow for 6s",
+            "maxValue": 24,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/seeping-bile.png"
+      },
+      {
+        "id": "echoing-shade",
+        "name": "Echoing Shade",
+        "starRating": 5,
+        "pvpTier": "C",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Summon",
+            "description": "2-3 Shadow Clones",
+            "maxValue": 3,
+            "duration": 30,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/echoing-shade.png"
+      },
+      {
+        "id": "bottled-hope",
+        "name": "Bottled Hope",
+        "starRating": 5,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage + Movement Speed",
+            "maxValue": 24,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "permanent",
+            "description": "Cooldown Reduction",
+            "maxValue": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/bottled-hope.png"
+      },
+      {
+        "id": "phoenix-ashes",
+        "name": "Phoenix Ashes",
+        "starRating": 5,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Cheat Death + Shield",
+            "maxValue": 1050,
+            "duration": 6,
+            "cooldown": 180,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "heal",
+            "description": "Heal after Shield expires",
+            "maxValue": 80,
+            "cooldown": 180,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/phoenix-ashes.png"
+      },
+      {
+        "id": "blessing-of-the-worthy",
+        "name": "Blessing of the Worthy",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "20% chance Counter Attack",
+            "maxValue": 28,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Damage Reduction",
+            "maxValue": 16,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/blessing-of-the-worthy.png"
+      },
+      {
+        "id": "howlers-call",
+        "name": "Howler's Call",
+        "starRating": 5,
+        "pvpTier": "C",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Summon",
+            "description": "Charging Wolf",
+            "maxValue": 360,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "48% chance to Stun",
+            "maxValue": 48,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/howlers-call.png"
+      },
+      {
+        "id": "zwensons-haunting",
+        "name": "Zwenson's Haunting",
+        "starRating": 5,
+        "pvpTier": "D",
+        "pveTier": "D",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Summon",
+            "description": "When you kill summon Dark Beast",
+            "maxValue": 120,
+            "duration": 1,
+            "cooldown": 6,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Summon",
+            "description": "48% chance for +1 Dark Beast",
+            "maxValue": 120,
+            "duration": 1,
+            "cooldown": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/zwensons-haunting.png"
+      },
+      {
+        "id": "chip-of-stone-flesh",
+        "name": "Chip of the Stone Flesh",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Curse enemies when you inflict LOC",
+            "maxValue": 450,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Vulnerable",
+            "maxValue": 24,
+            "duration": 3,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/chip-of-the-stone-flesh.png"
+      },
+      {
+        "id": "frozen-heart",
+        "name": "Frozen Heart",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Absorb Shield",
+            "maxValue": 360,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "LOC",
+            "description": "Chance to freeze",
+            "maxValue": 60,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/frozen-heart.png"
+      },
+      {
+        "id": "consecrated-will",
+        "name": "Consecrated Will",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Deal Dmg after Dash",
+            "maxValue": 135,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Dmg + Movement Speed",
+            "maxValue": 16,
+            "duration": 2,
+            "cooldown": 6,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/consecrated-will.png"
+      },
+      {
+        "id": "hellfire-fragment",
+        "name": "Hellfire Fragment",
+        "starRating": 5,
+        "pvpTier": "C",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Fire 3 missiles deal dmg",
+            "maxValue": 108,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Deal Additional Dmg",
+            "maxValue": 50,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/hellfire-fragment.png"
+      },
+      {
+        "id": "gloom-cask",
+        "name": "Gloom Cask",
+        "starRating": 5,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "PA Buff Gloom Blades",
+            "maxValue": 68,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Vulnerable to PA",
+            "maxValue": 24,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/gloom-cask.png"
+      },
+      {
+        "id": "starfire-shard",
+        "name": "Starfire Shard",
+        "starRating": 5,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "CC",
+            "description": "50% chance for AoE + Knockback",
+            "maxValue": 500,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "DOT",
+            "description": "Burn Ground",
+            "maxValue": 40,
+            "duration": 2,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/starfire-shard.png"
+      },
+      {
+        "id": "spiteful-blood",
+        "name": "Spiteful Blood",
+        "starRating": 5,
+        "pvpTier": "A",
+        "pveTier": "C",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "All Damage if attacked + health <50%",
+            "maxValue": 30,
+            "duration": 4,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Gain Absorb Shield",
+            "maxValue": 160,
+            "duration": 4,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Immunity to PA",
+            "maxValue": 100,
+            "duration": 4,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/spiteful-blood.png"
+      },
+      {
+        "id": "void-spark",
+        "name": "Void Spark",
+        "starRating": 5,
+        "pvpTier": "A",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "30% chance of Lightning Strike",
+            "maxValue": 110,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Attack Speed",
+            "maxValue": 16,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/void-spark.png"
+      },
+      {
+        "id": "maw-of-the-deep",
+        "name": "Maw of the Deep",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "B",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "CC",
+            "description": "Damage + Knock Up",
+            "maxValue": 450,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Armorbreak",
+            "maxValue": 24,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/maw-of-the-deep.png"
+      },
+      {
+        "id": "roiling-consequence",
+        "name": "Roiling Consequence",
+        "starRating": 5,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Critical Hit Chance",
+            "maxValue": 42,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "CHC vs burning enemies",
+            "maxValue": 12,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "DOT",
+            "description": "Apply burn",
+            "maxValue": 36,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ]
+      },
+      {
+        "id": "stormvault",
+        "name": "Stormvault",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Conjure",
+            "description": "Conjure storm follows",
+            "maxValue": 50,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "Dmg + Slow 10%",
+            "maxValue": 24,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/stormvault.png"
+      },
+      {
+        "id": "wolfheart",
+        "name": "Wolfheart",
+        "starRating": 5,
+        "pvpTier": "A",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Deal additional dmg every 5 hits",
+            "maxValue": 95,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Attack Speed",
+            "maxValue": 14,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/wolfheart.png"
+      },
+      {
+        "id": "golden-firmament",
+        "name": "Golden Firmament",
+        "starRating": 5,
+        "pvpTier": "A",
+        "pveTier": "A",
+        "effects": [
+          {
+            "category": "DEF",
+            "type": "Damage",
+            "description": "3 Wind Blades/s dealing dmg",
+            "maxValue": 110,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Evasion Rating",
+            "maxValue": 12,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/golden-firmament.png"
+      },
+      {
+        "id": "colossus-engine",
+        "name": "Colossus Engine",
+        "starRating": 5,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Skill Damage",
+            "maxValue": 50,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "ALL",
+            "type": "Buff",
+            "description": "Size & Range increased",
+            "maxValue": 20,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Buff",
+            "description": "Knockback Immunity",
+            "maxValue": 100,
+            "duration": 4.8,
+            "cooldown": 20,
+            "isStrifed": false
+          }
+        ],
+        "icon": "/icons/gems/colossus-engine.png"
+      },
+      {
+        "id": "blood-foe",
+        "name": "Blood Foe",
+        "starRating": 5,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Skill Damage",
+            "maxValue": 20,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Critical Hit Damage",
+            "maxValue": 40,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "DOT",
+            "description": "Cause Bleed",
+            "maxValue": 10,
+            "duration": 3,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/blood-foe.png"
+      },
+      {
+        "id": "haunt-coil",
+        "name": "Haunt Coil",
+        "starRating": 5,
+        "pvpTier": "S",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Enemies take increased damage",
+            "maxValue": 45,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "DEF",
+            "type": "Debuff",
+            "description": "Enemies deal reduced Damage",
+            "maxValue": 45,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Damage",
+            "description": "Enemies unleash blasts",
+            "maxValue": 40,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/haunt-coil.png"
+      },
+      {
+        "id": "fated-trail",
+        "name": "Fated Trail",
+        "starRating": 5,
+        "pvpTier": "B",
+        "pveTier": "S",
+        "effects": [
+          {
+            "category": "OFF",
+            "type": "Buff",
+            "description": "Deal damage eq to % of max.Life",
+            "maxValue": 10,
+            "duration": 6,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "Debuff",
+            "description": "Armorbreak",
+            "maxValue": 24,
+            "duration": 2,
+            "cooldown": 20,
+            "isStrifed": true
+          },
+          {
+            "category": "OFF",
+            "type": "LOC",
+            "description": "Immobilize",
+            "maxValue": 100,
+            "duration": 1.5,
+            "cooldown": 20,
+            "isStrifed": true
+          }
+        ],
+        "icon": "/icons/gems/fated-trail.png"
+      }
+    ]
+  }
+}
