@@ -5,7 +5,7 @@
 
 ## Summary
 
-Build the user interface components for the DI-Lab legendary gems optimizer application, enabling Diablo Immortal players to input their gem inventory, specify available resources, receive optimization recommendations, and manage their builds. The UI uses Next.js 16 with App Router, React 19, Tailwind CSS 4, and persists data to a server-side SQLite database via Drizzle ORM with anonymous session identification (localStorage UUID v4).
+Build the user interface components for the Glaucus App legendary gems optimizer application, enabling Diablo Immortal players to input their gem inventory, specify available resources, receive optimization recommendations, and manage their builds. The UI uses Next.js 16 with App Router, React 19, Tailwind CSS 4, and persists data to a server-side SQLite database via Drizzle ORM with anonymous session identification (localStorage UUID v4).
 
 ---
 

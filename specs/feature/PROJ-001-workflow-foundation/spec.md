@@ -7,7 +7,7 @@
 
 ## Summary
 
-This specification defines the foundational workflow infrastructure for DI-Lab, establishing GitHub-centric spec hierarchy, conventional commits, changelog management, semantic versioning, and agent instructions for automated workflows.
+This specification defines the foundational workflow infrastructure for Glaucus App, establishing GitHub-centric spec hierarchy, conventional commits, changelog management, semantic versioning, and agent instructions for automated workflows.
 
 ## Architecture Overview
 

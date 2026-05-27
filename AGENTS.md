@@ -10,12 +10,12 @@ This file provides guidance to agents when working with code in this repository.
 
 ## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `bun install` | Install dependencies |
-| `bun build` | Build production app |
-| `bun lint` | Check code quality |
-| `bun typecheck` | Type checking |
+| Command         | Purpose              |
+| --------------- | -------------------- |
+| `bun install`   | Install dependencies |
+| `bun build`     | Build production app |
+| `bun lint`      | Check code quality   |
+| `bun typecheck` | Type checking        |
 
 ## Non-Obvious Project Details
 
@@ -25,8 +25,10 @@ This file provides guidance to agents when working with code in this repository.
 
 ## Feature Recipes
 
-When adding features, check the project docs for any recipes or patterns to follow.
+When adding features, check `.kilocode/recipes/`:
+
+- **Add Database**: `.kilocode/recipes/add-database.md` (Drizzle + SQLite)
 
 ## Memory Bank
 
-Update project documentation after completing significant changes.
+Update `.kilocode/rules/memory-bank/context.md` after completing significant changes.

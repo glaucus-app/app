@@ -11,7 +11,7 @@ Templates requiring updates:
 Follow-up TODOs: None
 -->
 
-# DI-Lab Constitution
+# Glaucus App Constitution
 
 ## Spec-Driven Foundation
 
@@ -34,6 +34,7 @@ This constitution follows the Specification-Driven Development (SDD) paradigm wh
 **ALL WORKFLOW PHASES REQUIRE EXPLICIT USER APPROVAL BEFORE PROCEEDING.**
 
 This non-negotiable principle prevents:
+
 - Workflow hallucinations where agents assume default behaviors
 - Cascading errors from incorrect interpretations
 - Specification drift from auto-advancing phases
@@ -46,16 +47,18 @@ This non-negotiable principle prevents:
 ### I. User-First Experience
 
 Every feature MUST prioritize user experience over technical convenience:
+
 - **Fast Results**: Optimization calculations complete in under 5 seconds
 - **Clear Output**: Recommendations understandable by casual players without documentation
 - **Mobile-First**: All interfaces work seamlessly on mobile browsers for in-game use
 - **Progressive Enhancement**: Core functionality works without JavaScript; enhanced with client-side interactivity
 
-**Rationale**: DI-Lab competes with manual calculations and spreadsheets. Speed and clarity are the primary value propositions.
+**Rationale**: Glaucus App competes with manual calculations and spreadsheets. Speed and clarity are the primary value propositions.
 
 ### II. Data Integrity
 
 Gem data MUST be accurate and up-to-date:
+
 - **Single Source of Truth**: Legendary gem stats stored in structured database schema
 - **Versioned Data**: Gem stats include game version metadata for auditability
 - **External Validation**: DI days and event data sourced from diablo.tv
@@ -66,6 +69,7 @@ Gem data MUST be accurate and up-to-date:
 ### III. Security & Privacy
 
 User data handling MUST follow security best practices:
+
 - **OAuth-Only Authentication**: No password storage; Battle.net OAuth as primary auth provider
 - **Minimal Data Collection**: Only collect data necessary for core functionality
 - **Character Verification**: Mock redemption API validates character ownership before linking
@@ -76,6 +80,7 @@ User data handling MUST follow security best practices:
 ### IV. Transparent Methodology
 
 Optimization algorithms MUST be explainable:
+
 - **Documented Algorithms**: All optimization logic documented in code comments and user-facing docs
 - **Power Gain Visibility**: Show calculated power gain for each recommendation
 - **Resource Breakdown**: Display exact resource cost for each suggested upgrade
@@ -86,6 +91,7 @@ Optimization algorithms MUST be explainable:
 ### V. Tiered Value
 
 Free tier MUST provide genuine value; paid tiers MUST offer clear upgrades:
+
 - **Free Tier**: Basic optimization (greedy algorithm), manual entry, useful results
 - **Paid Tier 1**: Advanced algorithms, OCR, build saving, ad-free
 - **Paid Tier 2**: Character sync, history, API access, analytics
@@ -96,14 +102,14 @@ Free tier MUST provide genuine value; paid tiers MUST offer clear upgrades:
 
 ### Stack Requirements
 
-| Component | Technology | Rationale |
-|-----------|------------|-----------|
-| Framework | Next.js 16 + React 19 | App Router, Server Components |
-| Styling | Tailwind CSS 4 | Utility-first, mobile-responsive |
-| Database | Drizzle ORM + SQLite | Type-safe, serverless-compatible |
-| Auth | NextAuth 5 | Battle.net OAuth integration |
-| Validation | Zod | Runtime type safety |
-| Package Manager | Bun | Fast installs, native TypeScript |
+| Component       | Technology            | Rationale                        |
+| --------------- | --------------------- | -------------------------------- |
+| Framework       | Next.js 16 + React 19 | App Router, Server Components    |
+| Styling         | Tailwind CSS 4        | Utility-first, mobile-responsive |
+| Database        | Drizzle ORM + SQLite  | Type-safe, serverless-compatible |
+| Auth            | NextAuth 5            | Battle.net OAuth integration     |
+| Validation      | Zod                   | Runtime type safety              |
+| Package Manager | Bun                   | Fast installs, native TypeScript |
 
 ### Performance Standards
 
@@ -144,6 +150,7 @@ Commit types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 ## Governance
 
 This constitution supersedes all other development practices and decisions:
+
 - **Amendments**: Require documentation, approval, and migration plan
 - **Conflicts**: Constitution principles take precedence over convenience
 - **Updates**: Increment version using semantic versioning:
@@ -159,16 +166,16 @@ This constitution supersedes all other development practices and decisions:
 
 This project uses the [Spec Kit](https://github.com/github/spec-kit) workflow for AI-assisted development:
 
-| Phase | Command | Purpose |
-|-------|---------|---------|
+| Phase        | Command                 | Purpose                           |
+| ------------ | ----------------------- | --------------------------------- |
 | Constitution | `/speckit.constitution` | Establish foundational principles |
-| Specify | `/speckit.specify` | Create feature specification |
-| Clarify | `/speckit.clarify` | Resolve underspecified areas |
-| Plan | `/speckit.plan` | Create implementation plan |
-| Checklist | `/speckit.checklist` | Verify requirements completeness |
-| Tasks | `/speckit.tasks` | Generate actionable tasks |
-| Analyze | `/speckit.analyze` | Cross-artifact consistency check |
-| Implement | `/speckit.implement` | Execute implementation |
+| Specify      | `/speckit.specify`      | Create feature specification      |
+| Clarify      | `/speckit.clarify`      | Resolve underspecified areas      |
+| Plan         | `/speckit.plan`         | Create implementation plan        |
+| Checklist    | `/speckit.checklist`    | Verify requirements completeness  |
+| Tasks        | `/speckit.tasks`        | Generate actionable tasks         |
+| Analyze      | `/speckit.analyze`      | Cross-artifact consistency check  |
+| Implement    | `/speckit.implement`    | Execute implementation            |
 
 ### Spec-Kit Directory Structure
 

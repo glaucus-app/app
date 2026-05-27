@@ -1,6 +1,6 @@
 # Spec-Driven Development (SDD) Workflow
 
-This directory contains all feature specifications for DI-Lab, following the Spec-Driven Development methodology aligned with [GitHub Spec Kit](https://github.com/github/spec-kit).
+This directory contains all feature specifications for Glaucus App, following the Spec-Driven Development methodology aligned with [GitHub Spec Kit](https://github.com/github/spec-kit).
 
 ## ⚠️ CRITICAL: Human-in-the-Loop Validation
 

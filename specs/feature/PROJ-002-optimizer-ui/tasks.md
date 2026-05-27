@@ -264,7 +264,7 @@
 
 **Goal**: Interface works smoothly on mobile devices during gameplay
 
-**Independent Test**: User can access DI-Lab on a mobile device (320px+ viewport), navigate all sections, and complete the optimization flow with touch interactions
+**Independent Test**: User can access Glaucus App on a mobile device (320px+ viewport), navigate all sections, and complete the optimization flow with touch interactions
 
 ### Responsive Layout
 

@@ -154,7 +154,7 @@ interface SpecReference {
   "specId": "001-workflow-foundation",
   "specPath": "specs/001-workflow-foundation",
   "taskId": "T001",
-  "issueUrl": "https://github.com/user/di-lab/issues/42",
+  "issueUrl": "https://github.com/user/glaucus-app/issues/42",
   "issueState": "open"
 }
 ```

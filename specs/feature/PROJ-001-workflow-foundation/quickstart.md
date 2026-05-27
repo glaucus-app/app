@@ -135,7 +135,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: di-lab
+          package-name: glaucus-app
           changelog-types: |
             [
               {"type":"feat","section":"Added","hidden":false},
@@ -168,7 +168,7 @@ Create `release-please-config.json` for advanced configuration:
 ```json
 {
   "release-type": "node",
-  "package-name": "di-lab",
+  "package-name": "glaucus-app",
   "changelog-path": "CHANGELOG.md",
   "changelog-types": [
     { "type": "feat", "section": "Added", "hidden": false },

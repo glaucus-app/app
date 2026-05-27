@@ -5,7 +5,7 @@
 
 ## Summary
 
-This plan implements the foundational workflow infrastructure for DI-Lab, establishing:
+This plan implements the foundational workflow infrastructure for Glaucus App, establishing:
 
 - Conventional commit enforcement via commitlint
 - Automated changelog & release management via **release-please-action**

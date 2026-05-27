@@ -164,7 +164,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: di-lab
+          package-name: glaucus-app
           changelog-types: |
             [
               {"type":"feat","section":"Added","hidden":false},
@@ -199,7 +199,7 @@ For more advanced configuration, create `release-please-config.json`:
 ```json
 {
   "release-type": "node",
-  "package-name": "di-lab",
+  "package-name": "glaucus-app",
   "changelog-path": "CHANGELOG.md",
   "changelog-types": [
     { "type": "feat", "section": "Added", "hidden": false },
@@ -352,7 +352,7 @@ None (infrastructure only)
 
 ---
 
-## release-please-action Benefits for DI-Lab
+## release-please-action Benefits for Glaucus App
 
 1. **Automated Release Notes**: When merging a release PR, GitHub release is created with notes
 2. **Consistent Changelog**: Standard changelog format from conventional commits

@@ -7,7 +7,7 @@
 
 ## Summary
 
-This specification defines the user interface components, layout, and interaction patterns for the DI-Lab legendary gems optimizer application. The UI enables Diablo Immortal players to input their gem inventory, specify available resources, receive optimization recommendations, and manage their builds. This specification focuses exclusively on the presentation layer and user interactions.
+This specification defines the user interface components, layout, and interaction patterns for the Glaucus App legendary gems optimizer application. The UI enables Diablo Immortal players to input their gem inventory, specify available resources, receive optimization recommendations, and manage their builds. This specification focuses exclusively on the presentation layer and user interactions.
 
 ---
 
@@ -52,7 +52,7 @@ As a player, I want to input my available upgrade resources so that the optimize
 
 As a player, I want to trigger optimization and view prioritized recommendations so that I can make informed decisions about which gems to upgrade.
 
-**Why this priority**: Optimization is the core value proposition of the application. This is the primary reason users visit DI-Lab.
+**Why this priority**: Optimization is the core value proposition of the application. This is the primary reason users visit Glaucus App.
 
 **Independent Test**: User can click optimize button, see loading state, and view ranked recommendations with expected power gains. Delivers immediate actionable intelligence.
 
@@ -121,15 +121,15 @@ As an advanced player, I want to set optimization preferences so that recommenda
 
 ### User Story 7 - Responsive Mobile Experience (Priority: P2)
 
-As a player using my phone during gameplay, I want the interface to work smoothly on mobile so that I can use DI-Lab while playing Diablo Immortal.
+As a player using my phone during gameplay, I want the interface to work smoothly on mobile so that I can use Glaucus App while playing Diablo Immortal.
 
 **Why this priority**: Mobile usability is critical for in-game use cases but desktop layout can serve as the design foundation.
 
-**Independent Test**: User can access DI-Lab on a mobile device, navigate all sections, and complete the optimization flow with touch interactions.
+**Independent Test**: User can access Glaucus App on a mobile device, navigate all sections, and complete the optimization flow with touch interactions.
 
 **Acceptance Scenarios**:
 
-1. **Given** user accesses DI-Lab on mobile, **When** the page loads, **Then** the layout adapts to the viewport with appropriately sized touch targets
+1. **Given** user accesses Glaucus App on mobile, **When** the page loads, **Then** the layout adapts to the viewport with appropriately sized touch targets
 2. **Given** mobile user is viewing the gem catalog, **When** user scrolls through gems, **Then** the catalog scrolls smoothly at 60fps performance (full category loaded per tab, no infinite scroll needed)
 3. **Given** mobile user is configuring gems, **When** user interacts with quality/rank selectors, **Then** mobile-friendly input controls are used (dropdowns, sliders, or stepper buttons)
 4. **Given** mobile user is viewing optimization results, **When** user scrolls through recommendations, **Then** the results are presented in a mobile-optimized card stack
@@ -146,7 +146,7 @@ As a player using my phone during gameplay, I want the interface to work smoothl
 - What happens when a user loses network connection during optimization? The interface should handle errors gracefully and allow retry when connection is restored.
 - What happens when a user's saved build contains gems that have been removed from the database? The interface should indicate the deprecated gems and allow removal.
 - What happens when a user has very high resource amounts that exceed display formatting? The interface should format numbers >= 1,000,000 with M suffix (e.g., "1.2M gemPower"), numbers >= 10,000 with K suffix (e.g., "15.3K gemPower"); exact thresholds: >= 1,000,000 uses M, >= 10,000 uses K. Numbers below 10,000 display with comma formatting only (e.g., "9,500").
-- What happens when a user has DI-Lab open in multiple browser tabs and makes conflicting build changes? The interface should allow concurrent edits but show a non-blocking toast warning (auto-dismiss after 5 seconds with pause on hover) when changes are detected from another tab (optimistic UI pattern per FR-008a).
+- What happens when a user has Glaucus App open in multiple browser tabs and makes conflicting build changes? The interface should allow concurrent edits but show a non-blocking toast warning (auto-dismiss after 5 seconds with pause on hover) when changes are detected from another tab (optimistic UI pattern per FR-008a).
 
 ---
 
@@ -827,7 +827,7 @@ The following items are explicitly out of scope for this UI specification:
   A: **Run calculator only** - Show "X runs needed to craft Y gems" without weekly projections. Let users map runs to their own play schedule. Different players have different weekly capacities; showing run requirements lets them plan according to their own situation.
 
 - Q: Should the optimizer integrate with or reference diablo.tv's Builder tool?
-  A: **No integration** - Keep spec as-is with diablo.tv mentioned in documentation only. Focus on DI-Lab's optimization features independently. Build import would add API dependency on an external service. Starting with manual gem entry keeps DI-Lab self-contained.
+  A: **No integration** - Keep spec as-is with diablo.tv mentioned in documentation only. Focus on Glaucus App's optimization features independently. Build import would add API dependency on an external service. Starting with manual gem entry keeps Glaucus App self-contained.
 
 - Q: What is the Telluric Pearl conversion rate from Fading Embers?
   A: **5 Fading Embers = 1 Telluric Pearl** - This exchange is suboptimal compared to the player-preferred strategy of saving 320 Fading Embers for an Eternal Legendary Crest, but it remains a viable option for bridging minor resource deficits. The optimizer should show this conversion when Telluric Pearls are the bottleneck resource.
@@ -972,7 +972,7 @@ The following items are explicitly out of scope for this UI specification:
 - Q: Should there be a maximum limit on the number of saved builds per user?  
   A: Tiered subscription model - Build capacity varies by subscription tier (free tier: limited, paid tiers: higher limits)
 
-- Q: What should happen when a user has DI-Lab open in multiple browser tabs and makes conflicting build changes?  
+- Q: What should happen when a user has Glaucus App open in multiple browser tabs and makes conflicting build changes?  
   A: Optimistic UI with warning - Allow concurrent edits but show a non-blocking toast warning when changes are detected from another tab
 
 - Q: What should be the default optimization mode when a user first loads the optimizer?  
