@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0](https://github.com/glaucus-app/app/compare/glaucus-v0.5.1...glaucus-v0.6.0) (2026-06-05)
+
+
+### Features
+
+* add tech stack security audit document ([4f11afb](https://github.com/glaucus-app/app/commit/4f11afb3a23d93699671e0c34f9699a803a0e80b))
+* **audit:** add comprehensive architecture audit document ([#1](https://github.com/glaucus-app/app/issues/1)) ([ea6232c](https://github.com/glaucus-app/app/commit/ea6232cd895486e7a68b124880a587c39f0170c6))
+* **docs:** add target system architecture document ([#2](https://github.com/glaucus-app/app/issues/2)) ([bb04780](https://github.com/glaucus-app/app/commit/bb0478026e6f7314a38405e2f8d179d066147db1))
+
+
+### Bug Fixes
+
+* address refinery review comments on tech stack audit ([16036da](https://github.com/glaucus-app/app/commit/16036da2b44fee71d2115b3fb8db2137c19f8033))
+* **gems:** add missing icon fields to 3 gems ([bfdfe3a](https://github.com/glaucus-app/app/commit/bfdfe3aac4bec332fc66c9ed5235f15ff38529b8))
+
 ## [0.5.1](https://github.com/Dahgoth/di-lab/compare/di-lab-v0.5.0...di-lab-v0.5.1) (2026-03-09)
 
 
