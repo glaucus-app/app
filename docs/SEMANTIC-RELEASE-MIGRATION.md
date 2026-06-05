@@ -85,7 +85,7 @@ This document evaluates migrating the Glaucus app from **Release Please** to **s
           { "type": "build", "release": "patch" },
           { "type": "ci", "release": "patch" },
           { "type": "chore", "release": "patch" },
-          { "scope": "security", "release": "patch" },
+          { "type": "chore", "scope": "security", "release": "patch" },
           { "breaking": true, "release": "major" }
         ],
         "parserOpts": {
@@ -216,7 +216,6 @@ jobs:
           extra_plugins: |
             @semantic-release/changelog@6
             @semantic-release/git@10
-            conventional-changelog-conventionalcommits@8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
