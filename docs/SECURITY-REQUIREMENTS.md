@@ -1,8 +1,9 @@
 # Security Requirements — Glaucus App
 
 > **Date:** 2026-06-05
+> **Updated:** 2026-06-05
 > **Project:** Diablo Immortal Gem Optimizer (Glaucus)
-> **Version:** 1.0.0
+> **Version:** 1.0.1
 > **Classification:** Internal — Engineering Reference
 
 ---
@@ -52,13 +53,13 @@
 
 ### 1.2 Threat Actors
 
-| Actor | Capability | Motivation |
-|-------|-----------|------------|
-| **Anonymous User** | Browser-level access, can craft arbitrary UUIDs | Access other users' data, abuse API |
-| **Authenticated User** | Valid session, own data | Escalate privileges, access other users' data |
-| **Malicious External** | Network-level access to public API | DDoS, injection, data exfiltration |
-| **Compromised Dependency** | Supply chain attack via npm packages | Backdoor insertion, data theft |
-| **Insider (future admin)** | Database/file system access | Data theft, unauthorized access |
+| Actor                      | Capability                                      | Motivation                                    |
+| -------------------------- | ----------------------------------------------- | --------------------------------------------- |
+| **Anonymous User**         | Browser-level access, can craft arbitrary UUIDs | Access other users' data, abuse API           |
+| **Authenticated User**     | Valid session, own data                         | Escalate privileges, access other users' data |
+| **Malicious External**     | Network-level access to public API              | DDoS, injection, data exfiltration            |
+| **Compromised Dependency** | Supply chain attack via npm packages            | Backdoor insertion, data theft                |
+| **Insider (future admin)** | Database/file system access                     | Data theft, unauthorized access               |
 
 ### 1.3 Attack Surface
 
@@ -125,14 +126,14 @@ User Browser                    API Route                     Database
 
 ### 1.5 STRIDE Analysis
 
-| Threat Category | Affected Component | Severity | Mitigation |
-|----------------|-------------------|----------|------------|
-| **S**poofing | Anonymous UUID identity | HIGH | Session tokens with rotation, OAuth integration |
-| **T**ampering | Build data, session state | HIGH | Zod validation, ownership verification |
-| **R**epudiation | User actions, build saves | MED | Audit logging, authenticated sessions |
-| **I**nformation Disclosure | Error responses, build data | HIGH | Response sanitization, authorization |
-| **D**enial of Service | /api/optimize (CPU-heavy) | HIGH | Rate limiting, request queuing |
-| **E**levation of Privilege | Anonymous → authenticated | HIGH | Secure migration flow, tier enforcement |
+| Threat Category            | Affected Component          | Severity | Mitigation                                      |
+| -------------------------- | --------------------------- | -------- | ----------------------------------------------- |
+| **S**poofing               | Anonymous UUID identity     | HIGH     | Session tokens with rotation, OAuth integration |
+| **T**ampering              | Build data, session state   | HIGH     | Zod validation, ownership verification          |
+| **R**epudiation            | User actions, build saves   | MED      | Audit logging, authenticated sessions           |
+| **I**nformation Disclosure | Error responses, build data | HIGH     | Response sanitization, authorization            |
+| **D**enial of Service      | /api/optimize (CPU-heavy)   | HIGH     | Rate limiting, request queuing                  |
+| **E**levation of Privilege | Anonymous → authenticated   | HIGH     | Secure migration flow, tier enforcement         |
 
 ---
 
@@ -214,14 +215,14 @@ NEXTAUTH_URL=https://glaucus.app  # production
 
 **Requirements:**
 
-| Parameter | Value | Rationale |
-|-----------|-------|-----------|
-| Session expiration | 30 days (authenticated), 7 days (anonymous) | Balance UX and security |
-| Idle timeout | 24 hours of inactivity | Prevents abandoned session abuse |
-| Absolute timeout | 30 days from creation | Forces re-authentication |
-| Concurrent sessions | 3 per user (free), 10 (tier 1), unlimited (tier 2) | Prevents account sharing |
-| Session fixation protection | New session token on every login | Prevents fixation attacks |
-| Secure cookie flags | HttpOnly, Secure, SameSite=Strict | Prevents XSS and CSRF theft |
+| Parameter                   | Value                                              | Rationale                        |
+| --------------------------- | -------------------------------------------------- | -------------------------------- |
+| Session expiration          | 30 days (authenticated), 7 days (anonymous)        | Balance UX and security          |
+| Idle timeout                | 24 hours of inactivity                             | Prevents abandoned session abuse |
+| Absolute timeout            | 30 days from creation                              | Forces re-authentication         |
+| Concurrent sessions         | 3 per user (free), 10 (tier 1), unlimited (tier 2) | Prevents account sharing         |
+| Session fixation protection | New session token on every login                   | Prevents fixation attacks        |
+| Secure cookie flags         | HttpOnly, Secure, SameSite=Strict                  | Prevents XSS and CSRF theft      |
 
 **Session lifecycle:**
 
@@ -278,19 +279,19 @@ Created ──idle 24h──> Expired ──re-auth──> Refreshed ──30 da
 
 ### 3.2 Tier-Based Access Control
 
-| Feature | Free | Tier 1 ($5/mo) | Tier 2 ($15/mo) |
-|---------|------|----------------|-----------------|
-| Manual gem entry | YES | YES | YES |
-| Greedy optimization | YES | YES | YES |
-| Saved builds | 5 | 50 | Unlimited |
-| Screenshot OCR | NO | YES | YES |
-| Advanced algorithms | NO | YES | YES |
-| Battle.net character sync | NO | NO | YES |
-| Historical tracking | NO | NO | YES |
-| API access | NO | NO | YES |
-| Build sharing | NO | YES | YES |
-| Analytics dashboard | NO | NO | YES |
-| Concurrent sessions | 3 | 10 | Unlimited |
+| Feature                   | Free | Tier 1 ($5/mo) | Tier 2 ($15/mo) |
+| ------------------------- | ---- | -------------- | --------------- |
+| Manual gem entry          | YES  | YES            | YES             |
+| Greedy optimization       | YES  | YES            | YES             |
+| Saved builds              | 5    | 50             | Unlimited       |
+| Screenshot OCR            | NO   | YES            | YES             |
+| Advanced algorithms       | NO   | YES            | YES             |
+| Battle.net character sync | NO   | NO             | YES             |
+| Historical tracking       | NO   | NO             | YES             |
+| API access                | NO   | NO             | YES             |
+| Build sharing             | NO   | YES            | YES             |
+| Analytics dashboard       | NO   | NO             | YES             |
+| Concurrent sessions       | 3    | 10             | Unlimited       |
 
 **Implementation:**
 
@@ -301,34 +302,34 @@ Created ──idle 24h──> Expired ──re-auth──> Refreshed ──30 da
 
 ### 3.3 API Endpoint Authorization Matrix
 
-| Endpoint | Method | Anonymous | Authenticated | Admin |
-|----------|--------|-----------|---------------|-------|
-| `/api/gems` | GET | YES | YES | YES |
-| `/api/optimize` | POST | YES (rate limited) | YES (rate limited) | YES |
-| `/api/session` | GET | Own only | Own only | NO |
-| `/api/session` | POST | Own only | Own only | NO |
-| `/api/session` | DELETE | Own only | Own only | NO |
-| `/api/builds` | GET | Own only | Own only | NO |
-| `/api/builds` | POST | Own only | Own only | NO |
-| `/api/builds/:id` | GET | Own or public | Own or public | YES |
-| `/api/builds/:id` | PATCH | Own only | Own only | YES |
-| `/api/builds/:id` | DELETE | Own only | Own only | YES |
-| `/api/auth/battlenet` | GET/POST | YES | YES | YES |
-| `/api/auth/migrate` | POST | YES | NO | NO |
-| `/api/billing/*` | ALL | NO | Own only | YES |
-| `/api/admin/*` | ALL | NO | NO | YES |
-| `/api/health` | GET | YES | YES | YES |
-| `/api/webhooks/stripe` | POST | Signature verified | Signature verified | YES |
+| Endpoint               | Method   | Anonymous          | Authenticated      | Admin |
+| ---------------------- | -------- | ------------------ | ------------------ | ----- |
+| `/api/gems`            | GET      | YES                | YES                | YES   |
+| `/api/optimize`        | POST     | YES (rate limited) | YES (rate limited) | YES   |
+| `/api/session`         | GET      | Own only           | Own only           | NO    |
+| `/api/session`         | POST     | Own only           | Own only           | NO    |
+| `/api/session`         | DELETE   | Own only           | Own only           | NO    |
+| `/api/builds`          | GET      | Own only           | Own only           | NO    |
+| `/api/builds`          | POST     | Own only           | Own only           | NO    |
+| `/api/builds/:id`      | GET      | Own or public      | Own or public      | YES   |
+| `/api/builds/:id`      | PATCH    | Own only           | Own only           | YES   |
+| `/api/builds/:id`      | DELETE   | Own only           | Own only           | YES   |
+| `/api/auth/battlenet`  | GET/POST | YES                | YES                | YES   |
+| `/api/auth/migrate`    | POST     | YES                | NO                 | NO    |
+| `/api/billing/*`       | ALL      | NO                 | Own only           | YES   |
+| `/api/admin/*`         | ALL      | NO                 | NO                 | YES   |
+| `/api/health`          | GET      | YES                | YES                | YES   |
+| `/api/webhooks/stripe` | POST     | Signature verified | Signature verified | YES   |
 
 ### 3.4 Permission Levels
 
-| Role | Description | Capabilities |
-|------|-------------|--------------|
-| **Anonymous** | Unregistered user, identified by session cookie | Optimize, manage own anonymous session, 5 builds max |
-| **User (Free)** | Registered, no paid tier | All anonymous + persistent account, 5 builds |
-| **User (Tier 1)** | Dolphin subscriber | Free + OCR, advanced algorithms, 50 builds, sharing |
-| **User (Tier 2)** | Whale subscriber | Tier 1 + Battle.net sync, history, API access, unlimited |
-| **Admin** | Application administrator | View all resources, manage users, access admin endpoints |
+| Role              | Description                                     | Capabilities                                             |
+| ----------------- | ----------------------------------------------- | -------------------------------------------------------- |
+| **Anonymous**     | Unregistered user, identified by session cookie | Optimize, manage own anonymous session, 5 builds max     |
+| **User (Free)**   | Registered, no paid tier                        | All anonymous + persistent account, 5 builds             |
+| **User (Tier 1)** | Dolphin subscriber                              | Free + OCR, advanced algorithms, 50 builds, sharing      |
+| **User (Tier 2)** | Whale subscriber                                | Tier 1 + Battle.net sync, history, API access, unlimited |
+| **Admin**         | Application administrator                       | View all resources, manage users, access admin endpoints |
 
 **Admin role implementation:**
 
@@ -345,14 +346,14 @@ Created ──idle 24h──> Expired ──re-auth──> Refreshed ──30 da
 
 **Implementation:** Sliding window counter per identifier.
 
-| Endpoint | Anonymous Limit | Authenticated Limit | Window | Action on Excess |
-|----------|----------------|--------------------|--------|-----------------|
-| `/api/optimize` | 10 req / IP | 30 req / user | 60s | 429 + Retry-After header |
-| `/api/builds` (POST) | 5 req / IP | 20 req / user | 60s | 429 + Retry-After header |
-| `/api/session` (POST) | 30 req / IP | 60 req / user | 60s | 429 + Retry-After header |
-| All GET endpoints | 60 req / IP | 120 req / user | 60s | 429 + Retry-After header |
-| `/api/auth/*` | 5 req / IP | 10 req / user | 60s | 429 + account lock after 10 failures |
-| `/api/webhooks/*` | N/A | 100 req / IP | 60s | 429 (verify source IP) |
+| Endpoint              | Anonymous Limit | Authenticated Limit | Window | Action on Excess                     |
+| --------------------- | --------------- | ------------------- | ------ | ------------------------------------ |
+| `/api/optimize`       | 10 req / IP     | 30 req / user       | 60s    | 429 + Retry-After header             |
+| `/api/builds` (POST)  | 5 req / IP      | 20 req / user       | 60s    | 429 + Retry-After header             |
+| `/api/session` (POST) | 30 req / IP     | 60 req / user       | 60s    | 429 + Retry-After header             |
+| All GET endpoints     | 60 req / IP     | 120 req / user      | 60s    | 429 + Retry-After header             |
+| `/api/auth/*`         | 5 req / IP      | 10 req / user       | 60s    | 429 + account lock after 10 failures |
+| `/api/webhooks/*`     | N/A             | 100 req / IP        | 60s    | 429 (verify source IP)               |
 
 **Current scale (SQLite):** In-memory sliding window with per-process counters. Sufficient for < 100 concurrent users.
 
@@ -394,14 +395,17 @@ features/<feature>/
 **Validation middleware pattern:**
 
 ```typescript
-import { withZodValidation } from '@/shared/validation/validators';
-import { CreateBuildSchema } from '@/features/builds/schemas';
+import { withZodValidation } from "@/shared/validation/validators";
+import { CreateBuildSchema } from "@/features/builds/schemas";
 
-export const POST = withZodValidation(CreateBuildSchema, async (request, parsed) => {
-  // parsed is typed and validated
-  const build = await createBuild(parsed);
-  return NextResponse.json({ data: build }, { status: 201 });
-});
+export const POST = withZodValidation(
+  CreateBuildSchema,
+  async (request, parsed) => {
+    // parsed is typed and validated
+    const build = await createBuild(parsed);
+    return NextResponse.json({ data: build }, { status: 201 });
+  },
+);
 ```
 
 ### 4.3 Response Sanitization
@@ -423,28 +427,47 @@ export const POST = withZodValidation(CreateBuildSchema, async (request, parsed)
 // Development: return error details
 function handleApiError(error: unknown): NextResponse {
   if (error instanceof AppError) {
-    return NextResponse.json({ error: error.toResponse() }, { status: error.statusCode });
+    return NextResponse.json(
+      { error: error.toResponse() },
+      { status: error.statusCode },
+    );
   }
-  console.error('Unhandled API error:', error);
-  if (process.env.NODE_ENV === 'development') {
-    return NextResponse.json({ error: { message: (error as Error).message, stack: (error as Error).stack } }, { status: 500 });
+  console.error("Unhandled API error:", error);
+  if (process.env.NODE_ENV === "development") {
+    return NextResponse.json(
+      {
+        error: {
+          message: (error as Error).message,
+          stack: (error as Error).stack,
+        },
+      },
+      { status: 500 },
+    );
   }
-  return NextResponse.json({ error: { type: 'internal_error', message: 'An unexpected error occurred.' } }, { status: 500 });
+  return NextResponse.json(
+    {
+      error: {
+        type: "internal_error",
+        message: "An unexpected error occurred.",
+      },
+    },
+    { status: 500 },
+  );
 }
 ```
 
 ### 4.4 Input Size Limits
 
-| Input Type | Limit | Enforcement |
-|-----------|-------|-------------|
-| Request body | 1 MB | Next.js `bodySizeLimit` config |
-| File uploads (OCR) | 10 MB | Explicit size check before processing |
-| Build name | 100 characters | Zod `max(100)` |
-| Build notes | 5000 characters | Zod `max(5000)` |
-| Chat message (future) | 2000 characters | Zod `max(2000)` |
-| Array fields (gems, resources) | 100 items | Zod `array().max(100)` |
-| URL parameters | 255 characters | Express/Next.js default |
-| Cookie size | 4 KB | Browser limit (enforced by design) |
+| Input Type                     | Limit           | Enforcement                           |
+| ------------------------------ | --------------- | ------------------------------------- |
+| Request body                   | 1 MB            | Next.js `bodySizeLimit` config        |
+| File uploads (OCR)             | 10 MB           | Explicit size check before processing |
+| Build name                     | 100 characters  | Zod `max(100)`                        |
+| Build notes                    | 5000 characters | Zod `max(5000)`                       |
+| Chat message (future)          | 2000 characters | Zod `max(2000)`                       |
+| Array fields (gems, resources) | 100 items       | Zod `array().max(100)`                |
+| URL parameters                 | 255 characters  | Express/Next.js default               |
+| Cookie size                    | 4 KB            | Browser limit (enforced by design)    |
 
 ### 4.5 SQL Injection Prevention
 
@@ -477,16 +500,16 @@ const result = await db.execute(`SELECT * FROM users WHERE id = '${userId}'`);
 
 **PII collected:**
 
-| Data Type | Source | Classification | Storage | Retention |
-|-----------|--------|---------------|---------|-----------|
-| Email | Battle.net OAuth | PII | Encrypted at rest | Until account deletion + 30 days |
-| Battle.net BattleTag | OAuth profile | Public identifier | Plain text | Until account deletion |
-| Battle.net access token | OAuth flow | Secret | Encrypted at rest | Until token expires or user revokes |
-| Battle.net refresh token | OAuth flow | Secret | Encrypted at rest | Until user revokes or logs out |
-| IP address | Request headers | PII (GDPR) | Not stored (rate limiting uses in-memory) | N/A |
-| User agent | Request headers | PII | Not stored | N/A |
-| Game character names | User input / Battle.net API | Non-PII | Plain text | Until user deletes |
-| Build data | User input | Non-PII | Plain text | Until user deletes |
+| Data Type                | Source                      | Classification    | Storage                                   | Retention                           |
+| ------------------------ | --------------------------- | ----------------- | ----------------------------------------- | ----------------------------------- |
+| Email                    | Battle.net OAuth            | PII               | Encrypted at rest                         | Until account deletion + 30 days    |
+| Battle.net BattleTag     | OAuth profile               | Public identifier | Plain text                                | Until account deletion              |
+| Battle.net access token  | OAuth flow                  | Secret            | Encrypted at rest                         | Until token expires or user revokes |
+| Battle.net refresh token | OAuth flow                  | Secret            | Encrypted at rest                         | Until user revokes or logs out      |
+| IP address               | Request headers             | PII (GDPR)        | Not stored (rate limiting uses in-memory) | N/A                                 |
+| User agent               | Request headers             | PII               | Not stored                                | N/A                                 |
+| Game character names     | User input / Battle.net API | Non-PII           | Plain text                                | Until user deletes                  |
+| Build data               | User input                  | Non-PII           | Plain text                                | Until user deletes                  |
 
 **Encryption at rest:**
 
@@ -545,12 +568,12 @@ CREATE POLICY user_builds_policy ON saved_builds
 
 ### 5.4 Backup Strategy
 
-| Backup Type | Frequency | Retention | Encryption | Storage |
-|-------------|-----------|-----------|------------|---------|
-| SQLite database | Daily (cron) | 30 days | AES-256 | Encrypted cloud storage |
-| PostgreSQL | Continuous WAL archiving + daily full | 90 days | Built-in + AES-256 | Managed provider |
-| Environment variables | On change | Indefinite | Vault/secrets manager | Infrastructure config |
-| User uploads (OCR images) | Real-time replication | 7 days | Provider encryption | Cloud storage |
+| Backup Type               | Frequency                             | Retention  | Encryption            | Storage                 |
+| ------------------------- | ------------------------------------- | ---------- | --------------------- | ----------------------- |
+| SQLite database           | Daily (cron)                          | 30 days    | AES-256               | Encrypted cloud storage |
+| PostgreSQL                | Continuous WAL archiving + daily full | 90 days    | Built-in + AES-256    | Managed provider        |
+| Environment variables     | On change                             | Indefinite | Vault/secrets manager | Infrastructure config   |
+| User uploads (OCR images) | Real-time replication                 | 7 days     | Provider encryption   | Cloud storage           |
 
 **Backup verification:**
 
@@ -573,18 +596,18 @@ CREATE POLICY user_builds_policy ON saved_builds
 
 ### 5.5 Data Retention
 
-| Data Type | Retention Period | Deletion Trigger |
-|-----------|-----------------|-----------------|
-| Anonymous sessions | 7 days of inactivity | Inactivity > 7 days or explicit delete |
-| Authenticated sessions | 30 days of inactivity | Inactivity > 30 days or logout |
-| Saved builds (active user) | Indefinite | User deletion |
-| Saved builds (deleted account) | 30 days (grace period) | Grace period expires |
-| OAuth tokens | Until expiry or revocation | Token expiry, user logout, or user revokes |
-| Chat history (future) | 90 days | User deletion or 90-day expiry |
-| Payment records | 7 years (legal requirement) | Legal retention period expires |
-| Audit logs | 1 year | 1-year expiry |
-| Rate limit counters | In-memory only | Process restart |
-| Error logs | 90 days | 90-day expiry |
+| Data Type                      | Retention Period            | Deletion Trigger                           |
+| ------------------------------ | --------------------------- | ------------------------------------------ |
+| Anonymous sessions             | 7 days of inactivity        | Inactivity > 7 days or explicit delete     |
+| Authenticated sessions         | 30 days of inactivity       | Inactivity > 30 days or logout             |
+| Saved builds (active user)     | Indefinite                  | User deletion                              |
+| Saved builds (deleted account) | 30 days (grace period)      | Grace period expires                       |
+| OAuth tokens                   | Until expiry or revocation  | Token expiry, user logout, or user revokes |
+| Chat history (future)          | 90 days                     | User deletion or 90-day expiry             |
+| Payment records                | 7 years (legal requirement) | Legal retention period expires             |
+| Audit logs                     | 1 year                      | 1-year expiry                              |
+| Rate limit counters            | In-memory only              | Process restart                            |
+| Error logs                     | 90 days                     | 90-day expiry                              |
 
 **User data deletion (GDPR/CCPA):**
 
@@ -600,15 +623,15 @@ CREATE POLICY user_builds_policy ON saved_builds
 
 ### 6.1 Current State Assessment
 
-| Header | Current Value | Status | Target |
-|--------|--------------|--------|--------|
-| `X-Content-Type-Options` | `nosniff` | OK | Keep |
-| `X-Frame-Options` | `ALLOWALL` | VULNERABLE | `DENY` |
-| `X-XSS-Protection` | `1; mode=block` | Deprecated | Remove (CSP replaces) |
-| `Content-Security-Policy` | Via middleware (partial) | INCOMPLETE | See below |
-| `Strict-Transport-Security` | Not set | MISSING | Required |
-| `Referrer-Policy` | Not set | MISSING | Required |
-| `Permissions-Policy` | Not set | MISSING | Required |
+| Header                      | Current Value            | Status     | Target                |
+| --------------------------- | ------------------------ | ---------- | --------------------- |
+| `X-Content-Type-Options`    | `nosniff`                | OK         | Keep                  |
+| `X-Frame-Options`           | `ALLOWALL`               | VULNERABLE | `DENY`                |
+| `X-XSS-Protection`          | `1; mode=block`          | Deprecated | Remove (CSP replaces) |
+| `Content-Security-Policy`   | Via middleware (partial) | INCOMPLETE | See below             |
+| `Strict-Transport-Security` | Not set                  | MISSING    | Required              |
+| `Referrer-Policy`           | Not set                  | MISSING    | Required              |
+| `Permissions-Policy`        | Not set                  | MISSING    | Required              |
 
 ### 6.2 Target Security Headers
 
@@ -621,25 +644,31 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
           // Prevent MIME type sniffing
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: "X-Content-Type-Options", value: "nosniff" },
 
           // Prevent clickjacking - no framing allowed
-          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: "X-Frame-Options", value: "DENY" },
 
           // Force HTTPS
-          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
 
           // Control referrer information
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
 
           // Restrict browser features
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(self)' },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), payment=(self)",
+          },
 
           // Remove server identification
-          { key: 'X-Powered-By', value: '' },
+          { key: "X-Powered-By", value: "" },
         ],
       },
     ];
@@ -749,12 +778,12 @@ report-to csp-endpoint
 
 ### 7.3 Vulnerability Response Process
 
-| Severity | Response Time | Action |
-|----------|--------------|--------|
-| Critical | 24 hours | Immediate patch or workaround, emergency release |
-| High | 7 days | Scheduled patch in next release |
-| Medium | 30 days | Added to backlog, addressed in sprint |
-| Low | 90 days | Added to backlog |
+| Severity | Response Time | Action                                           |
+| -------- | ------------- | ------------------------------------------------ |
+| Critical | 24 hours      | Immediate patch or workaround, emergency release |
+| High     | 7 days        | Scheduled patch in next release                  |
+| Medium   | 30 days       | Added to backlog, addressed in sprint            |
+| Low      | 90 days       | Added to backlog                                 |
 
 **Process:**
 
@@ -770,12 +799,12 @@ report-to csp-endpoint
 
 **High-risk dependencies:**
 
-| Package | Risk | Mitigation |
-|---------|------|-----------|
-| `tesseract.js` (7MB+) | Large WASM binary, complex loading chain, external model files | Pin to exact version, verify checksum, lazy-load only when needed, review source code |
-| `next-auth` (beta) | Beta version, potential breaking changes, security surface | Monitor release notes, test thoroughly before upgrading, consider stable alternative if issues arise |
-| `better-sqlite3` | Native binary, compiled code | Pin version, verify binary integrity, monitor security advisories |
-| `@radix-ui/*` | Multiple packages, broad UI surface | Pin all to exact versions, update together |
+| Package               | Risk                                                           | Mitigation                                                                                           |
+| --------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `tesseract.js` (7MB+) | Large WASM binary, complex loading chain, external model files | Pin to exact version, verify checksum, lazy-load only when needed, review source code                |
+| `next-auth` (beta)    | Beta version, potential breaking changes, security surface     | Monitor release notes, test thoroughly before upgrading, consider stable alternative if issues arise |
+| `better-sqlite3`      | Native binary, compiled code                                   | Pin version, verify binary integrity, monitor security advisories                                    |
+| `@radix-ui/*`         | Multiple packages, broad UI surface                            | Pin all to exact versions, update together                                                           |
 
 **Supply chain security practices:**
 
@@ -790,17 +819,17 @@ report-to csp-endpoint
 
 ### 8.1 What Constitutes a Security Incident
 
-| Category | Examples | Severity |
-|----------|----------|----------|
-| **Data Breach** | User data exposed, database accessed unauthorized | Critical |
-| **Authentication Bypass** | UUID forgery exploited, OAuth flow bypassed | Critical |
-| **Account Takeover** | User account accessed by unauthorized party | Critical |
-| **XSS Exploitation** | Malicious script executed in user browser | High |
-| **CSRF Exploitation** | Unauthorized action performed on behalf of user | High |
-| **DDoS** | Service degraded or unavailable due to abuse | High |
-| **Dependency Compromise** | Supply chain attack via npm package | Critical |
-| **Credential Leak** | API keys, secrets, or tokens exposed in code or logs | High |
-| **Configuration Error** | Security headers misconfigured, HTTPS disabled | Medium |
+| Category                  | Examples                                             | Severity |
+| ------------------------- | ---------------------------------------------------- | -------- |
+| **Data Breach**           | User data exposed, database accessed unauthorized    | Critical |
+| **Authentication Bypass** | UUID forgery exploited, OAuth flow bypassed          | Critical |
+| **Account Takeover**      | User account accessed by unauthorized party          | Critical |
+| **XSS Exploitation**      | Malicious script executed in user browser            | High     |
+| **CSRF Exploitation**     | Unauthorized action performed on behalf of user      | High     |
+| **DDoS**                  | Service degraded or unavailable due to abuse         | High     |
+| **Dependency Compromise** | Supply chain attack via npm package                  | Critical |
+| **Credential Leak**       | API keys, secrets, or tokens exposed in code or logs | High     |
+| **Configuration Error**   | Security headers misconfigured, HTTPS disabled       | Medium   |
 
 ### 8.2 Response Process
 
@@ -842,12 +871,12 @@ report-to csp-endpoint
 
 **5. Notify:**
 
-| Audience | Trigger | Timeline | Method |
-|----------|---------|----------|--------|
-| Affected users | Personal data exposed | 72 hours (GDPR) | Email + in-app notification |
-| Authorities (DPA) | Personal data breach affecting EU users | 72 hours (GDPR) | Formal report |
-| Battle.net | Violation of their API ToS discovered | 48 hours | Developer relations contact |
-| Public | Incident affecting > 100 users | 7 days | Blog post, SECURITY.md update |
+| Audience          | Trigger                                 | Timeline        | Method                        |
+| ----------------- | --------------------------------------- | --------------- | ----------------------------- |
+| Affected users    | Personal data exposed                   | 72 hours (GDPR) | Email + in-app notification   |
+| Authorities (DPA) | Personal data breach affecting EU users | 72 hours (GDPR) | Formal report                 |
+| Battle.net        | Violation of their API ToS discovered   | 48 hours        | Developer relations contact   |
+| Public            | Incident affecting > 100 users          | 7 days          | Blog post, SECURITY.md update |
 
 ### 8.3 Responsible Disclosure Policy
 
@@ -877,12 +906,14 @@ We take the security of Glaucus seriously. If you believe you've found a securit
 ## Scope
 
 In-scope:
+
 - The Glaucus web application (https://glaucus.app)
 - All API endpoints
 - Authentication flows
 - Data storage and transmission
 
 Out-of-scope:
+
 - Third-party services (Battle.net, Stripe)
 - Social engineering attacks
 - Physical security
@@ -890,14 +921,14 @@ Out-of-scope:
 
 ### 8.4 Log Retention for Forensic Analysis
 
-| Log Type | Retention | Format | Access |
-|----------|-----------|--------|--------|
-| API access logs | 90 days | JSON structured | Engineering team |
-| Authentication events | 1 year | JSON structured | Engineering + Admin |
-| Error logs | 90 days | JSON structured | Engineering team |
-| Security audit logs | 1 year | JSON structured | Admin only |
-| CSP violation reports | 30 days | JSON | Engineering team |
-| Rate limit events | 7 days | JSON | Engineering team |
+| Log Type              | Retention | Format          | Access              |
+| --------------------- | --------- | --------------- | ------------------- |
+| API access logs       | 90 days   | JSON structured | Engineering team    |
+| Authentication events | 1 year    | JSON structured | Engineering + Admin |
+| Error logs            | 90 days   | JSON structured | Engineering team    |
+| Security audit logs   | 1 year    | JSON structured | Admin only          |
+| CSP violation reports | 30 days   | JSON            | Engineering team    |
+| Rate limit events     | 7 days    | JSON            | Engineering team    |
 
 **Audit log events (minimum):**
 
@@ -935,15 +966,15 @@ Out-of-scope:
 
 **Responsibility split:**
 
-| Responsibility | Handled By | Notes |
-|---------------|-----------|-------|
-| Card data collection | Stripe.js (client-side) | Card numbers NEVER touch Glaucus servers |
-| Card data transmission | Stripe | TLS encrypted, PCI DSS Level 1 certified |
-| Token storage | Glaucus (Stripe customer ID only) | Token is not card data |
-| PCI DSS compliance | Stripe | Stripe handles PCI certification |
-| PCI SAQ-A | Glaucus | Must complete SAQ-A (self-assessment questionnaire) |
-| Vulnerability scanning | Glaucus | Quarterly external scans required for SAQ-A |
-| Security policy | Glaucus | Must maintain information security policy |
+| Responsibility         | Handled By                        | Notes                                               |
+| ---------------------- | --------------------------------- | --------------------------------------------------- |
+| Card data collection   | Stripe.js (client-side)           | Card numbers NEVER touch Glaucus servers            |
+| Card data transmission | Stripe                            | TLS encrypted, PCI DSS Level 1 certified            |
+| Token storage          | Glaucus (Stripe customer ID only) | Token is not card data                              |
+| PCI DSS compliance     | Stripe                            | Stripe handles PCI certification                    |
+| PCI SAQ-A              | Glaucus                           | Must complete SAQ-A (self-assessment questionnaire) |
+| Vulnerability scanning | Glaucus                           | Quarterly external scans required for SAQ-A         |
+| Security policy        | Glaucus                           | Must maintain information security policy           |
 
 **Glaucus PCI responsibilities:**
 
@@ -960,18 +991,18 @@ Out-of-scope:
 
 **Requirements:**
 
-| Requirement | Implementation |
-|------------|----------------|
-| **Lawful basis** | Legitimate interest (service delivery) + consent (optional features) |
-| **Data minimization** | Collect only email, BattleTag, game data needed for service |
-| **Right to access** | `/api/account/export` — download all personal data (JSON format) |
-| **Right to erasure** | `/api/account/delete` — full account deletion within 30 days |
-| **Right to rectification** | User can update their profile data via settings page |
-| **Right to portability** | Export includes all user data in machine-readable format |
-| **Right to object** | User can object to processing; results in account deletion |
-| **Consent management** | Cookie consent banner for non-essential cookies (analytics, etc.) |
-| **Data processing agreement** | Required with any third-party processor (Stripe, hosting provider) |
-| **DPO contact** | privacy@glaucus.app (or equivalent) |
+| Requirement                   | Implementation                                                       |
+| ----------------------------- | -------------------------------------------------------------------- |
+| **Lawful basis**              | Legitimate interest (service delivery) + consent (optional features) |
+| **Data minimization**         | Collect only email, BattleTag, game data needed for service          |
+| **Right to access**           | `/api/account/export` — download all personal data (JSON format)     |
+| **Right to erasure**          | `/api/account/delete` — full account deletion within 30 days         |
+| **Right to rectification**    | User can update their profile data via settings page                 |
+| **Right to portability**      | Export includes all user data in machine-readable format             |
+| **Right to object**           | User can object to processing; results in account deletion           |
+| **Consent management**        | Cookie consent banner for non-essential cookies (analytics, etc.)    |
+| **Data processing agreement** | Required with any third-party processor (Stripe, hosting provider)   |
+| **DPO contact**               | privacy@glaucus.app (or equivalent)                                  |
 
 **Data export format:**
 
@@ -997,13 +1028,13 @@ Out-of-scope:
 
 ### 9.5 Compliance Checklist
 
-| Regulation | Status | Action Items |
-|-----------|--------|-------------|
-| Battle.net API ToS | NOT REVIEWED | Review current ToS, document compliance requirements |
-| Stripe PCI SAQ-A | NOT STARTED | Complete before launching billing feature |
-| GDPR | PARTIAL (design) | Implement data export, deletion, consent banner |
-| CCPA | PARTIAL (design) | Add "Do Not Sell" link, update privacy policy |
-| Cookie consent | NOT IMPLEMENTED | Implement before adding analytics/tracking |
+| Regulation         | Status           | Action Items                                         |
+| ------------------ | ---------------- | ---------------------------------------------------- |
+| Battle.net API ToS | NOT REVIEWED     | Review current ToS, document compliance requirements |
+| Stripe PCI SAQ-A   | NOT STARTED      | Complete before launching billing feature            |
+| GDPR               | PARTIAL (design) | Implement data export, deletion, consent banner      |
+| CCPA               | PARTIAL (design) | Add "Do Not Sell" link, update privacy policy        |
+| Cookie consent     | NOT IMPLEMENTED  | Implement before adding analytics/tracking           |
 
 ---
 
@@ -1074,14 +1105,14 @@ Use this checklist for EVERY feature before deployment. Check all items that app
 
 ### 11.1 When to Pen Test
 
-| Trigger | Scope |
-|---------|-------|
-| Before v1.0 launch | Full application |
-| After auth implementation | Auth flows, session management |
-| After billing implementation | Payment flows, Stripe integration |
-| After major architecture change | Affected components + regression |
-| Annually (minimum) | Full application |
-| After security incident | Full application |
+| Trigger                         | Scope                             |
+| ------------------------------- | --------------------------------- |
+| Before v1.0 launch              | Full application                  |
+| After auth implementation       | Auth flows, session management    |
+| After billing implementation    | Payment flows, Stripe integration |
+| After major architecture change | Affected components + regression  |
+| Annually (minimum)              | Full application                  |
+| After security incident         | Full application                  |
 
 ### 11.2 Recommended Testing Areas
 
@@ -1140,16 +1171,16 @@ Use this checklist for EVERY feature before deployment. Check all items that app
 
 ### 11.3 Testing Tools
 
-| Tool | Purpose |
-|------|---------|
-| **OWASP ZAP** | Automated vulnerability scanner, free |
-| **Burp Suite Community** | Manual testing proxy |
+| Tool                        | Purpose                                                      |
+| --------------------------- | ------------------------------------------------------------ |
+| **OWASP ZAP**               | Automated vulnerability scanner, free                        |
+| **Burp Suite Community**    | Manual testing proxy                                         |
 | **Burp Suite Professional** | Full automated + manual testing (recommended for engagement) |
-| **Nuclei** | Template-based vulnerability scanning |
-| **SQLMap** | SQL injection testing (verify Drizzle protection) |
-| **jwt_tool** | JWT token manipulation testing |
-| **trufflehog** | Secret scanning in codebase |
-| **semgrep** | Static analysis for security patterns |
+| **Nuclei**                  | Template-based vulnerability scanning                        |
+| **SQLMap**                  | SQL injection testing (verify Drizzle protection)            |
+| **jwt_tool**                | JWT token manipulation testing                               |
+| **trufflehog**              | Secret scanning in codebase                                  |
+| **semgrep**                 | Static analysis for security patterns                        |
 
 ### 11.4 Engaging External Testers
 
@@ -1184,35 +1215,35 @@ Use this checklist for EVERY feature before deployment. Check all items that app
 
 ## Appendix A: Related Technical Debt
 
-| TD ID | Security Impact | Priority |
-|-------|----------------|----------|
-| TD-04 | No authorization — any UUID accesses any session | CRITICAL |
-| TD-10 | No rate limiting — API abuse possible | HIGH |
-| TD-05 | Inconsistent validation — potential bypass gaps | MEDIUM |
-| TD-16 | Unused next-auth dependency — unnecessary attack surface | LOW |
+| TD ID | Security Impact                                          | Priority |
+| ----- | -------------------------------------------------------- | -------- |
+| TD-04 | No authorization — any UUID accesses any session         | CRITICAL |
+| TD-10 | No rate limiting — API abuse possible                    | HIGH     |
+| TD-05 | Inconsistent validation — potential bypass gaps          | MEDIUM   |
+| TD-16 | Unused next-auth dependency — unnecessary attack surface | LOW      |
 
 ## Appendix B: Security-Related Environment Variables
 
-| Variable | Purpose | Sensitivity | Required For |
-|----------|---------|------------|--------------|
-| `NEXTAUTH_SECRET` | Session signing key | CRITICAL | Auth |
-| `NEXTAUTH_URL` | Auth callback URL | Low | Auth |
-| `BATTLENET_CLIENT_ID` | OAuth client ID | Medium | Auth (future) |
-| `BATTLENET_CLIENT_SECRET` | OAuth client secret | CRITICAL | Auth (future) |
-| `STRIPE_SECRET_KEY` | Stripe API key | CRITICAL | Billing (future) |
-| `STRIPE_WEBHOOK_SECRET` | Webhook signature verification | CRITICAL | Billing (future) |
-| `LLM_GATEWAY_API_KEY` | LLM API authentication | CRITICAL | AI Chat (future) |
-| `ENCRYPTION_KEY` | Database column encryption | CRITICAL | Data protection |
-| `RATE_LIMIT_WINDOW_MS` | Rate limit configuration | Low | Rate limiting |
-| `RATE_LIMIT_MAX_REQUESTS` | Rate limit configuration | Low | Rate limiting |
+| Variable                  | Purpose                        | Sensitivity | Required For     |
+| ------------------------- | ------------------------------ | ----------- | ---------------- |
+| `NEXTAUTH_SECRET`         | Session signing key            | CRITICAL    | Auth             |
+| `NEXTAUTH_URL`            | Auth callback URL              | Low         | Auth             |
+| `BATTLENET_CLIENT_ID`     | OAuth client ID                | Medium      | Auth (future)    |
+| `BATTLENET_CLIENT_SECRET` | OAuth client secret            | CRITICAL    | Auth (future)    |
+| `STRIPE_SECRET_KEY`       | Stripe API key                 | CRITICAL    | Billing (future) |
+| `STRIPE_WEBHOOK_SECRET`   | Webhook signature verification | CRITICAL    | Billing (future) |
+| `LLM_GATEWAY_API_KEY`     | LLM API authentication         | CRITICAL    | AI Chat (future) |
+| `ENCRYPTION_KEY`          | Database column encryption     | CRITICAL    | Data protection  |
+| `RATE_LIMIT_WINDOW_MS`    | Rate limit configuration       | Low         | Rate limiting    |
+| `RATE_LIMIT_MAX_REQUESTS` | Rate limit configuration       | Low         | Rate limiting    |
 
 ## Appendix C: Security-Related CI Checks
 
-| Check | Tool | Failure Threshold |
-|-------|------|------------------|
-| Dependency audit | `bun audit --level high` | Any high/critical |
-| TypeScript check | `bun typecheck` | Any error |
-| Linting | `bun lint` | Any error |
-| Secret scanning | trufflehog (add to CI) | Any secret found |
-| Static analysis | semgrep (add to CI) | Any security rule violation |
-| CSP report | Monitor `/api/csp-report` | Alert on violation count spike |
+| Check            | Tool                      | Failure Threshold              |
+| ---------------- | ------------------------- | ------------------------------ |
+| Dependency audit | `bun audit --level high`  | Any high/critical              |
+| TypeScript check | `bun typecheck`           | Any error                      |
+| Linting          | `bun lint`                | Any error                      |
+| Secret scanning  | trufflehog (add to CI)    | Any secret found               |
+| Static analysis  | semgrep (add to CI)       | Any security rule violation    |
+| CSP report       | Monitor `/api/csp-report` | Alert on violation count spike |
