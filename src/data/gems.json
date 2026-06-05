@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "lastUpdated": "2026-02-18",
-  "source": "docs/legendary-gems/*.md",
+  "version": "1.1.0",
+  "lastUpdated": "2026-06-05",
+  "source": "docs/legendary-gems/*.md + diablo.fandom.com/wiki/Legendary_Gems",
   "gems": {
     "1-star": [
       {
@@ -310,7 +310,8 @@
             "cooldown": 20,
             "isStrifed": false
           }
-        ]
+        ],
+        "icon": "/icons/gems/defiant-soul.png"
       },
       {
         "id": "freedom-and-devotion",
@@ -685,6 +686,18 @@
           }
         ],
         "icon": "/icons/gems/flaystone.png"
+      },
+      {
+        "id": "taxmans-pity",
+        "name": "Taxman's Pity",
+        "starRating": 1,
+        "pvpTier": "TBD",
+        "pveTier": "TBD",
+        "effects": [],
+        "icon": "/icons/gems/taxmans-pity.png",
+        "pool": "standard",
+        "needsVerification": true,
+        "note": "Added March 19, 2026. Effects need verification from diablo.tv or in-game."
       }
     ],
     "2-star": [
@@ -1469,6 +1482,44 @@
           }
         ],
         "icon": "/icons/gems/rampant-torch.png"
+      },
+      {
+        "id": "tundra-blight",
+        "name": "Tundra Blight",
+        "starRating": 2,
+        "pvpTier": "TBD",
+        "pveTier": "TBD",
+        "effects": [],
+        "icon": "/icons/gems/tundra-blight.png",
+        "pool": "standard",
+        "needsVerification": true,
+        "note": "Added March 19, 2026. Effects need verification from diablo.tv or in-game."
+      },
+      {
+        "id": "the-crucible",
+        "name": "The Crucible",
+        "starRating": 2,
+        "pvpTier": "TBD",
+        "pveTier": "TBD",
+        "effects": [],
+        "pool": "special",
+        "source": "Event",
+        "needsVerification": true,
+        "note": "Added ~April 2026. Event reward only. Effects need verification.",
+        "icon": "/icons/gems/the-crucible.png"
+      },
+      {
+        "id": "war-herald",
+        "name": "War Herald",
+        "starRating": 2,
+        "pvpTier": "TBD",
+        "pveTier": "TBD",
+        "effects": [],
+        "pool": "special",
+        "source": "Battle Pass (Empowered)",
+        "needsVerification": true,
+        "note": "From next Battle Pass season. Effects need verification.",
+        "icon": "/icons/gems/war-herald.png"
       }
     ],
     "5-star": [
@@ -2196,6 +2247,42 @@
           }
         ],
         "icon": "/icons/gems/fated-trail.png"
+      },
+      {
+        "id": "leviathan-tomb",
+        "name": "Leviathan Tomb",
+        "starRating": 5,
+        "pvpTier": "TBD",
+        "pveTier": "TBD",
+        "effects": [],
+        "icon": "/icons/gems/leviathan-tomb.png",
+        "pool": "standard",
+        "needsVerification": true,
+        "note": "Added March 19, 2026. Effects need verification from diablo.tv or in-game."
+      },
+      {
+        "id": "blood-floe",
+        "name": "Blood Floe",
+        "starRating": 5,
+        "pvpTier": "TBD",
+        "pveTier": "TBD",
+        "effects": [],
+        "icon": "/icons/gems/blood-floe.png",
+        "pool": "standard",
+        "needsVerification": true,
+        "note": "Added to standard pool. Effects need verification from diablo.tv or in-game."
+      },
+      {
+        "id": "wulfheort",
+        "name": "Wulfheort",
+        "starRating": 5,
+        "pvpTier": "TBD",
+        "pveTier": "TBD",
+        "effects": [],
+        "icon": "/icons/gems/wulfheort.png",
+        "pool": "standard",
+        "needsVerification": true,
+        "note": "Listed as Wulfheort in wiki. May be renamed Wolfheart or separate gem. Needs verification."
       }
     ]
   }
