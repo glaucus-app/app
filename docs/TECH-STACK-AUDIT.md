@@ -173,7 +173,7 @@ No known security vulnerabilities. Radix UI provides unstyled, accessible primit
 
 **Issues found:**
 
-1. **No permissions declared** — The workflow declares `contents: write` and `pull-requests: write` at the top level. This is broader than necessary. The `release-please` step needs both, but the `actions/checkout` step only needs `contents: read`.
+1. **Overly broad top-level permissions** — The workflow declares `contents: write` and `pull-requests: write` at the top level. This is broader than necessary. The `release-please` step needs both, but the `actions/checkout` step only needs `contents: read`.
 
 2. **actions/checkout@v4 uses mutable tag** — Should be pinned to a commit SHA. The tag `@v4` can be moved by the maintainers or compromised. Latest safe SHA: `@11bd71901bbe5b1630ceea73d27597364c9af683` (v4.2.2).
 
@@ -189,7 +189,7 @@ No known security vulnerabilities. Radix UI provides unstyled, accessible primit
 
 | Action | Current | Recommended (SHA-pinned) |
 |--------|---------|--------------------------|
-| `googleapis/release-please-action` | `@v4` | `@<sha>` # v4.x |
+| `googleapis/release-please-action` | `@v4` | `@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071` # v4 |
 | `actions/checkout` | `@v4` | `@11bd71901bbe5b1630ceea73d27597364c9af683` # v4.2.2 |
 
 ### Recommended Workflow Hardening
@@ -205,7 +205,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@<sha> # v4
+      - uses: googleapis/release-please-action@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071 # v4
         id: release
         with:
           manifest-file: .release-please-manifest.json
@@ -304,7 +304,7 @@ jobs:
 
 **Recommendation:**
 - If deploying to single-instance (Railway, self-hosted): better-sqlite3 is fine
-- If planning serverless deployment: evaluate Tursoon/libsql now to avoid migration pain later
+- If planning serverless deployment: evaluate Turso/libsql now to avoid migration pain later
 - Drizzle ORM supports both better-sqlite3 and libsql dialects, making migration easier
 
 ### Tesseract.js: LOW-MEDIUM RISK
