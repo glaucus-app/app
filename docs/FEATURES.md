@@ -63,7 +63,6 @@ Each feature below includes:
   - As a user, I want to upgrade my account to Tier 1 to unlock OCR features.
 - **Acceptance Criteria:**
   - Given I am on the billing page, when I click "Upgrade to Tier 1", then I am redirected to Stripe Checkout, and upon success, my user tier is updated.
-    are updated.
 - **Technical Considerations:**
   - **Data Model:** New `subscriptions` table (`id`, `userId`, `stripeCustomerId`, `stripeSubscriptionId`, `tier`, `status`, `currentPeriodEnd`).
   - **API Routes:** `POST /api/billing/create-checkout-session`, `POST /api/billing/webhook` (Stripe events).
@@ -114,9 +113,26 @@ Each feature below includes:
   - Given I am on `/characters`, when I click "Add Character", fill in name, class (9 current + 1 TBD), and gender, then the character is saved and appears in the list.
 - **Technical Considerations:**
   - **Data Model:** New `characters` table (`id`, `userId`, `name`, `className`, `gender`, `gearScore`, `createdAt`).
-  - **API Routes:** `GET /api/characters`, `POST /api/characters`, `PATCH /api/characters/[id]`, `DELETE /api2.
-- **Dependencies:** F01, F06.
-- **Test Requirements:** Component tests for paper doll rendering, integration tests for equipment updates.
+  - **API Routes:** `GET /api/characters`, `POST /api/characters`, `PATCH /api/characters/[id]`, `DELETE /api/characters/[id]`.
+  - **Components:** `CharacterList` (Server), `CharacterForm` (Client).
+  - **Tier Gating:** Free.
+  - **Dependencies:** F01.
+  - **Test Requirements:** Component tests for character list rendering, integration tests for character CRUD API.
+
+### F07: Equipment Screen
+
+- **Description:** Visual paper doll showing equipped items by slot for a character.
+- **User Stories:**
+  - As a user, I want to see a visual representation of my character's equipped items by slot.
+- **Acceptance Criteria:**
+  - Given I am on the Equipment tab of a character detail page, when I view the screen, then I see a paper doll grid with items displayed in their respective slots.
+- **Technical Considerations:**
+  - **Data Model:** Uses `build_equipment` table.
+  - **API Routes:** `GET /api/characters/[id]/equipment`, `PATCH /api/characters/[id]/equipment`.
+  - **Components:** `EquipmentPaperDoll` (Client), `EquipmentSlot` (Client).
+  - **Tier Gating:** Free.
+  - **Dependencies:** F06.
+  - **Test Requirements:** Component tests for paper doll rendering, integration tests for equipment updates.
 
 ### F08: Character Inventory Management
 

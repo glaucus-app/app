@@ -65,14 +65,13 @@ This product strictly adheres to the Glaucus App Constitution (`.specify/memory/
 ### 5.1 Public-Facing Site
 
 - **Landing Page:** Hero section with app description, value proposition, and a live, interactive demo preview of the optimization flow.
-
-2. **Feature Showcase:** Animated screenshots or interactive demos highlighting the optimization flow, OCR, and character management.
-3. **Social Proof:** User testimonials, community stats, and Discord integration.
-4. **Pricing Tiers:**
-   - **Free:** Manual gem entry, basic optimization (greedy algorithm), limited selections, anonymous usage.
-   - **Paid Tier 1 ($5/mo):** Screenshot OCR, advanced algorithms (dynamic programming), build saving/sharing, ad-free experience.
-   - **Paid Tier 2 ($15/mo):** Battle.net character sync, historical tracking, API access, multiple character slots, advanced analytics.
-5. **FAQ & Trivia:** Diablo Immortal tips, gem guides, and common optimization questions.
+- **Feature Showcase:** Animated screenshots or interactive demos highlighting the optimization flow, OCR, and character management.
+- **Social Proof:** User testimonials, community stats, and Discord integration.
+- **Pricing Tiers:**
+  - **Free:** Manual gem entry, basic optimization (greedy algorithm), limited selections, anonymous usage.
+  - **Paid Tier 1 ($5/mo):** Screenshot OCR, advanced algorithms (dynamic programming), build saving/sharing, ad-free experience.
+  - **Paid Tier 2 ($15/mo):** Battle.net character sync, historical tracking, API access, multiple character slots, advanced analytics.
+- **FAQ & Trivia:** Diablo Immortal tips, gem guides, and common optimization questions.
 
 ### 5.2 User Personal Space
 
@@ -87,7 +86,7 @@ This product strictly adheres to the Glaucus App Constitution (`.specify/memory/
 - **Character Creation:** Select class (from 9 current DI classes, 10th TBD via diablo.tv), select gender (changeable later), and enter character name.
 - **Character Detail Page (Tabbed):**
   - **Equipment Screen:** Visual character paper doll showing equipped items by slot.
-    and normal gems currently equipped and available.
+  - **Gems:** Show all legendary and normal gems currently equipped and available.
   - **Stats:** Derived stats from current build (damage, toughness, life per second, etc.).
 
 ### 5.4 Item Input Methods
