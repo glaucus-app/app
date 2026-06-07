@@ -11,10 +11,10 @@
 
 | Milestone | Focus Area              | Estimated Duration | Target Release |
 | --------- | ----------------------- | ------------------ | -------------- |
-| M0        | Project Restructure     | 1 week             | Week 1         |
+| M0        | Greenfield Foundation   | 1 week             | Week 1         |
 | M1        | Public Site + Auth      | 2 weeks            | Week 3         |
 | M2        | Character Foundation    | 3 weeks            | Week 6         |
-| M3        | Optimization Engine v2  | 2 weeks            | Week 8         |
+| M3        | Optimization Engine     | 2 weeks            | Week 8         |
 | M4        | Screenshot OCR          | 2 weeks            | Week 10        |
 | M5        | Billing & Subscriptions | 2 weeks            | Week 12        |
 | M6        | AI Chat                 | 2 weeks            | Week 14        |
@@ -28,10 +28,10 @@
 
 ```mermaid
 graph TD
-    M0[M0: Project Restructure] --> M1[M1: Public Site + Auth]
+    M0[M0: Greenfield Foundation] --> M1[M1: Public Site + Auth]
     M1 --> M2[M2: Character Foundation]
     M1 --> M5[M5: Billing & Subscriptions]
-    M2 --> M3[M3: Optimization Engine v2]
+    M2 --> M3[M3: Optimization Engine]
     M2 --> M4[M4: Screenshot OCR]
     M3 --> M6[M6: AI Chat]
     M4 --> M6
@@ -45,7 +45,7 @@ graph TD
 **Critical Path:** M0 → M1 → M2 → M3 → M6 → M7
 
 - Auth (M1) blocks Character management (M2).
-- Character management (M2) blocks Optimization Engine v2 (M3) and OCR (M4).
+- Character management (M2) blocks Optimization Engine (M3) and OCR (M4).
 - Optimization (M3) and OCR (M4) must complete before AI Chat (M6) can inject meaningful context.
 
 ---
@@ -72,54 +72,36 @@ To maximize throughput, multiple poles can work in parallel on non-dependent mil
 
 ---
 
-## 5. API Versioning Strategy
+## 5. API Strategy
 
-- **Current State:** All APIs are unversioned (`/api/optimize`, `/api/builds`).
+All APIs use versioned routes from the start to maintain clean contracts:
+
+- **API Prefix:** All endpoints use `/api/v1/` prefix (e.g., `/api/v1/optimize`, `/api/v1/builds`, `/api/v1/characters`, `/api/v1/chat`).
 - **Strategy:**
-  - Maintain existing unversioned routes for backward compatibility during M0-M2.
-  - Introduce `/api/v1/` prefix for all **new** endpoints created in M2+ (e.g., `/api/v1/characters`, `/api/v1/chat`).
-  - Deprecate old `/api/optimize` in M3 by adding a `Deprecation` header, redirecting internal UI to `/api/v1/optimize`.
-  - Remove legacy routes entirely in M7.
+  - Use `/api/v1/` for all endpoints from M1 forward.
+  - The old application's API patterns inform the new design but are not maintained for backward compatibility.
 
 ---
 
-## 6. Handling the Existing `/optimize` Page
+## 6. Page Architecture Strategy
 
-The current `/optimize` page works but uses legacy patterns. We will use a **gradual migration with feature flags**.
+The new application follows a clean, specification-driven architecture:
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant NextJS as Next.js Router
-    participant Flag as Feature Flag System
-    participant Legacy as Legacy /optimize
-    participant New as New /v1/optimize
-
-    User->>NextJS: GET /optimize
-    NextJS->>Flag: check('new-optimizer-ui')
-    alt Flag is OFF (Default for M0-M2)
-        Flag-->>NextJS: false
-        NextJS->>Legacy: Render legacy page
-        Legacy-->>User: Legacy UI
-    else Flag is ON (M3+)
-        Flag-->>NextJS: true
-        NextJS->>New: Render new page
-        New-->>User: New UI with Character context
-    end
-```
-
-- **M0-M2:** Flag is `false`. Legacy page remains the default.
-- **M3:** Flag is `true` for internal testing and Tier 2 beta users.
-- **M4:** Flag is `true` for all users. Legacy page is hidden behind `/legacy/optimize` for emergency rollback.
-- **M7:** Legacy page code is deleted.
+- **Landing & Demo:** `/page.tsx` (root) hosts the landing page with interactive demo.
+- **Optimizer:** `/optimize/page.tsx` provides the core gem optimization interface.
+- **Builds:** `/builds/page.tsx` for build management (save, load, delete).
+- **Characters:** `/characters/page.tsx` for character management (available M2+).
+- **Chat:** `/chat/page.tsx` for AI chat feature (available M6+).
 
 ---
 
 ## 7. Milestone Definitions
 
-### Milestone 0: Project Restructure
+### Milestone 0: Greenfield Foundation
 
-**Goal:** Clean up current codebase, establish new directory structure, and define the fresh database schema.
+The old application codebase is deprecated. This milestone establishes fresh, clean architecture for the new implementation.
+
+**Goal:** Establish the target directory skeleton, type system, and error-handling infrastructure for the new Glaucus implementation.
 
 - **Included Features:** Infrastructure setup (no user-facing features).
 - **Estimated Effort:** M (Medium)
@@ -127,10 +109,10 @@ sequenceDiagram
 - **Acceptance Criteria:**
   - [ ] `src/features/` directory structure matches `TARGET-ARCHITECTURE.md`.
   - [ ] Fresh Drizzle schema defined in `src/lib/db/schema.ts`.
-  - [ ] `bun typecheck`, `bun lint`, and `bun test:run` pass with 0 errors.
+  - [ ] `bun typecheck`, `bun lint`, and `bun build` pass with 0 errors.
 - **Risks & Mitigations:**
   - _Risk:_ Breaking existing optimizer during refactor.
-  - _Mitigation:_ Keep legacy code in `src/legacy/` until new modules pass all tests.
+  - _Mitigation:_ Old code is archived; new modules follow specification-first development with comprehensive testing.
 - **Suggested Team Size:** 1 polecat.
 
 ---
@@ -171,9 +153,9 @@ sequenceDiagram
 
 ---
 
-### Milestone 3: Optimization Engine v2
+### Milestone 3: Optimization Engine
 
-**Goal:** Upgrade the core optimization algorithm and integrate it with character data.
+**Goal:** Build the core optimization algorithm and integrate it with character data.
 
 - **Included Features:** F15 (Playstyle Presets), F16 (Advanced Algorithm), F17 (Before/After UI), F18 (What-If Scenarios), F19 (Build Versioning).
 - **Estimated Effort:** L (Large)
@@ -181,7 +163,7 @@ sequenceDiagram
 - **Acceptance Criteria:**
   - [ ] Advanced algorithm completes optimization for 10 gems in < 5 seconds.
   - [ ] What-if scenarios update UI instantly without mutating saved build.
-  - [ ] Feature flag successfully routes traffic to new optimizer UI.
+  - [ ] Optimizer UI renders correctly with character context.
 - **Risks & Mitigations:**
   - _Risk:_ Advanced algorithm exceeds 5s timeout.
   - _Mitigation:_ Implement Web Workers for client-side computation or optimize server-side DP with memoization.
@@ -253,7 +235,6 @@ sequenceDiagram
 - **Acceptance Criteria:**
   - [ ] Lighthouse scores > 90 across all pages.
   - [ ] All E2E tests pass in CI/CD pipeline.
-  - [ ] Legacy `/optimize` code is fully removed.
   - [ ] `docs/` folder is fully updated with this PRD, FEATURES, and ROADMAP.
 - **Risks & Mitigations:**
   - _Risk:_ Last-minute bug discoveries.

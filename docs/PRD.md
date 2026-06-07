@@ -11,7 +11,7 @@
 
 Glaucus is a web-based optimization tool for Diablo Immortal (DI) players, focused initially on legendary gem optimization with a clear architectural path to equipment optimization. The application allows players to maximize resonance, DPS, survivability, and resource ROI with transparent, explainable upgrade guidance.
 
-This PRD defines the complete product experience, bridging the gap between the currently built optimizer UI/workflow foundation and the full vision of a personalized, account-backed character management and optimization platform.
+This PRD defines the complete product experience for a greenfield implementation built from lessons learned from previous iterations.
 
 ---
 

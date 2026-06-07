@@ -2,19 +2,21 @@
 
 ## Current State
 
-**Project Status**: ✅ All Implementation Tasks Complete - Ready for Manual Validation
+**Project Status**: 🔄 Documentation Alignment in Progress
 
-All implemented user stories (P1-P3) have been completed:
+The project is transitioning from a legacy-aware approach to a **completely new greenfield implementation**. All documentation has been updated to reflect this strategy:
 
-- **User Story 1 (P1)**: Gem Inventory Entry - Select, configure, and manage equipped gems
-- **User Story 2 (P1)**: Resource Specification - Input and validate upgrade resources
-- **User Story 3 (P1)**: Optimization Execution & Results - Run optimization and view recommendations
-- **User Story 4 (P2)**: Build Management - Save, load, delete named builds
-- **User Story 5 (P2)**: Gem Information Reference - Tooltips, upgrade costs, tier rankings
-- **User Story 6 (P3)**: Optimization Constraints - PVP/PVE mode toggle, budget constraints, Advanced Strategies
-- **User Story 7 (P2)**: Responsive Mobile Experience - Touch targets, responsive layouts
+- **PRD.md**: Updated to remove "bridging" language; now frames work as fresh implementation
+- **ROADMAP.md**: Updated to remove legacy page retention, feature flags, and backward compatibility assumptions
+- **REFACTORING-PLAN.md**: Replaced with Greenfield Implementation Plan
+- **.kilocode/rules/specify-rules.md**: Fixed project structure and commands to match actual architecture
 
-### Implemented Components
+### Recently Completed (2026-06-06)
+
+- [x] **PRD.md**: Removed bridging/legacy language; framed as greenfield implementation
+- [x] **ROADMAP.md**: Removed feature flag migration strategy; established clean page architecture
+- [x] **REFACTORING-PLAN.md**: Rewrote as Greenfield Implementation Plan
+- [x] **.kilocode/rules/specify-rules.md**: Fixed project structure (src/ not backend/frontend/tests) and commands (bun not npm)
 
 | Phase    | Description                                     | Status      |
 | -------- | ----------------------------------------------- | ----------- |
